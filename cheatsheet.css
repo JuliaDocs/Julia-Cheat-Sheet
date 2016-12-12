@@ -197,6 +197,8 @@ ul {
 .box .title {
   /*background: linear-gradient(180deg, #bf655f, #f6f6f6);*/
   background: linear-gradient(180deg, darkmagenta,mediumblue);
+  padding: .5em;
+  margin-bottom: 1em;
 }
 .box h1 {
   font-family: 'Consolas', sans-serif;
