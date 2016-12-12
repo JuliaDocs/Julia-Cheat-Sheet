@@ -3,9 +3,13 @@ Julia Cheat Sheet copied &amp; restored from https://bitbucket.org/hell316/
 
 ### Status
 
-Currently only v0.4 is supported. Any help regarding cleanup and/or expanding data is greatly appreciated. 
+Currently I'm updating the content to Julia v0.5.
+
+Any help regarding cleanups and/or expanding data is greatly appreciated. 
 
 Just clone this repo and send your pull requests.
+
+**Thanks!**
 
 [Go to GitHub Page](https://brakmic.github.io/Julia-Cheat-Sheet/)
 
