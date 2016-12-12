@@ -189,6 +189,7 @@ footer {
   margin: 0.5em;
   padding-bottom: 0.5em;
   width: 44em;
+  word-wrap: break-word;
 }
 #contents > ol,
 ul {
