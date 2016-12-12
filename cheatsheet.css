@@ -188,7 +188,7 @@ footer {
   background-color: #f6f6f6;
   margin: 0.5em;
   padding-bottom: 0.5em;
-  width: 44em;
+  width: 35em;
   word-wrap: break-word;
 }
 #contents > ol,
@@ -302,4 +302,13 @@ a.tooltip span {
 .github-info {
   font-style: italic;
   font-size: smaller;
+}
+
+@media(min-width:576px){}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1500px){
+  .box {
+    width: 43em;
+  }
 }
