@@ -159,10 +159,11 @@ footer {
   margin: auto;
 }
 #version {
+  font-size: larger;
   vertical-align: bottom;
-  margin-left: 0.25em;
+  margin-left: -1em;
   margin-top: auto;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 #contents {
   -webkit-columns: 6 34em;
@@ -291,4 +292,9 @@ a.tooltip span {
 
 .individual-styling > .bold {
   color: blue;
+}
+
+.github-info {
+  font-style: italic;
+  font-size: smaller;
 }
