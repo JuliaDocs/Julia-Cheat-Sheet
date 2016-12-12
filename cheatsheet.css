@@ -309,6 +309,6 @@ a.tooltip span {
 @media(min-width:992px){}
 @media(min-width:1500px){
   .box {
-    width: 43em;
+    width: 36em;
   }
 }
