@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+
+  <title>The Fast Track to Julia</title>
+  <link href='cheatsheet.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id='top'>
+    <div id='title'>
+      <h1>The Fast Track to</h1>
+      <h2>A quick and dirty overview of</h2>
+    </div>
+
+    <img src='julia.png' alt='Julia' height='100'/>
+
+    <div id='version'>    
+      <h1>0.4</h1>
+    </div>
+  </div>
+
+  <div id='contents'>
+    <ul>
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>What is&hellip;?</h1>
+          </div>
+
+          <p><a href='http://julialang.org' target='_blank'>Julia</a> is an open-source, multi-platform, high-level, high-performance programming language for technical computing.</p>
+
+          <p>Julia has an <a class='tooltip' href='#'>LLVM<span>Low-Level Virtual Machine (LLVM) is a compiler infrastructure to build intermediate and/or binary machine code.</span></a>-based
+          <a class='tooltip' href='#'>JIT<span>Just-In-Time compilation occurs at run-time rather than prior to execution, which means it offers both the speed of compiled code and the flexibility of
+          interpretation. The compiler parses the code and infers types, after which the LLVM code is generated, which in turn is compiled into native code.</span></a> compiler that allows it to
+          match the performance of languages such as C and FORTRAN without the hassle of low-level code. Because the code is compiled on the fly you can run (bits of) code in a shell or <a class=
+          'tooltip' href='#'>REPL<span>Read-Eval-Print-Loop</span></a>, which is part of the recommended <a href='http://julia.readthedocs.org/en/latest/manual/workflow-tips' target=
+          '_blank'>workflow</a>.</p>
+
+          <p>Julia is dynamically typed, provides <a class='tooltip' href='#'>multiple dispatch<span>Because function argument types are determined at run-time, the compiler can choose the
+          implementation that is optimized for the provided arguments and the processor architecture.</span></a>, and is designed for parallelism and distributed computation.</p>
+
+          <p>Julia has a built-in package manager.</p>
+
+          <p>Julia has many built-in mathematical functions, including special functions (e.g. Airy, Bessel, Gamma), and supports complex numbers right out of the box.</p>
+
+          <p>Julia allows you to generate code automagically thanks to Lisp-inspired macros.</p>
+
+          <p>Julia was born in 2012.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Basics</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Assignment</td>
+
+              <td>
+                <pre>
+<code>answer = 42
+x, y, z = 1, [1:10; ], "A String"
+x, y = y, x  # swap x and y</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Constant declaration</td>
+
+              <td><code>const DATE_OF_BIRTH = 2012</code></td>
+            </tr>
+
+            <tr>
+              <td>End-of-line comment</td>
+
+              <td><code>i = 1 # This is a comment</code></td>
+            </tr>
+
+            <tr>
+              <td>Delimited comment</td>
+
+              <td><code>#= This is another comment =#</code></td>
+            </tr>
+
+            <tr>
+              <td>Chaining</td>
+
+              <td>
+                <pre>
+<code>x = y = z = 1  # right-to-left
+0 &lt; x &lt; 3      # true
+5 &lt; x != y &lt; 5 # false</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Function definition</td>
+
+              <td>
+                <pre>
+<code>function add_one(i)
+  return i + 1
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Insert LaTeX symbols</td>
+
+              <td><code>\delta</code> + [Tab]</td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Operators</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Basic arithmetic</td>
+
+              <td><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></td>
+            </tr>
+
+            <tr>
+              <td>Exponentiation</td>
+
+              <td><code>2^3 == 8</code></td>
+            </tr>
+
+            <tr>
+              <td>Fractional division</td>
+
+              <td><code>3//12 == 0.25</code></td>
+            </tr>
+
+            <tr>
+              <td>Inverse division</td>
+
+              <td><code>7\3 == 3/7</code></td>
+            </tr>
+
+            <tr>
+              <td>Remainder</td>
+
+              <td><code>x % y</code> or <code>rem(x,y)</code></td>
+            </tr>
+
+            <tr>
+              <td>Negation</td>
+
+              <td><code>!true == false</code></td>
+            </tr>
+
+            <tr>
+              <td>Equality</td>
+
+              <td><code>a == b</code></td>
+            </tr>
+
+            <tr>
+              <td>
+                Equality (<a class='tooltip' href='#'>composite types<span>The default comparison operator compares only memory addresses for composite types.</span></a>)
+              </td>
+
+              <td><code>is(a, b) # done on bit level</code></td>
+            </tr>
+
+            <tr>
+              <td>Inequality</td>
+
+              <td><code>a != b</code> or <code>a ≠ b</code></td>
+            </tr>
+
+            <tr>
+              <td>Less and larger than</td>
+
+              <td><code>&lt;</code> and <code>&gt;</code></td>
+            </tr>
+
+            <tr>
+              <td>Less than or equal to</td>
+
+              <td><code>&lt;=</code> or <code>&leq;</code></td>
+            </tr>
+
+            <tr>
+              <td>Greater than or equal to</td>
+
+              <td><code>&gt;=</code> or <code>&geq;</code></td>
+            </tr>
+
+            <tr>
+              <td>Element-wise operation</td>
+
+              <td>
+                <pre>
+<code>[1, 2, 3] .+ [1, 2, 3] == [2, 4, 6]
+[1, 2, 3] .* [1, 2, 3] == [1, 4, 9]</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Not a number</td>
+
+              <td><code>isnan(NaN)</code> not(!) <code>NaN == NaN</code></td>
+            </tr>
+
+            <tr>
+              <td>Ternary operator</td>
+
+              <td><code>a == b ? "Equal" : "Not equal"</code></td>
+            </tr>
+
+            <tr>
+              <td>Short-circuited AND and OR</td>
+
+              <td><code>a && b</code> and <code>a || b</code></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>The shell a.k.a. REPL</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Recall last result</td>
+
+              <td><code>ans</code></td>
+            </tr>
+
+            <tr>
+              <td>Interrupt execution</td>
+
+              <td>[Ctrl] + [C]</td>
+            </tr>
+
+            <tr>
+              <td>Clear screen</td>
+
+              <td>[Ctrl] + [L]</td>
+            </tr>
+
+            <tr>
+              <td>Clear all variables and reset session</td>
+
+              <td><code>workspace()</code></td>
+            </tr>
+
+            <tr>
+              <td>Run program</td>
+
+              <td><code>include("filename.jl")</code></td>
+            </tr>
+
+            <tr>
+              <td>Get help for <code>func</code> is defined</td>
+
+              <td><code>?func</code></td>
+            </tr>
+
+            <tr>
+              <td>See all places where <code>func</code> is defined</td>
+
+              <td><code>apropos("func")</code></td>
+            </tr>
+
+            <tr>
+              <td>Escape to OS command line</td>
+
+              <td><code>;</code></td>
+            </tr>
+
+            <tr>
+              <td>Exit</td>
+
+              <td><code>quit()</code> or [Ctrl] + [D]</td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>IDEs, Editors and Plug-ins</h1>
+          </div>
+
+          <ul>
+            <li><a href='http://junolab.org' target='_blank'>Juno</a> (editor)</li>
+            <li><a href='http://forio.com/labs/julia-studio' target='_blank'>Forio Epicenter</a> (online IDE)</li>
+            <li><a href='http://www.juliabox.org' target='_blank'>JuliaBox</a> (online IJulia notebook)</li>
+            <li><a href='http://try.jupyter.org' target='_blank'>Jupyter</a> (online IJulia notebook)</li>
+            <li><a href='http://www.liclipse.com/' target='_blank'>LiClipse</a> (editor)</li>
+            <li><a href='http://wiki.gnome.org/Apps/Gedit' target='_blank'>gedit</a> <a href='http://github.com/JuliaLang/julia/blob/master/contrib/julia.lang' target='_blank'>syntax highlighting</a> (editor)</li>
+            <li><a href='http://www.gnu.org/software/emacs' target='_blank'>Emacs <a href='http://www.emacswiki.org/emacs/Julia' target='_blank'>Julia mode</a> (editor)</li>
+            <li><a href='http://www.vim.org' target='_blank'>vim <a href='http://github.com/JuliaLang/julia-vim' target='_blank'>Julia mode</a> (editor)</li>
+            <li><a href='http://www.sublimetext.com' target='_blank'>Sublime Text <a href='http://github.com/WestleyArgentum/Sublime-Julia' target='_blank'>Julia plug-in</a> (editor)</li>
+            <li><a href='http://www.sublimetext.com' target='_blank'>Sublime Text <a href='http://github.com/quinnj/Sublime-IJulia' target='_blank'>IJulia plug-in</a> (editor)</li>
+          </ul>
+          
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Package management</h1>
+          </div>
+
+          <p>Packages must be <a href='http://pkg.julialang.org' target='_blank'>registered</a> before they are visible to the package manager.</p>
+
+          <table>
+            <tr>
+              <td>List installed packages (human-readable)</td>
+
+              <td><code>Pkg.status()</code></td>
+            </tr>
+
+            <tr>
+              <td>List installed packages (machine-readable)</td>
+
+              <td><code>Pkg.installed()</code></td>
+            </tr>
+
+            <tr>
+              <td>Location of package cache</td>
+
+              <td><code>Pkg.dir()</code></td>
+            </tr>
+
+            <tr>
+              <td>Update all packages</td>
+
+              <td><code>Pkg.update()</code></td>
+            </tr>
+
+            <tr>
+              <td>Install <code>PackageName</code></td>
+
+              <td><code>Pkg.add("PackageName")</code></td>
+            </tr>
+
+            <tr>
+              <tdRebuild <code>PackageName</code></td>
+
+              <td><code>Pkg.build("PackageName")</code></td>
+            </tr>
+
+
+            <tr>
+              <td>Use <code>PackageName</code> (after install)</td>
+
+              <td><code>using PackageName</code></td>
+            </tr>
+
+            <tr>
+              <td>Remove <code>PackageName</code></td>
+
+              <td><code>Pkg.rm("PackageName")</code></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Characters and strings</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Character</td>
+
+              <td><code>chr = 'C'</code></td>
+            </tr>
+
+            <tr>
+              <td>String</td>
+
+              <td><code>str = "A string"</code></td>
+            </tr>
+
+            <tr>
+              <td>Character code</td>
+
+              <td><code>Int('J') == 74</code></td>
+            </tr>
+
+            <tr>
+              <td>Character from code</td>
+
+              <td><code>Char(74) == 'J'</code></td>
+            </tr>
+
+            <tr>
+              <td>Any <a href='http://docs.julialang.org/en/latest/manual/unicode-input' target='_blank'>UTF</a> character</td>
+
+              <td>
+                <pre>
+<code>chr = '\uXXXX'     # 4-digit HEX
+chr = '\uXXXXXXXX' # 8-digit HEX</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Loop through characters</td>
+
+              <td>
+                <pre>
+<code>for c in str
+  println(c)
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Concatenation</td>
+
+              <td><code>str = "Learn" * " " * "Julia"</code></td>
+            </tr>
+
+            <tr>
+              <td>String interpolation</td>
+
+              <td>
+                <pre>
+<code>a = b = 2
+println("a * b = $(a*b)")</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>First matching character or regular expression</td>
+
+              <td><code>search("Julia", 'i') == 4</code></td>
+            </tr>
+
+            <tr>
+              <td>Replace substring or regular expression</td>
+
+              <td><code>replace("Julia", "a", "us") == "Julius"</code></td>
+            </tr>
+
+            <tr>
+              <td>Last index (of collection)</td>
+
+              <td><code>endof("Hello") == 5</code></td>
+            </tr>
+
+            <tr>
+              <td>Number of characters</td>
+
+              <td><code>length("Hello") == 5</code></td>
+            </tr>
+
+            <tr>
+              <td>Regular expression</td>
+
+              <td><code>pattern = r"l[aeiou]"</code></td>
+            </tr>
+
+            <tr>
+              <td>Subexpressions</td>
+
+              <td>
+                <pre>
+<code>str = "+1 234 567 890"
+pat = r"\+([0-9]) ([0-9]+)"
+m = match(pat, str)
+m.captures == ["1", "234"]</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>All occurrences</td>
+
+              <td><code>matchall(pat, str)</code></td>
+            </tr>
+
+            <tr>
+              <td>All occurrences (as <a href='http://slendermeans.org/julia-iterators.html' target='_blank'>iterator</a>)</td>
+
+              <td><code>eachmatch(pat, str)</code></td>
+            </tr>
+          </table>
+
+          <p>Beware of multi-byte Unicode encodings in UTF-8:</p>
+
+          <div class='centred'>
+            <pre>
+<code>10 == endof("Ångström") != length("Ångström") == 8</code>
+</pre>
+          </div>
+
+          <p>Strings are immutable.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Numbers</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Integer types</td>
+
+              <td><code>IntN</code> and <code>UIntN</code>, with <code>N</code> &isin; {<code>8</code>,<code>16</code>,<code>32</code>,<code>64</code>,<code>128</code>}<br>
+              <code>BigInt</code></td>
+            </tr>
+
+            <tr>
+              <td>Floating-point types</td>
+
+              <td><code>FloatN</code> with <code>N</code> &isin; {<code>16</code>, <code>32</code>, <code>64</code>}<br>
+              <code>BigFloat</code></td>
+            </tr>
+
+            <tr>
+              <td>Minimum and maximum values by type</td>
+
+              <td>
+                <pre>
+<code>typemin(Int8)
+typemax(Int64)</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Complex types</td>
+
+              <td><code>ComplexN</code> with <code>N</code> &isin; {<code>64</code>, <code>128</code>}</td>
+            </tr>
+
+            <tr>
+              <td>Imaginary unit</td>
+
+              <td><code>im</code></td>
+            </tr>
+
+            <tr>
+              <td>Machine precision</td>
+
+              <td><code>eps() # same as eps(Float64)</code></td>
+            </tr>
+
+            <tr>
+              <td>Rounding</td>
+
+              <td>
+                <pre>
+<code>round()  # floating-point
+iround() # integer</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Random numbers</td>
+
+              <td>
+                <pre>
+<code>rand()   # uniform [0,1)
+randn()  # normal (-Inf, Inf)</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Type conversions</td>
+
+              <td>
+                <pre>
+<code>convert(TypeName, val) # attempt/error
+typename(val)          # calls convert</code>
+</pre>
+              </td>
+            </tr>
+          </table>
+
+          <p>Julia does <em>not</em> automatically check for numerical overflow.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Mathematics</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Global constants</td>
+
+              <td>
+                <pre>
+<code>pi      # 3.1415...
+&pi;       # 3.1415...
+e       # 2.7182...
+im      # real(im * im) == -1
+catalan # 0.9159...
+&gamma;       # 0.5772...
+&phi;       # 1.6180...</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Identity matrix</td>
+
+              <td><code>eye(n) # n&times;n </code></td>
+            </tr>
+
+            <tr>
+              <td>Define matrix</td>
+
+              <td><code>M = [1 0; 0 1] # eye(2)</code></td>
+            </tr>
+
+            <tr>
+              <td>Matrix dimensions</td>
+
+              <td><code>size(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Select <code>i</code>th row</td>
+
+              <td><code>M[i, :]</code></td>
+            </tr>
+
+            <tr>
+              <td>Select <code>i</code>th column</td>
+
+              <td><code>M[:, i]</code></td>
+            </tr>
+
+            <tr>
+              <td>Matrix transposition</td>
+
+              <td><code>transpose(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Conjugate matrix transposition</td>
+
+              <td><code>M'</code> or <code>ctranspose(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Matrix trace</td>
+
+              <td><code>trace(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Matrix determinant</td>
+
+              <td><code>det(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Matrix rank</td>
+
+              <td><code>rank(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Matrix eigenvalues</td>
+
+              <td><code>eigvals(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Matrix eigenvectors</td>
+
+              <td><code>eigvecs(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Matrix inverse</td>
+
+              <td><code>inv(M)</code></td>
+            </tr>
+
+            <tr>
+              <td>Solve <code>M*x == v</code></td>
+
+              <td>
+                <code>M\v</code> is <a class='tooltip' href='#'>better<span>Numerically more stable and typically also faster.</span></a> than <code>inv(M)*v</code>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Moore-Penrose pseudo-inverse</td>
+
+              <td><code>pinv(M)</code></td>
+            </tr>
+          </table>
+
+          <p>Julia provides <a href='http://docs.julialang.org/en/latest/stdlib/math' target='_blank'>many</a> mathematical (special) and statistical functions.</p>
+
+          <p>Julia has built-in support for <a href='http://docs.julialang.org/en/latest/manual/linear-algebra' target='_blank'>matrix decompositions</a>.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Control flow and loops</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Conditional</td>
+
+              <td><code>if</code>-<code>elseif</code>-<code>else</code>-<code>end</code></td>
+            </tr>
+
+            <tr>
+              <td>Simple <code>for</code> loop</td>
+
+              <td>
+                <pre>
+<code>for i in 1:10
+  println(i)
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Unnested <code>for</code> loop</td>
+
+              <td>
+                <pre>
+<code>for i in 1:10, j = 1:5
+  println(i*j)
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Enumeration</td>
+
+              <td>
+                <pre>
+<code>for (idx, val) in enumerate(arr)
+  println("the $idx-th element is $val")
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td><code>while</code> loop</td>
+
+              <td>
+                <pre>
+<code>while bool_expr
+  # do stuff
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Exit loop</td>
+
+              <td><code>break</code></td>
+            </tr>
+
+            <tr>
+              <td>Exit iteration</td>
+
+              <td><code>continue</code></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Functions</h1>
+          </div>
+
+          <p>All arguments to functions are passed by reference.</p>
+
+          <p>Functions with <code>!</code> appended change at least one argument, typically the first: <code>sort!(arr)</code>.</p>
+
+          <p>Required arguments are separated with a comma and use the positional notation.</p>
+
+          <p>Optional arguments need a default value in the signature, defined with <code>=</code>.</p>
+
+         <p>Keyword arguments use the named notation and are listed in the function's signature after the semicolon:</p>
+
+          <div class='indented'>
+            <pre>
+<code>function func(req1, req2; key1=dflt1, key2=dflt2)
+  # do stuff
+end</code>
+</pre>
+          </div>
+
+          <p>The semicolon is <em>not</em> required in the call to a function that accepts keyword arguments.</p>
+
+          <p>The <code>return</code> statement is optional but highly recommended.</p>
+
+          <p>Multiple data structures can be returned as a tuple in a single <code>return</code> statement.</p>
+
+          <p>Command line arguments <code>julia script.jl arg1 arg2...</code>can be processed from global constant <code>ARGS</code>:</p>
+
+          <div class='indented'>
+            <pre>
+<code>for arg in ARGS
+  println(arg)
+end</code>
+</pre>
+          </div>
+
+          <p>Anonymous functions can best be used in collection functions or list comprehensions: <code>x -&gt; x^2</code>.</p>
+
+          <p>Functions can accept a variable number of arguments:</p>
+
+          <div class='indented'>
+            <pre>
+<code>function func(a...)
+  println(a)
+end
+
+func(1, 2, [3:5]) # tuple: (1,2,[3,4,5])</code>
+</pre>
+          </div>
+
+          <p>Functions can be nested:</p>
+
+          <div class='indented'>
+            <pre>
+<code>function outerfunction()
+  # do some outer stuff
+  function innerfunction()
+    # do inner stuff
+    # can access prior outer definitions
+  end
+  # do more outer stuff
+end</code>
+</pre>
+          </div>
+
+          <p>Julia generates <a class='tooltip' href='#'>specialized versions<span>Multiple dispatch a type of polymorphism that dynamically determines which version of a function to call. In this
+          context, dynamic means that it is resolved at run-time, whereas method overloading is resolved at compile time. Julia manages multiple dispatch completely in the background. Of course, you
+          can provide custom function overloadings with type annotations.</span></a> of functions based on data types. When a function is called with the same argument types again, Julia can look up
+          the native machine code and skip the compilation process.</p>
+
+          <p>Stack overflow is possible when recursive functions nest many levels deep. <a href='http://blog.zachallaun.com/post/jumping-julia' target='_blank'>Trampolining</a> can be used to do 
+          tail-call optimization, as Julia does not do that automatically <a href='https://github.com/JuliaLang/julia/issues/4964' target='_blank'>yet</a>. Alternatively, you can rewrite the 
+          tail recursion as an iteration.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Arrays</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Declaration</td>
+
+              <td><code>arr = Float64[]</code></td>
+            </tr>
+
+            <tr>
+              <td>Pre-allocation</td>
+
+              <td><code>sizehint(arr, 10^4)</code></td>
+            </tr>
+
+            <tr>
+              <td>Access and assignment</td>
+
+              <td><code>arr[1] = "Some text"</code></td>
+            </tr>
+
+            <tr>
+              <td>Comparison</td>
+
+              <td>
+                <pre>
+<code>a = [1:10; ]
+b = a      # b points to a
+a[1] = -99
+a == b     # true</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Copy elements (not address)</td>
+
+              <td>
+                <pre>
+<code>b = copy(a)
+b = deepcopy(a)</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Select subarray from <code>m</code> to <code>n</code></td>
+
+              <td><code>arr[n:m]</code></td>
+            </tr>
+
+            <tr>
+              <td><code>n</code>-element array with <code>0.0</code>s</td>
+
+              <td><code>zeros(n)</code></td>
+            </tr>
+
+            <tr>
+              <td><code>n</code>-element array with <code>1.0</code>s</td>
+
+              <td><code>ones(n)</code></td>
+            </tr>
+
+            <tr>
+              <td><code>n</code>-element array with <code>#undef</code>s</td>
+
+              <td><code>cell(n)</code></td>
+            </tr>
+
+            <tr>
+              <td><code>n</code> equally spaced numbers from <code>start</code> to <code>stop</code></td>
+
+              <td><code>linspace(start, stop, n)</code></td>
+            </tr>
+
+            <tr>
+              <td>Array with <code>n</code> random <code>Int8</code> elements</td>
+
+              <td><code>rand(Int8, n)</code></td>
+            </tr>
+
+            <tr>
+              <td>Fill array with <code>val</code></td>
+
+              <td><code>fill!(arr, val)</code></td>
+            </tr>
+
+            <tr>
+              <td>Pop last element</td>
+
+              <td><code>pop!(arr)</code></td>
+            </tr>
+
+            <tr>
+              <td>Pop <em>first</em> element</td>
+
+              <td><code>shift!(a)</code></td>
+            </tr>
+
+            <tr>
+              <td>Push <code>val</code> as last element</td>
+
+              <td><code>push!(arr, val)</code></td>
+            </tr>
+
+            <tr>
+              <td>Push <code>val</code> as <em>first</em> element</td>
+
+              <td><code>unshift!(arr, val)</code></td>
+            </tr>
+
+            <tr>
+              <td>Remove element at index <code>idx</code></td>
+
+              <td><code>splice!(arr, idx)</code></td>
+            </tr>
+
+            <tr>
+              <td>Sort</td>
+
+              <td><code>sort!(arr)</code></td>
+            </tr>
+
+            <tr>
+              <td>Append <code>a</code> with <code>b</code></td>
+
+              <td><code>append!(a,b)</code></td>
+            </tr>
+
+            <tr>
+              <td>Check whether <code>val</code> is element</td>
+
+              <td><code>in(val, arr)</code> or <code>val in arr</code></td>
+            </tr>
+
+            <tr>
+              <td>Scalar product</td>
+
+              <td><code>dot(a, b) == sum(a .* w)</code></td>
+            </tr>
+
+            <tr>
+              <td>Change dimensions (if possible)</td>
+
+              <td>
+                <pre>
+<code>reshape(1:6, 3, 2)' == 
+[1 2 3; 4 5 6]</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>To string (with delimiter <code>del</code> between elements)</td>
+
+              <td><code>join(arr, del)</code></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Dictionaries</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Dictionary</td>
+
+              <td>
+                <pre>
+<code>d = Dict(key1 =&gt; val1, 
+         key2 =&gt; val2, ...)
+d = Dict(:key1 =&gt; val1, 
+         :key2 =&gt; val2, ...)</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>All keys (iterator)</td>
+
+              <td><code>keys(d)</code></td>
+            </tr>
+
+            <tr>
+              <td>All values (iterator)</td>
+
+              <td><code>values(d)</code></td>
+            </tr>
+
+            <tr>
+              <td>Loop through key-value pairs</td>
+
+              <td>
+                <pre>
+<code>for (k,v) in d
+  println("key: $k, value: $v")
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Check for key <code>:k</code></td>
+
+              <td><code>haskey(d, :k)</code></td>
+            </tr>
+
+            <tr>
+              <td>Copy keys (or values) to array</td>
+
+              <td>
+                <pre>
+<code>arr = collect(keys(d)) 
+arr = [k for (k,v) in d]</code>
+</pre>
+              </td>
+            </tr>
+          </table>
+
+          <p>Dictionaries are mutable; when symbols are used as keys, the keys are immutable.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Sets</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Declaration</td>
+
+              <td><code>s = Set([1, 2, 3, "Some text"])</code></td>
+            </tr>
+
+            <tr>
+              <td>Union <code>s1</code> &cup; <code>s2</code></td>
+
+              <td><code>union(s1, s2)</code></td>
+            </tr>
+
+            <tr>
+              <td>Intersection <code>s1</code> &cap; <code>s2</code></td>
+
+              <td><code>intersect(s1, s2)</code></td>
+            </tr>
+
+            <tr>
+              <td>Difference <code>s1</code> \ <code>s2</code></td>
+
+              <td><code>setdiff(s1, s2)</code></td>
+            </tr>
+
+            <tr>
+              <td>Difference <code>s1</code> &#x25B3; <code>s2</code></td>
+
+              <td><code>symdiff(s1, s2)</code></td>
+            </tr>
+
+            <tr>
+              <td>Subset <code>s1</code> &sube; <code>s2</code></td>
+
+              <td><code>issubset(s1, s2)</code></td>
+            </tr>
+          </table>
+
+          <p>Checking whether an element is contained in a set is done in O(1).</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Collection functions</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Apply <code>f</code> to all elements of collection <code>coll</code></td>
+
+              <td>
+                <code>map(f, coll)</code> or
+                <pre>
+<code>map(coll) do elem
+  # do stuff with elem
+  # must contain return
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Filter <code>coll</code> for true values of <code>f</code></td>
+
+              <td><code>filter(f, coll)</code></td>
+            </tr>
+
+            <tr>
+              <td>List comprehension</td>
+
+              <td><code>arr = [f(elem) for elem in coll]</code></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Types</h1>
+          </div>
+
+          <p>Julia has no classes and thus no class-specific methods.</p>
+
+          <p>Types mimic classes in a simple way.</p>
+
+          <p>Abstract types can be subtyped but not instantiated.</p>
+
+          <p>Concrete types cannot be subtyped.</p>
+
+          <p>Immutable types enhance performance and are thread safe, as they can be shared among threads without the need for synchronization.</p>
+
+          <table>
+            <tr>
+              <td>Type annotation</td>
+
+              <td><code>var::TypeName</code></td>
+            </tr>
+
+            <tr>
+              <td>Type declaration</td>
+
+              <td>
+                <pre>
+<code>type Programmer
+  name::AbstractString
+  birth_year::UInt16
+  fave_language::AbstractString
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a class='tooltip' href='#'>Immutable<span>Immutable types are passed around by value (i.e. copying), whereas mutable types are passed by reference.</span></a> type declaration
+              </td>
+
+              <td>replace <code>type</code> with <code>immutable</code></td>
+            </tr>
+
+            <tr>
+              <td>Type alias</td>
+
+              <td><code>typealias Nerd Programmer</code></td>
+            </tr>
+
+            <tr>
+              <td>Type instantiation</td>
+
+              <td>
+                <pre>
+<code>me = Programmer("Ian", 1984, "Julia")
+me = Nerd("Ian", 1984, "Julia")</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Subtype declaration</td>
+
+              <td>
+                <pre>
+<code>abstract Programmer
+type Hacker &lt;: Programmer
+  name::AbstractString
+  birth_year::UInt16
+  fave_language::AbstractString
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Parametric type</td>
+
+              <td>
+                <pre>
+<code>type Point{T &lt;: Real}
+  x::T
+  y::T
+end
+
+p = Point{Float64}(1,2)</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Traverse type hierarchy</td>
+
+              <td><code>super(TypeName)</code> and <code>subtypes(TypeName)</code></td>
+            </tr>
+
+            <tr>
+              <td>Default supertype</td>
+
+              <td><code>Any</code></td>
+            </tr>
+
+            <tr>
+              <td>All fields</td>
+
+              <td><code>names(TypeName)</code></td>
+            </tr>
+
+            <tr>
+              <td>All field types</td>
+
+              <td><code>TypeName.types</code></td>
+            </tr>
+
+            <tr>
+              <td>Nullable type</td>
+
+              <td><code>Nullable{T}</code></td>
+            </tr>
+          </table>
+
+          <p>When a type is defined with an <em>inner</em> constructor, the default <em>outer</em> constructors are not available and have to be defined manually if need be. An inner constructor is
+          best used to check whether the parameters conform to certain (invariance) conditions. Obviously, these invariants can be violated by accessing and modifying the fields directly, unless the
+          type is defined as immutable. The <code>new</code> keyword may be used to create an object of the same type.</p>
+
+          <p>Type parameters are invariant, which means that <code>Point{Float64} &lt;: Point{Real}</code> is false, even though <code>Float64 &lt;: Real</code>. Tuple types, on the other hand, are
+          covariant: <code>Tuple{Float64} &lt;: Tuple{Real}</code>.</p>
+
+          <p>The type-inferred form of Julia's internal representation can be found with <code>code_typed()</code>. This is useful to identify where <code>Any</code> rather than type-specific native
+          code is generated.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Exceptions</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Throw <code>SomeExcep</code></td>
+
+              <td><code>throw(SomeExcep())</code></td>
+            </tr>
+
+            <tr>
+              <td>Rethrow current exception</td>
+
+              <td><code>rethrow()</code></td>
+            </tr>
+
+            <tr>
+              <td>Define <code>NewExcep</code></td>
+
+              <td>
+                <pre>
+<code>type NewExcep &lt;: Exception 
+  v::AbstractString
+end
+
+Base.showerror(io::IO, e::NewExcep) = 
+  print(io, "A problem with $(e.v)!")
+
+throw(NewExcep("x"))</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Throw error with <code>msg</code> text</td>
+
+              <td><code>error(msg)</code></td>
+            </tr>
+
+            <tr>
+              <td>Throw warning with <code>msg</code> text</td>
+
+              <td><code>warn(msg)</code></td>
+            </tr>
+
+            <tr>
+              <td>Throw information with <code>msg</code> text</td>
+
+              <td><code>info(msg)</code></td>
+            </tr>
+
+            <tr>
+              <td>Handler</td>
+
+              <td>
+                <pre>
+<code>try
+  # do something potentially iffy
+catch ex
+  if isa(ex, SomeExcep)
+    # handle SomeExcep
+  elseif isa(ex, AnotherExcep)
+    # handle AnotherExcep
+  else
+    # handle all others
+  finally
+    # do this in any case
+end</code>
+</pre>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Modules</h1>
+          </div>
+
+          <p>Modules are separate global variable workspaces that group together similar functionality.</p>
+
+          <table>
+            <tr>
+              <td>Definition</td>
+
+              <td>
+                <pre>
+<code>module PackageName
+  # add module definitions
+  # use export to make definitions accessible
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Include <code>filename.jl</code></td>
+
+              <td><code>include("filename.jl")</code></td>
+            </tr>
+
+            <tr>
+              <td>Load</td>
+
+              <td>
+                <pre>
+<code>using ModuleName        # all exported names
+using ModuleName: x, y  # only x, y
+using ModuleName.x, 
+      ModuleName.y:     # only x, y
+import ModuleName       # only ModuleName
+import ModuleName: x, y # only x, y
+import ModuleName.x,
+       ModuleName.y     # only x, y</code>
+</pre>
+              </td>
+            </tr>
+          </table>
+
+          <p>The main difference between <code>using</code> and <code>import</code> is that the former automatically resolves names, so you can write <code>x</code> in your code, whereas the latter
+          requires the namespace too: <code>ModuleName.x</code>. Moreover, <code>using</code> only loads exported names by default while <code>import</code> loads all names defined in the module.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Expressions</h1>
+          </div>
+
+          <p>Julia is homoiconic: programs are represented as data structures of the language itself. In fact, everything is an expression <code>Expr</code>.</p>
+
+          <p>Symbols are <a class='tooltip' href='#'>interned strings<span>Only one copy of each distinct (immutable) string value is stored.</span></a> prefixed with a colon. Symbols are more
+          efficient and they are typically used as identifiers, keys (in dictionaries), or columns in data frames. Symbols cannot be concatenated.</p>
+
+          <p>Quoting <code>:( ... )</code> or <code>quote ... end</code> creates an expression, just like <a class='tooltip' href='#'><code>parse(str)</code><span>This form is probably most familiar
+          to people with knowledge of dynamic SQL. The <code>parse</code> function is similar to Oracle's and PostgreSQL's <code>EXECUTE IMMEDIATE</code> statement or SQL Server's
+          <code>sp_executesql()</code> procedure.</span></a>, and <code>Expr(:call, ...)</code>.</p>
+
+          <div class='indented'>
+            <pre>
+<code>x = 1       
+line = "1 + $x"      # some code
+expr = parse(line)   # make an Expr object
+typeof(expr) == Expr # true
+dump(expr)           # generate abstract syntax tree
+eval(expr) == 2      # evaluate Expr object: true</code>
+</pre>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Macros</h1>
+          </div>
+
+          <p>Macros allow generated code (i.e. expressions) to be included in a program.</p>
+
+          <table>
+            <tr>
+              <td>Definition</td>
+
+              <td>
+                <pre>
+<code>macro macroname(expr)
+  # do stuff
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Usage</td>
+
+              <td><code>@macroname(ex1, ex2, ...)</code> or <code>@macroname(ex1, ex2, ...)</code></td>
+            </tr>
+
+            <tr>
+              <td>Built-in macros</td>
+
+              <td>
+                <pre>
+<code>@test           # equal (exact)
+@test_approx_eq # equal (modulo numerical errors)
+@test x &approx; y     # isapprox(x, y)
+@assert         # assert (unit test)
+@which          # types used
+@time           # time and memory statistics
+@elapsed        # time elapsed
+@allocated      # memory allocated
+@profile        # profile
+@spawn          # run at some worker
+@spawnat        # run at specified worker
+@async          # asynchronous task
+@parallel       # parallel for loop
+@everywhere     # make available to workers</code>
+</pre>
+              </td>
+            </tr>
+          </table>
+
+          <p>Rules for creating <em>hygienic</em> macros:</p>
+
+          <ul>
+            <li>Declare variables inside macro with <code>local</code>.</li>
+
+            <li>Do not call <code>eval</code> inside macro.</li>
+
+            <li>Escape interpolated expressions to avoid expansion: <code>$(esc(expr))</code>.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Tasks a.k.a. coroutines</h1>
+          </div>
+
+          <p>Tasks provide a lightweight threading mechanism and they can be suspended and resumed at will. Tasks follow the producer-consumer model, which means that between consumption calls the
+          task is suspended.</p>
+
+          <p>Tasks are <em>not</em> executed in different threads, so they cannot run on different processors.</p>
+
+          <p>Tasks have low overhead because switching between them does not consume stack space unlike normal function calls.</p>
+
+          <table>
+            <tr>
+              <td>Define</td>
+
+              <td><code>t = Task( () -&gt; somefunc(...) )</code> or <code>t = @task somefunc(...)</code></td>
+            </tr>
+
+            <tr>
+              <td>Produce</td>
+
+              <td>
+                <pre>
+<code>function somefunc(...)
+  # do stuff
+  produce(...)
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Consume</td>
+
+              <td><code>consume(t)</code></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Parallel Computing</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Launch REPL with <code>N</code> workers</td>
+
+              <td><code>julia -p N</code></td>
+            </tr>
+
+            <tr>
+              <td>Number of available workers</td>
+
+              <td><code>nprocs()</code></td>
+            </tr>
+
+            <tr>
+              <td>Add <code>N</code> workers</td>
+
+              <td><code>addprocs(N)</code></td>
+            </tr>
+
+            <tr>
+              <td>See all worker ids</td>
+
+              <td>
+                <pre>
+<code>for pid in workers()
+  println(pid)
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Remove worker</td>
+
+              <td><code>rmprocs(pid)</code></td>
+            </tr>
+
+            <tr>
+              <td>Run <code>f</code> with arguments <code>args</code> on <code>pid</code></td>
+
+              <td>
+                <pre>
+<code>r = remotecall(pid, f, args)
+# or:
+r = @spawnat pid f(args)
+...
+fetch(r)</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Run <code>f</code> with arguments <code>args</code> on <code>pid</code> (more efficient)</td>
+
+              <td>
+                <pre>
+<code>remotecall_fetch(pid, f, args)</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Run <code>f</code> with arguments <code>args</code> on any worker</td>
+
+              <td><code>r = @spawn f(args) ... fetch(r)</code></td>
+            </tr>
+
+            <tr>
+              <td>Run <code>f</code> with arguments <code>args</code> on all workers</td>
+
+              <td><code>r = [@spawnat w f(args) for w in workers()] ... fetch(r)</code></td>
+            </tr>
+
+            <tr>
+              <td>Make <code>expr</code> available to all workers</td>
+
+              <td><code>@everywhere expr</code></td>
+            </tr>
+
+            <tr>
+              <td>
+                Parallel <code>for</code> loop with <a class='tooltip' href='#'>reducer<span>A reducer combines the results from different (independent) workers.</span></a> function <code>red</code>
+              </td>
+
+              <td>
+                <pre>
+<code>sum = @parallel (red) for i in 1:10^6
+  # do parallel stuff 
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Apply <code>f</code> to all elements in collection <code>coll</code></td>
+
+              <td><code>pmap(f, coll)</code></td>
+            </tr>
+          </table>
+
+          <p>Workers are also known as concurrent/parallel processes.</p>
+
+          <p>Modules with parallel processing capabilities are best split into a functions file that contains all the functions and variables needed by all workers, and a driver file that handles the
+          processing of data. The driver file obviously has to import the functions file.</p>
+
+          <p>A non-trivial (word count) example of a reducer function is provided by <a href='http://blog.ajdecon.org/parallel-word-count-with-julia-an-interesting' target='_blank'>Adam
+          DeConinck</a>.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>I/O</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Read stream</td>
+
+              <td>
+                <pre>
+<code>stream = STDIN
+for line in eachline(stream)
+  # do stuff
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Read file</td>
+
+              <td>
+                <pre>
+<code>open(filename) do file
+  for line in eachline(file)
+    # do stuff
+  end
+end</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Read CSV file</td>
+
+              <td><code>readdlm(filename, ',' header=true)</code> or <code>readcsv(filename)</code></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Data frames</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Read (gzipped) CSV</td>
+
+              <td><code>df = readtable(filename)</code></td>
+            </tr>
+
+            <tr>
+              <td>
+                <a class='tooltip' href='#'>Describe<span>Similar to <code>summary(df)</code> in R.</span></a> data frame
+              </td>
+
+              <td><code>describe(df)</code></td>
+            </tr>
+
+            <tr>
+              <td>Write CSV</td>
+
+              <td><code>writetable("filename.csv", df)</code></td>
+            </tr>
+
+            <tr>
+              <td>Make vector of column <code>col</code></td>
+
+              <td><code>v = df[:col]</code></td>
+            </tr>
+
+            <tr>
+              <td>Sort by <code>col</code></td>
+
+              <td><code>sort!(df, cols = [:col])</code></td>
+            </tr>
+
+            <tr>
+              <td>
+                <a class='tooltip' href='#'>Pool<span>Similar to <code>df$col = as.factor(df$col)</code> in R.</span></a> <code>col</code>
+              </td>
+
+              <td><code>pool!(df, [:col])</code></td>
+            </tr>
+
+            <tr>
+              <td>List <code>col</code> levels</td>
+
+              <td><code>levels(df[:col])</code></td>
+            </tr>
+
+            <tr>
+              <td>All observations with <code>col==val</code></td>
+
+              <td>
+                <pre>
+<code>df[df[:col] .== val, :]
+subset(df, :(col .== val))</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Reshape from wide to long format</td>
+
+              <td>
+                <pre>
+<code>stack(df, [1:n; ])
+stack(df, [:col1, :col2, ...]
+melt(df, [:col1, :col2]) [</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Reshape from long to wide format</td>
+
+              <td>
+                <pre>
+<code>unstack(df, :id, :val)</code>
+</pre>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Introspection and reflection</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Type</td>
+
+              <td><code>typeof(name)</code></td>
+            </tr>
+
+            <tr>
+              <td>Type check</td>
+
+              <td><code>isa(name, TypeName)</code></td>
+            </tr>
+
+            <tr>
+              <td>List subtypes</td>
+
+              <td><code>subtypes(name)</code></td>
+            </tr>
+
+            <tr>
+              <td>List supertype</td>
+
+              <td><code>super(TypeName)</code></td>
+            </tr>
+
+            <tr>
+              <td>Function methods</td>
+
+              <td><code>methods(func)</code></td>
+            </tr>
+
+            <tr>
+              <td>JIT bytecode</td>
+
+              <td><code>code_llvm(expr)</code></td>
+            </tr>
+
+            <tr>
+              <td>Assembly code</td>
+
+              <td><code>code_native(expr)</code></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Noteworthy packages and projects</h1>
+          </div>
+
+          <table>
+            <tr>
+              <td>Dates and times</td>
+
+              <td><code>Dates</code></td>
+            </tr>
+
+            <tr>
+              <td>ODBC drivers</td>
+
+              <td><code>ODBC</code></td>
+            </tr>
+
+            <tr>
+              <td>JSON parser</td>
+
+              <td><code>JSON</code></td>
+            </tr>
+
+            <tr>
+              <td>Test framework</td>
+
+              <td><code>Test</code></td>
+            </tr>
+
+            <tr>
+              <td>Static code checking</td>
+
+              <td><code>Lint</code></td>
+            </tr>
+
+            <tr>
+              <td>Statically sized arrays</td>
+
+              <td><code>ImmutableArrays</code></td>
+            </tr>
+
+            <tr>
+              <td>Distributed arrays</td>
+
+              <td><code>DistributedArrays</code></td>
+            </tr>
+
+            <tr>
+              <td>Arrays with <code>NA</code></td>
+
+              <td><code>DataArrays</code></td>
+            </tr>
+
+            <tr>
+              <td>Data frames</td>
+
+              <td><code>DataFrames</code></td>
+            </tr>
+
+            <tr>
+              <td>Statistical distributions</td>
+
+              <td><code>Distributions</code></td>
+            </tr>
+
+            <tr>
+              <td>Bootstrapping</td>
+
+              <td><code>Bootstrap</code></td>
+            </tr>
+
+            <tr>
+              <td>Evolutionary algorithms</td>
+
+              <td><code>Evolutionary</code></td>
+            </tr>
+
+            <tr>
+              <td>Data visualization à la <code>ggplot2</code></td>
+
+              <td><code>Gadfly</code></td>
+            </tr>
+
+            <tr>
+              <td>Analytics</td>
+
+              <td>
+                <pre>
+<code>
+Regression   # linear/logistic regression
+GLM          # gen. linear models
+Lasso        # lasso and elastic nets
+DecisionTree # trees and random forests
+Clustering   # clustering
+TextAnalysis # text mining
+Mocha        # deep learning</code>
+</pre>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Statistics</td>
+
+              <td>
+                <a href='http://juliastats.github.io' target='_blank'>JuliaStats</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Automatic differentiation</td>
+
+              <td>
+                <a href='http://www.juliadiff.org' target='_blank'>JuliaDiff</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Numerical optimization</td>
+
+              <td>
+                <a href='http://www.juliaopt.org' target='_blank'>JuliaOpt</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Web</td>
+
+              <td>
+                <a href='http://github.com/JuliaWeb' target='_blank'>JuliaWeb</a>
+              </td>
+            </tr>
+          </table>
+
+          <p>A nice example of analytics with Julia is the <a href='http://ajkl.github.io/2015/08/10/Titanic-with-Julia' target='_blank'>Kaggle's Titanic competition</a>.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Conventions</h1>
+          </div>
+
+          <p>The main convention in Julia is to avoid underscores unless they are required for legibility.</p>
+
+          <p>Variable names are in lower (or snake) case: <code>somevariable</code>.</p>
+
+          <p>Constants are in upper case: <code>SOMECONSTANT</code>.</p>
+
+          <p>Functions are in lower (or snake) case: <code>somefunction</code>.</p>
+
+          <p>Macros are in lower (or snake) case: <code>@somemacro</code>.</p>
+
+          <p>Type names are in initial-capital camel case: <code>SomeType</code>.</p>
+
+          <p>Julia files have the <code>jl</code> extension.</p>
+
+          <p>John Myles White has provided a comprehensive <a href='http://github.com/johnmyleswhite/Style.jl' target='_blank'>style guide</a> with more details and suggestions.</p>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Performance tips</h1>
+          </div>
+
+          <ul>
+            <li>Never use (non-constant) global variables.</li>
+
+            <li>Write <a href='http://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia' target='_blank'>type-stable</a> code.
+            </li>
+
+            <li>In fact, use immutable types where possible.</li>
+
+            <li>Use <code>sizehint</code> for large arrays.</li>
+
+            <li>Free up memory for large arrays with <code>arr = nothing</code>.</li>
+
+            <li>Access arrays along columns, because multi-dimensional arrays are stored in column-major order.</li>
+
+            <li>Pre-allocate resultant data structures.</li>
+
+            <li>Disable the garbage collector in real-time applications: <code>disable_gc()</code>.</li>
+
+            <li>Use named instead of anonymous functions.</li>
+
+            <li>Use type annotation rather than tests for function arguments.</li>
+
+            <li>Avoid the splat (<code>...</code>) operator for keyword arguments.</li>
+
+            <li>Use mutating APIs (i.e. functions with <code>!</code> to avoid copying data structures.</li>
+
+            <li>Use array (element-wise) operations instead of list comprehensions.</li>
+
+            <li>Avoid <code>try</code>-<code>catch</code> in (computation-intensive) loops.</li>
+
+            <li>Avoid <code>Any</code> in collections.</li>
+
+            <li>Avoid abstract types in collections.</li>
+
+            <li>Avoid string interpolation in I/O.</li>
+
+            <li>
+              <a href='http://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code' target='_blank'>Devectorize</a> code with <code>for</code> loops
+              unlike R, MATLAB or Python.
+            </li>
+
+            <li>Split functions into <a href='http://doodlingindata.com/2015/08/11/writing-good-julia-functions' target='_blank'>smaller</a> components to aid the compiler.
+            </li>
+
+            <li>Avoid <code>eval</code> at run-time.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class='box'>
+          <div class='title'>
+            <h1>Resources</h1>
+          </div>
+
+          <ul>
+            <li>
+              <a href='http://docs.julialang.org/en/latest' target='_blank'>Official documentation</a>.
+            </li>
+
+            <li>
+              <a href='http://julialang.org/learning' target='_blank'>Learning Julia</a> page.
+            </li>
+
+            <li>
+              <a href='http://julialang.org/community/standards' target='_blank'>Community standards</a>.
+            </li>
+
+            <li>
+              <a href='http://dataframesjl.readthedocs.org/en/latest' target='_blank'>Official <code>DataFrames</code> documentation</a>.
+            </li>
+
+            <li>
+              <a href='http://www.packtpub.com/application-development/getting-started-julia-programming' target='_blank'>Getting Started with Julia</a>.
+            </li>
+
+            <li>
+              <a href='http://www.manning.com/voncsefalvay' target='_blank'>Learn Julia</a>.
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2015 <a href='http://databaseline.wordpress.com'>Ian Hellström</a>.
+    <div id='thanks'>
+      Alex Ames, Szilard Bokros, Chris von Csefalvay, Páll Haraldsson, Katie Hyatt, Steven G. Johnson, Jeffrey Sarnoff, Craig Schmidt.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,284 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+/*******************************************************************
+ * CSS reset adapted from http://meyerweb.com/eric/tools/css/reset *
+ *******************************************************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/******************
+ * Custom styling *
+ ******************/
+body {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  color: #2a2a2a;
+  margin: 1em;
+}
+h1 {
+  display: table-cell;
+  font-size: 200%;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: right;
+}
+h2 {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 120%;
+  text-align: right;
+}
+footer {
+  font-size: 80%;
+}
+#thanks:before {
+  content: "Thanks (alphabetically): ";
+}
+#top {
+  display: inline-flex;
+}
+#title {
+  margin: auto;
+}
+#version {
+  vertical-align: bottom;
+  margin-left: 0.25em;
+  margin-top: auto;
+  margin-bottom: 1em;
+}
+#contents {
+  -webkit-columns: 6 34em;
+  -moz-columns: 6 34em;
+  columns: 6 34em;
+  -webkit-column-gap: 0.25em;
+  -moz-column-gap: 0.25em;
+  column-gap: 0.25em;
+}
+/*
+ * Note: a coloured box title for a rounded box would require a hidden overflow to 
+ * avoid colour spilling over the border. This, however, clashes with tooltips in 
+ * all but the very first column due to the absolute positioning.
+ */
+.box {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #b03e37;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  text-align: left;
+  background-color: #f6f6f6;
+  margin: 0.5em;
+  padding-bottom: 0.5em;
+  width: 34em;
+}
+#contents > ol,
+ul {
+  list-style: none;
+}
+.box .title {
+  background: linear-gradient(180deg, #bf655f, #f6f6f6);
+}
+.box h1 {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 140%;
+  font-weight: bold;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.box p {
+  padding: 0.25em 0.5em 0.25em 0.5em;
+}
+.box em {
+  font-style: italic;
+}
+le .box table {
+  border-spacing: 0.1em;
+  border-collapse: collapse;
+  width: 33em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.box table td {
+  padding: 0.1em 0.5em 0.1em 0.5em;
+  vertical-align: middle;
+}
+.box table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.box ul li {
+  list-style-type: square;
+  margin-left: 2em;
+}
+.centred {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.indented {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 32em;
+}
+pre {
+  font-family: 'Ubuntu Mono', monospace;
+  color: #80ab5d;
+}
+code {
+  display: inline-block;
+  font-family: 'Ubuntu Mono', monospace;
+  color: #80ab5d;
+}
+a {
+  color: #7182dc;
+}
+a:hover {
+  color: #2e44b9;
+  text-decoration: underline;
+}
+/********************************************************************
+ * Tooltip adapted from http://www.menucool.com/tooltip/css-tooltip *
+ ********************************************************************/
+a.tooltip {
+  outline: none;
+  color: #9e7abe;
+}
+a.tooltip:hover {
+  color: #6b458d;
+  text-decoration: none;
+  cursor: help;
+}
+a.tooltip span {
+  display: none;
+  max-width: 33.5em;
+  padding: 0.25em;
+  text-align: center;
+  color: #2a2a2a;
+}
+a.tooltip:hover span {
+  display: block;
+  position: absolute;
+  border: 1px solid #5d5d5d;
+  background: rgba(195, 195, 195, 0.9);
+}
+a.tooltip span {
+  border-radius: 0.25em;
+  box-shadow: 0.1em 0.1em 0.1em #909090;
+}
