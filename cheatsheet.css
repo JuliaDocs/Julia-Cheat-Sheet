@@ -195,14 +195,16 @@ ul {
   list-style: none;
 }
 .box .title {
-  background: linear-gradient(180deg, #bf655f, #f6f6f6);
+  /*background: linear-gradient(180deg, #bf655f, #f6f6f6);*/
+  background: linear-gradient(180deg, darkmagenta,mediumblue);
 }
 .box h1 {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-size: 140%;
+  font-family: 'Consolas', sans-serif;
+  font-size: 120%;
   font-weight: bold;
   padding-left: 0.25em;
   padding-right: 0.25em;
+  color:white;
 }
 .box p {
   padding: 0.25em 0.5em 0.25em 0.5em;
