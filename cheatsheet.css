@@ -306,9 +306,19 @@ a.tooltip span {
 
 @media(min-width:576px){}
 @media(min-width:768px){}
-@media(min-width:992px){}
+@media(min-width:992px){
+  .box {
+    width: 35em;
+  }
+}
 @media(min-width:1500px){
   .box {
-    width: 36em;
+    width: 43em;
+  }
+}
+
+@media(min-width:1600px){
+  .box {
+    width: 30em;
   }
 }
