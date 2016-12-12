@@ -9,3 +9,6 @@ Just clone this repo and send your pull requests.
 
 [Go to GitHub Page](https://brakmic.github.io/Julia-Cheat-Sheet/)
 
+### License
+
+[MIT](https://github.com/brakmic/Julia-Cheat-Sheet/blob/master/LICENSE)

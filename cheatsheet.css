@@ -150,6 +150,7 @@ footer {
 }
 #thanks:before {
   content: "Thanks (alphabetically): ";
+  font-size: larger;
 }
 #top {
   display: inline-flex;
@@ -186,7 +187,7 @@ footer {
   background-color: #f6f6f6;
   margin: 0.5em;
   padding-bottom: 0.5em;
-  width: 34em;
+  width: 44em;
 }
 #contents > ol,
 ul {
@@ -244,7 +245,7 @@ pre {
 code {
   display: inline-block;
   font-family: 'Ubuntu Mono', monospace;
-  color: #80ab5d;
+  color: darkgreen;
 }
 a {
   color: #7182dc;
@@ -281,4 +282,13 @@ a.tooltip:hover span {
 a.tooltip span {
   border-radius: 0.25em;
   box-shadow: 0.1em 0.1em 0.1em #909090;
+}
+
+.footer-text {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.individual-styling > .bold {
+  color: blue;
 }
