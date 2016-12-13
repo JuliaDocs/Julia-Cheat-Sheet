@@ -1489,13 +1489,14 @@ import ModuleName.x,
               <td>
                 <pre>
 <code>
-  names(ModuleName) # Get an array of names exported by Module
-  names(ModuleName, all::Bool) # include non-exports, 
-                               # deprecateds and compiler-generated 
-                               # names
-  names(ModuleName, all::Bool, imported::Bool) # also show names 
-                                               # explicitely imported
-                                               # from other modules
+# Get an array of names exported by Module
+names(ModuleName) 
+
+# include non-exports, deprecateds and compiler-generated names 
+names(ModuleName, all::Bool)
+
+#also show names explicitely imported from other modules
+names(ModuleName, all::Bool, imported::Bool) 
 </code>
 </pre>
               </td>
