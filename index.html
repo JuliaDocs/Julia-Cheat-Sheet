@@ -306,6 +306,7 @@ end</code>
           </div>
 
           <p>Packages must be <a href="http://pkg.julialang.org" target="_blank">registered</a> before they are visible to the package manager.</p>
+          <br/>
           <table>
             <tr>
               <td>List installed packages (human-readable)</td>
@@ -336,9 +337,13 @@ end</code>
 
               <td><code>Pkg.add("PackageName")</code></td>
             </tr>
-
             <tr>
-              <tdRebuild <code>PackageName</code></td>
+              <td>Checkout <code>Package source from Git</code></td>
+
+              <td><code>Pkg.checkout("Git URL")</code></td>
+            </tr>
+            <tr>
+              <td>Rebuild <code>PackageName</code></td>
 
               <td><code>Pkg.build("PackageName")</code></td>
             </tr>
