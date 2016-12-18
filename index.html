@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
 
   <title>The Fast Track to Julia</title>
-  <link href='cheatsheet.css' rel='stylesheet' type='text/css'>
+  <link href="cheatsheet.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <div id='top'>
-    <div id='title'>
+  <div id="top">
+    <div id="title">
       <h1>The Fast Track to</h1>
       <h2>A quick and dirty overview of</h2>
     </div>
 
-    <img src='julia.png' alt='Julia' height='100'/>
+    <img src="julia.png" alt="Julia" height="100"/>
 
-    <div id='version'>    
+    <div id="version">    
       <h1>0.5</h1>
     </div>
   </div>
-  <div class="github-info">This page's source is <a href="https://github.com/brakmic/Julia-Cheat-Sheet">located here</a>. Pull requests are welcome!</div>
-  <div id='contents'>
+  <div class="github-info">This page"s source is <a href="https://github.com/brakmic/Julia-Cheat-Sheet">located here</a>. Pull requests are welcome!</div>
+  <div id="contents">
     <ul>
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>What is&hellip;?</h1>
           </div>
 
-          <p><a href='http://julialang.org' target='_blank'>Julia</a> is an open-source, multi-platform, high-level, high-performance programming language for technical computing.</p>
+          <p><a href="http://julialang.org" target="_blank">Julia</a> is an open-source, multi-platform, high-level, high-performance programming language for technical computing.</p>
 
-          <p>Julia has an <a class='tooltip' href='#'>LLVM<span>Low-Level Virtual Machine (LLVM) is a compiler infrastructure to build intermediate and/or binary machine code.</span></a>-based
-          <a class='tooltip' href='#'>JIT<span>Just-In-Time compilation occurs at run-time rather than prior to execution, which means it offers both the speed of compiled code and the flexibility of
+          <p>Julia has an <a class="tooltip" href="#">LLVM<span>Low-Level Virtual Machine (LLVM) is a compiler infrastructure to build intermediate and/or binary machine code.</span></a>-based
+          <a class="tooltip" href="#">JIT<span>Just-In-Time compilation occurs at run-time rather than prior to execution, which means it offers both the speed of compiled code and the flexibility of
           interpretation. The compiler parses the code and infers types, after which the LLVM code is generated, which in turn is compiled into native code.</span></a> compiler that allows it to
           match the performance of languages such as C and FORTRAN without the hassle of low-level code. Because the code is compiled on the fly you can run (bits of) code in a shell or <a class=
-          'tooltip' href='#'>REPL<span>Read-Eval-Print-Loop</span></a>, which is part of the recommended <a href='http://julia.readthedocs.org/en/latest/manual/workflow-tips' target=
-          '_blank'>workflow</a>.</p>
+          "tooltip" href="#">REPL<span>Read-Eval-Print-Loop</span></a>, which is part of the recommended <a href="http://julia.readthedocs.org/en/latest/manual/workflow-tips" target=
+          "_blank">workflow</a>.</p>
 
-          <p>Julia is dynamically typed, provides <a class='tooltip' href='#'>multiple dispatch<span>Because function argument types are determined at run-time, the compiler can choose the
+          <p>Julia is dynamically typed, provides <a class="tooltip" href="#">multiple dispatch<span>Because function argument types are determined at run-time, the compiler can choose the
           implementation that is optimized for the provided arguments and the processor architecture.</span></a>, and is designed for parallelism and distributed computation.</p>
 
           <p>Julia has a built-in package manager.</p>
@@ -53,8 +53,8 @@
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Basics</h1>
           </div>
 
@@ -123,8 +123,8 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Operators</h1>
           </div>
 
@@ -173,7 +173,7 @@ end</code>
 
             <tr>
               <td>
-                Equality (<a class='tooltip' href='#'>composite types<span>The default comparison operator compares only memory addresses for composite types.</span></a>)
+                Equality (<a class="tooltip" href="#">composite types<span>The default comparison operator compares only memory addresses for composite types.</span></a>)
               </td>
 
               <td><code>is(a, b) # done on bit level</code></td>
@@ -236,8 +236,8 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>The shell a.k.a. REPL</h1>
           </div>
 
@@ -300,13 +300,12 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Package management</h1>
           </div>
 
-          <p>Packages must be <a href='http://pkg.julialang.org' target='_blank'>registered</a> before they are visible to the package manager.</p>
-
+          <p>Packages must be <a href="http://pkg.julialang.org" target="_blank">registered</a> before they are visible to the package manager.</p>
           <table>
             <tr>
               <td>List installed packages (human-readable)</td>
@@ -361,8 +360,8 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Characters and strings</h1>
           </div>
 
@@ -370,7 +369,7 @@ end</code>
             <tr>
               <td>Character</td>
 
-              <td><code>chr = 'C'</code></td>
+              <td><code>chr = "C"</code></td>
             </tr>
 
             <tr>
@@ -382,22 +381,22 @@ end</code>
             <tr>
               <td>Character code</td>
 
-              <td><code>Int('J') == 74</code></td>
+              <td><code>Int("J") == 74</code></td>
             </tr>
 
             <tr>
               <td>Character from code</td>
 
-              <td><code>Char(74) == 'J'</code></td>
+              <td><code>Char(74) == "J"</code></td>
             </tr>
 
             <tr>
-              <td>Any <a href='http://docs.julialang.org/en/latest/manual/unicode-input' target='_blank'>UTF</a> character</td>
+              <td>Any <a href="http://docs.julialang.org/en/latest/manual/unicode-input" target="_blank">UTF</a> character</td>
 
               <td>
                 <pre>
-<code>chr = '\uXXXX'     # 4-digit HEX
-chr = '\uXXXXXXXX' # 8-digit HEX</code>
+<code>chr = "\uXXXX"     # 4-digit HEX
+chr = "\uXXXXXXXX" # 8-digit HEX</code>
 </pre>
               </td>
             </tr>
@@ -434,7 +433,7 @@ println("a * b = $(a*b)")</code>
             <tr>
               <td>First matching character or regular expression</td>
 
-              <td><code>search("Julia", 'i') == 4</code></td>
+              <td><code>search("Julia", "i") == 4</code></td>
             </tr>
 
             <tr>
@@ -481,7 +480,7 @@ m.captures == ["1", "234"]</code>
             </tr>
 
             <tr>
-              <td>All occurrences (as <a href='http://slendermeans.org/julia-iterators.html' target='_blank'>iterator</a>)</td>
+              <td>All occurrences (as <a href="http://slendermeans.org/julia-iterators.html" target="_blank">iterator</a>)</td>
 
               <td><code>eachmatch(pat, str)</code></td>
             </tr>
@@ -489,7 +488,7 @@ m.captures == ["1", "234"]</code>
 
           <p>Beware of multi-byte Unicode encodings in UTF-8:</p>
 
-          <div class='centred'>
+          <div class="centred">
             <pre>
 <code>10 == endof("Ångström") != length("Ångström") == 8</code>
 </pre>
@@ -500,8 +499,8 @@ m.captures == ["1", "234"]</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Numbers</h1>
           </div>
 
@@ -588,8 +587,8 @@ typename(val)          # calls convert</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Mathematics</h1>
           </div>
 
@@ -649,7 +648,7 @@ catalan # 0.9159...
             <tr>
               <td>Conjugate matrix transposition</td>
 
-              <td><code>M'</code> or <code>ctranspose(M)</code></td>
+              <td><code>M"</code> or <code>ctranspose(M)</code></td>
             </tr>
 
             <tr>
@@ -692,7 +691,7 @@ catalan # 0.9159...
               <td>Solve <code>M*x == v</code></td>
 
               <td>
-                <code>M\v</code> is <a class='tooltip' href='#'>better<span>Numerically more stable and typically also faster.</span></a> than <code>inv(M)*v</code>
+                <code>M\v</code> is <a class="tooltip" href="#">better<span>Numerically more stable and typically also faster.</span></a> than <code>inv(M)*v</code>
               </td>
             </tr>
 
@@ -703,15 +702,15 @@ catalan # 0.9159...
             </tr>
           </table>
 
-          <p>Julia provides <a href='http://docs.julialang.org/en/latest/stdlib/math' target='_blank'>many</a> mathematical (special) and statistical functions.</p>
+          <p>Julia provides <a href="http://docs.julialang.org/en/latest/stdlib/math" target="_blank">many</a> mathematical (special) and statistical functions.</p>
 
-          <p>Julia has built-in support for <a href='http://docs.julialang.org/en/latest/manual/linear-algebra' target='_blank'>matrix decompositions</a>.</p>
+          <p>Julia has built-in support for <a href="http://docs.julialang.org/en/latest/manual/linear-algebra" target="_blank">matrix decompositions</a>.</p>
         </div>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Control flow and loops</h1>
           </div>
 
@@ -786,8 +785,8 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Functions</h1>
           </div>
 
@@ -799,9 +798,9 @@ end</code>
 
           <p>Optional arguments need a default value in the signature, defined with <code>=</code>.</p>
 
-         <p>Keyword arguments use the named notation and are listed in the function's signature after the semicolon:</p>
+         <p>Keyword arguments use the named notation and are listed in the function"s signature after the semicolon:</p>
 
-          <div class='indented'>
+          <div class="indented">
             <pre>
 
 <code>function func(req1, req2; key1=dflt1, key2=dflt2)
@@ -819,7 +818,7 @@ end</code>
 
           <p>Command line arguments <code>julia script.jl arg1 arg2...</code>can be processed from global constant <code>ARGS</code>:</p>
 
-          <div class='indented'>
+          <div class="indented">
             <pre>
 
 <code>for arg in ARGS
@@ -833,7 +832,7 @@ end</code>
 
           <p>Functions can accept a variable number of arguments:</p>
 
-          <div class='indented'>
+          <div class="indented">
             <pre>
 
 <code>function func(a...)
@@ -848,7 +847,7 @@ func(1, 2, [3:5]) # tuple: (1,2,[3,4,5])
 
           <p>Functions can be nested:</p>
 
-          <div class='indented'>
+          <div class="indented">
 <pre>
 
 <code>function outerfunction()
@@ -897,7 +896,7 @@ julia> mean(B,1)
 </pre>
           </div>
 
-          <p>Julia generates <a class='tooltip' href='#'>specialized versions<span>Multiple dispatch a type of polymorphism that dynamically determines which version of a function to call. In this
+          <p>Julia generates <a class="tooltip" href="#">specialized versions<span>Multiple dispatch a type of polymorphism that dynamically determines which version of a function to call. In this
           context, dynamic means that it is resolved at run-time, whereas method overloading is resolved at compile time. Julia manages multiple dispatch completely in the background. Of course, you
           can provide custom function overloadings with type annotations.</span></a> of functions based on data types. When a function is called with the same argument types again, Julia can look up
           the native machine code and skip the compilation process.</p>
@@ -905,16 +904,16 @@ julia> mean(B,1)
             Since <span class="bold">Julia 0.5</span> the existence of potential ambiguities is still acceptable, but actually calling an ambiguous method is an <span class="bold">immediate error</span>.
           </p>
 
-          <p>Stack overflow is possible when recursive functions nest many levels deep. <a href='http://blog.zachallaun.com/post/jumping-julia' target='_blank'>Trampolining</a> can be used to do 
-          tail-call optimization, as Julia does not do that automatically <a href='https://github.com/JuliaLang/julia/issues/4964' target='_blank'>yet</a>. Alternatively, you can rewrite the 
+          <p>Stack overflow is possible when recursive functions nest many levels deep. <a href="http://blog.zachallaun.com/post/jumping-julia" target="_blank">Trampolining</a> can be used to do 
+          tail-call optimization, as Julia does not do that automatically <a href="https://github.com/JuliaLang/julia/issues/4964" target="_blank">yet</a>. Alternatively, you can rewrite the 
           tail recursion as an iteration.</p>
         </div>
         
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Arrays</h1>
           </div>
 
@@ -1062,7 +1061,7 @@ b = deepcopy(a)</code>
 
               <td>
                 <pre>
-<code>reshape(1:6, 3, 2)' == 
+<code>reshape(1:6, 3, 2)" == 
 [1 2 3; 4 5 6]</code>
 </pre>
               </td>
@@ -1078,8 +1077,8 @@ b = deepcopy(a)</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Dictionaries</h1>
           </div>
 
@@ -1144,8 +1143,8 @@ arr = [k for (k,v) in d]</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Sets</h1>
           </div>
 
@@ -1191,8 +1190,8 @@ arr = [k for (k,v) in d]</code>
         </div>
       </li>
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Collection functions</h1>
           </div>
 
@@ -1227,8 +1226,8 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Types</h1>
           </div>
 
@@ -1264,7 +1263,7 @@ end</code>
             </tr>
             <tr>
               <td>
-                <a class='tooltip' href='#'>Immutable<span>Immutable types are passed around by value (i.e. copying), whereas mutable types are passed by reference.</span></a> type declaration
+                <a class="tooltip" href="#">Immutable<span>Immutable types are passed around by value (i.e. copying), whereas mutable types are passed by reference.</span></a> type declaration
               </td>
 
               <td>replace <code>type</code> with <code>immutable</code></td>
@@ -1358,14 +1357,14 @@ p = Point{Float64}(1,2)</code>
           <p>Type parameters are invariant, which means that <code>Point{Float64} &lt;: Point{Real}</code> is false, even though <code>Float64 &lt;: Real</code>. Tuple types, on the other hand, are
           covariant: <code>Tuple{Float64} &lt;: Tuple{Real}</code>.</p>
 
-          <p>The type-inferred form of Julia's internal representation can be found with <code>code_typed()</code>. This is useful to identify where <code>Any</code> rather than type-specific native
+          <p>The type-inferred form of Julia"s internal representation can be found with <code>code_typed()</code>. This is useful to identify where <code>Any</code> rather than type-specific native
           code is generated.</p>
         </div>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Exceptions</h1>
           </div>
 
@@ -1442,8 +1441,8 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Modules</h1>
           </div>
 
@@ -1513,21 +1512,21 @@ names(ModuleName, all::Bool, imported::Bool)
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Expressions</h1>
           </div>
 
           <p>Julia is homoiconic: programs are represented as data structures of the language itself. In fact, everything is an expression <code>Expr</code>.</p>
 
-          <p>Symbols are <a class='tooltip' href='#'>interned strings<span>Only one copy of each distinct (immutable) string value is stored.</span></a> prefixed with a colon. Symbols are more
+          <p>Symbols are <a class="tooltip" href="#">interned strings<span>Only one copy of each distinct (immutable) string value is stored.</span></a> prefixed with a colon. Symbols are more
           efficient and they are typically used as identifiers, keys (in dictionaries), or columns in data frames. Symbols cannot be concatenated.</p>
 
-          <p>Quoting <code>:( ... )</code> or <code>quote ... end</code> creates an expression, just like <a class='tooltip' href='#'><code>parse(str)</code><span>This form is probably most familiar
-          to people with knowledge of dynamic SQL. The <code>parse</code> function is similar to Oracle's and PostgreSQL's <code>EXECUTE IMMEDIATE</code> statement or SQL Server's
+          <p>Quoting <code>:( ... )</code> or <code>quote ... end</code> creates an expression, just like <a class="tooltip" href="#"><code>parse(str)</code><span>This form is probably most familiar
+          to people with knowledge of dynamic SQL. The <code>parse</code> function is similar to Oracle"s and PostgreSQL"s <code>EXECUTE IMMEDIATE</code> statement or SQL Server"s
           <code>sp_executesql()</code> procedure.</span></a>, and <code>Expr(:call, ...)</code>.</p>
 
-          <div class='indented'>
+          <div class="indented">
             <pre>
 <code>x = 1       
 line = "1 + $x"      # some code
@@ -1541,8 +1540,8 @@ eval(expr) == 2      # evaluate Expr object: true</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Macros</h1>
           </div>
 
@@ -1604,8 +1603,8 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Tasks a.k.a. coroutines</h1>
           </div>
 
@@ -1646,8 +1645,8 @@ end</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Parallel Computing</h1>
           </div>
 
@@ -1732,7 +1731,7 @@ fetch(r)</code>
 
             <tr>
               <td>
-                Parallel <code>for</code> loop with <a class='tooltip' href='#'>reducer<span>A reducer combines the results from different (independent) workers.</span></a> function <code>red</code>
+                Parallel <code>for</code> loop with <a class="tooltip" href="#">reducer<span>A reducer combines the results from different (independent) workers.</span></a> function <code>red</code>
               </td>
 
               <td>
@@ -1756,14 +1755,14 @@ end</code>
           <p>Modules with parallel processing capabilities are best split into a functions file that contains all the functions and variables needed by all workers, and a driver file that handles the
           processing of data. The driver file obviously has to import the functions file.</p>
 
-          <p>A non-trivial (word count) example of a reducer function is provided by <a href='http://blog.ajdecon.org/parallel-word-count-with-julia-an-interesting' target='_blank'>Adam
+          <p>A non-trivial (word count) example of a reducer function is provided by <a href="http://blog.ajdecon.org/parallel-word-count-with-julia-an-interesting" target="_blank">Adam
           DeConinck</a>.</p>
         </div>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>I/O</h1>
           </div>
 
@@ -1798,15 +1797,15 @@ end</code>
             <tr>
               <td>Read CSV file</td>
 
-              <td><code>readdlm(filename, ',' header=true)</code> or <code>readcsv(filename)</code></td>
+              <td><code>readdlm(filename, "," header=true)</code> or <code>readcsv(filename)</code></td>
             </tr>
           </table>
         </div>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Data frames</h1>
           </div>
 
@@ -1819,7 +1818,7 @@ end</code>
 
             <tr>
               <td>
-                <a class='tooltip' href='#'>Describe<span>Similar to <code>summary(df)</code> in R.</span></a> data frame
+                <a class="tooltip" href="#">Describe<span>Similar to <code>summary(df)</code> in R.</span></a> data frame
               </td>
 
               <td><code>describe(df)</code></td>
@@ -1845,7 +1844,7 @@ end</code>
 
             <tr>
               <td>
-                <a class='tooltip' href='#'>Pool<span>Similar to <code>df$col = as.factor(df$col)</code> in R.</span></a> <code>col</code>
+                <a class="tooltip" href="#">Pool<span>Similar to <code>df$col = as.factor(df$col)</code> in R.</span></a> <code>col</code>
               </td>
 
               <td><code>pool!(df, [:col])</code></td>
@@ -1894,8 +1893,8 @@ melt(df, [:col1, :col2]) [</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Introspection and reflection</h1>
           </div>
 
@@ -1946,8 +1945,8 @@ melt(df, [:col1, :col2]) [</code>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Noteworthy packages and projects</h1>
           </div>
 
@@ -2051,7 +2050,7 @@ Mocha        # deep learning</code>
               <td>Statistics</td>
 
               <td>
-                <a href='http://juliastats.github.io' target='_blank'>JuliaStats</a>
+                <a href="http://juliastats.github.io" target="_blank">JuliaStats</a>
               </td>
             </tr>
 
@@ -2059,7 +2058,7 @@ Mocha        # deep learning</code>
               <td>Automatic differentiation</td>
 
               <td>
-                <a href='http://www.juliadiff.org' target='_blank'>JuliaDiff</a>
+                <a href="http://www.juliadiff.org" target="_blank">JuliaDiff</a>
               </td>
             </tr>
 
@@ -2067,7 +2066,7 @@ Mocha        # deep learning</code>
               <td>Numerical optimization</td>
 
               <td>
-                <a href='http://www.juliaopt.org' target='_blank'>JuliaOpt</a>
+                <a href="http://www.juliaopt.org" target="_blank">JuliaOpt</a>
               </td>
             </tr>
 
@@ -2075,18 +2074,18 @@ Mocha        # deep learning</code>
               <td>Web</td>
 
               <td>
-                <a href='http://github.com/JuliaWeb' target='_blank'>JuliaWeb</a>
+                <a href="http://github.com/JuliaWeb" target="_blank">JuliaWeb</a>
               </td>
             </tr>
           </table>
 
-          <p>A nice example of analytics with Julia is the <a href='http://ajkl.github.io/2015/08/10/Titanic-with-Julia' target='_blank'>Kaggle's Titanic competition</a>.</p>
+          <p>A nice example of analytics with Julia is the <a href="http://ajkl.github.io/2015/08/10/Titanic-with-Julia" target="_blank">Kaggle"s Titanic competition</a>.</p>
         </div>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Conventions</h1>
           </div>
 
@@ -2104,20 +2103,20 @@ Mocha        # deep learning</code>
 
           <p>Julia files have the <code>jl</code> extension.</p>
 
-          <p>John Myles White has provided a comprehensive <a href='http://github.com/johnmyleswhite/Style.jl' target='_blank'>style guide</a> with more details and suggestions.</p>
+          <p>John Myles White has provided a comprehensive <a href="http://github.com/johnmyleswhite/Style.jl" target="_blank">style guide</a> with more details and suggestions.</p>
         </div>
       </li>
 
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Performance tips</h1>
           </div>
 
           <ul>
             <li>Never use (non-constant) global variables.</li>
 
-            <li>Write <a href='http://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia' target='_blank'>type-stable</a> code.
+            <li>Write <a href="http://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia" target="_blank">type-stable</a> code.
             </li>
 
             <li>In fact, use immutable types where possible.</li>
@@ -2151,11 +2150,11 @@ Mocha        # deep learning</code>
             <li>Avoid string interpolation in I/O.</li>
 
             <li>
-              <a href='http://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code' target='_blank'>Devectorize</a> code with <code>for</code> loops
+              <a href="http://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code" target="_blank">Devectorize</a> code with <code>for</code> loops
               unlike R, MATLAB or Python.
             </li>
 
-            <li>Split functions into <a href='http://doodlingindata.com/2015/08/11/writing-good-julia-functions' target='_blank'>smaller</a> components to aid the compiler.
+            <li>Split functions into <a href="http://doodlingindata.com/2015/08/11/writing-good-julia-functions" target="_blank">smaller</a> components to aid the compiler.
             </li>
 
             <li>Avoid <code>eval</code> at run-time.</li>
@@ -2163,46 +2162,46 @@ Mocha        # deep learning</code>
         </div>
       </li>
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>IDEs, Editors and Plug-ins</h1>
           </div>
 
           <ul>
-            <li><a href='http://junolab.org' target='_blank'>Juno</a> (editor)</li>
-            <li><a href='http://forio.com/labs/julia-studio' target='_blank'>Forio Epicenter</a> (online IDE)</li>
-            <li><a href='http://www.juliabox.org' target='_blank'>JuliaBox</a> (online IJulia notebook)</li>
-            <li><a href='http://try.jupyter.org' target='_blank'>Jupyter</a> (online IJulia notebook)</li>
-            <li><a href='http://www.liclipse.com/' target='_blank'>LiClipse</a> (editor)</li>
-            <li><a href='http://wiki.gnome.org/Apps/Gedit' target='_blank'>gedit</a> <a href='http://github.com/JuliaLang/julia/blob/master/contrib/julia.lang' target='_blank'>syntax highlighting</a> (editor)</li>
-            <li><a href='http://www.gnu.org/software/emacs' target='_blank'>Emacs <a href='http://www.emacswiki.org/emacs/Julia' target='_blank'>Julia mode</a> (editor)</li>
-            <li><a href='http://www.vim.org' target='_blank'>vim <a href='http://github.com/JuliaLang/julia-vim' target='_blank'>Julia mode</a> (editor)</li>
+            <li><a href="http://junolab.org" target="_blank">Juno</a> (editor)</li>
+            <li><a href="http://forio.com/labs/julia-studio" target="_blank">Forio Epicenter</a> (online IDE)</li>
+            <li><a href="http://www.juliabox.org" target="_blank">JuliaBox</a> (online IJulia notebook)</li>
+            <li><a href="http://try.jupyter.org" target="_blank">Jupyter</a> (online IJulia notebook)</li>
+            <li><a href="http://www.liclipse.com/" target="_blank">LiClipse</a> (editor)</li>
+            <li><a href="http://wiki.gnome.org/Apps/Gedit" target="_blank">gedit</a> <a href="http://github.com/JuliaLang/julia/blob/master/contrib/julia.lang" target="_blank">syntax highlighting</a> (editor)</li>
+            <li><a href="http://www.gnu.org/software/emacs" target="_blank">Emacs <a href="http://www.emacswiki.org/emacs/Julia" target="_blank">Julia mode</a> (editor)</li>
+            <li><a href="http://www.vim.org" target="_blank">vim <a href="http://github.com/JuliaLang/julia-vim" target="_blank">Julia mode</a> (editor)</li>
             <li><a href="https://marketplace.visualstudio.com/items?itemName=julialang.language-julia">VS Code extension</a> (editor)</li>
-            <li><a href='http://www.sublimetext.com' target='_blank'>Sublime Text <a href='http://github.com/WestleyArgentum/Sublime-Julia' target='_blank'>Julia plug-in</a> (editor)</li>
-            <li><a href='http://www.sublimetext.com' target='_blank'>Sublime Text <a href='http://github.com/quinnj/Sublime-IJulia' target='_blank'>IJulia plug-in</a> (editor)</li>
+            <li><a href="http://www.sublimetext.com" target="_blank">Sublime Text <a href="http://github.com/WestleyArgentum/Sublime-Julia" target="_blank">Julia plug-in</a> (editor)</li>
+            <li><a href="http://www.sublimetext.com" target="_blank">Sublime Text <a href="http://github.com/quinnj/Sublime-IJulia" target="_blank">IJulia plug-in</a> (editor)</li>
           </ul>
           
         </div>
       </li>
       <li>
-        <div class='box'>
-          <div class='title'>
+        <div class="box">
+          <div class="title">
             <h1>Resources</h1>
           </div>
 
           <ul>
             <li>
-              <a href='http://docs.julialang.org/en/latest' target='_blank'>Official documentation</a>.
+              <a href="http://docs.julialang.org/en/latest" target="_blank">Official documentation</a>.
             </li>
 
             <li>
-              <a href='http://julialang.org/learning' target='_blank'>Learning Julia</a> page.
+              <a href="http://julialang.org/learning" target="_blank">Learning Julia</a> page.
             </li>
             <li>
               <a href="https://github.com/DataWookie/MonthOfJulia" target="_blank">Month of Julia</a>
             </li>
             <li>
-              <a href='http://julialang.org/community/standards' target='_blank'>Community standards</a>.
+              <a href="http://julialang.org/community/standards" target="_blank">Community standards</a>.
             </li>
             <li>
               <a href="https://arxiv.org/pdf/1411.1607v4.pdf" target="_blank">Julia: A fresh approach to numerical computing</a><span> (pdf)</span>
@@ -2220,16 +2219,16 @@ Mocha        # deep learning</code>
           </div>
           <ul>
             <li>
-              <a href='https://www.youtube.com/playlist?list=PLP8iPy9hna6SQPwZUDtAM59-wPzCPyD_S' target='_blank'>The 3rd annual JuliaCon 2016</a>
+              <a href="https://www.youtube.com/playlist?list=PLP8iPy9hna6SQPwZUDtAM59-wPzCPyD_S" target="_blank">The 3rd annual JuliaCon 2016</a>
             </li>
             <li>
               <a href="https://www.youtube.com/watch?v=pHQdSmySQ_w&list=UU6LD83Gx-mFVq9y33w0YEug" target="_blank">Getting Started with Julia</a><span> by </span><a href="https://twitter.com/astrieanna" target="_blank">Leah Hanson</a>
             </li>
             <li>
-              <a href='https://youtu.be/8mZRIRHAZfo' target='_blank'> Intro to Julia</a><span> by </span><a href="https://twitter.com/nassarhuda" target="_blank">Huda Nassar</a>
+              <a href="https://youtu.be/8mZRIRHAZfo" target="_blank"> Intro to Julia</a><span> by </span><a href="https://twitter.com/nassarhuda" target="_blank">Huda Nassar</a>
             </li>
             <li>
-              <a href='https://youtu.be/Cj6bjqS5otM' target='_blank'> Introduction to Julia for Pythonistas</a><span> by </span><a href="https://twitter.com/jmxpearson" target="_blank">John Pearson</a>
+              <a href="https://youtu.be/Cj6bjqS5otM" target="_blank"> Introduction to Julia for Pythonistas</a><span> by </span><a href="https://twitter.com/jmxpearson" target="_blank">John Pearson</a>
             </li>
           </ul>
         </div>
@@ -2239,12 +2238,12 @@ Mocha        # deep learning</code>
 
   <footer>
     <div class="footer-text">
-    &copy; 2015 Original version for Julia 0.4 <a href='http://databaseline.wordpress.com'>Ian Hellström</a><br/><br/>
-    &copy; 2016 Updates for Julia 0.5 by <a href='http://blog.brakmic.com'>Harris Brakmic</a>
+    &copy; 2015 Original version for Julia 0.4 <a href="http://databaseline.wordpress.com">Ian Hellström</a><br/><br/>
+    &copy; 2016 Updates for Julia 0.5 by <a href="http://blog.brakmic.com">Harris Brakmic</a>
     <br/><br/>
       <a href="https://twitter.com/IanHellstrom/status/808337281027280896">Used with permission</a>
     </div>
-    <div id='thanks'>
+    <div id="thanks">
       Alex Ames, Szilard Bokros, Chris von Csefalvay, Páll Haraldsson, Katie Hyatt, Steven G. Johnson, Jeffrey Sarnoff, Craig Schmidt.
     </div>
   </footer>
