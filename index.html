@@ -1362,7 +1362,7 @@ p = Point{Float64}(1,2)</code>
           <p>Type parameters are invariant, which means that <code>Point{Float64} &lt;: Point{Real}</code> is false, even though <code>Float64 &lt;: Real</code>. Tuple types, on the other hand, are
           covariant: <code>Tuple{Float64} &lt;: Tuple{Real}</code>.</p>
 
-          <p>The type-inferred form of Julia"s internal representation can be found with <code>code_typed()</code>. This is useful to identify where <code>Any</code> rather than type-specific native
+          <p>The type-inferred form of Julia's internal representation can be found with <code>code_typed()</code>. This is useful to identify where <code>Any</code> rather than type-specific native
           code is generated.</p>
         </div>
       </li>
