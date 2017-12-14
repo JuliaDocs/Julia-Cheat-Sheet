@@ -1984,7 +1984,7 @@ melt(df, [:col1, :col2]) [</code>
 
           <td>
             <pre>
-<code>df[:col] = collect(Missings.replace(df[:col], 1))</code>
+<code>collect(Missings.replace(df[:col], 1))</code>
 </pre>
           </td>
         </tr>
@@ -2382,13 +2382,14 @@ Mocha        # deep learning</code>
 
   <footer>
     <div class="footer-text">
-    &copy; 2015 Original version for Julia 0.4 <a href="http://databaseline.wordpress.com">Ian Hellström</a><br/><br/>
-    &copy; 2016 Updates for Julia 0.5 by <a href="http://blog.brakmic.com">Harris Brakmic</a>
+    &copy; 2015 Original version for Julia 0.4 <a href="http://databaseline.wordpress.com">Ian Hellström</a><br/>
+    &copy; 2016 Updates for Julia 0.5 by <a href="http://blog.brakmic.com">Harris Brakmic</a><br/>
+    &copy; 2017 Updates for Julia 0.6 by <a href="http://www.nickeubank.com">Nick Eubank</a>
     <br/><br/>
       <a href="https://twitter.com/IanHellstrom/status/808337281027280896">Used with permission</a>
     </div>
     <div id="thanks">
-      Alex Ames, Szilard Bokros, Chris von Csefalvay, Páll Haraldsson, Katie Hyatt, Steven G. Johnson, Jeffrey Sarnoff, Craig Schmidt.
+      Alex Ames, Szilard Bokros, Chris von Csefalvay, Nick Eubank, Páll Haraldsson, Katie Hyatt, Steven G. Johnson, Jeffrey Sarnoff, Craig Schmidt.
     </div>
   </footer>
 </body>
