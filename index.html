@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <div id="top">
     <div id="title">
       <h1>The Fast Track to</h1>
@@ -17,8 +18,8 @@
 
     <img src="julia.png" alt="Julia" height="100"/>
 
-    <div id="version">    
-      <h1>0.5</h1>
+    <div id="version">
+      <h1>0.6</h1>
     </div>
   </div>
   <div class="github-info">This page's source is <a href="https://github.com/brakmic/Julia-Cheat-Sheet">located here</a>. Pull requests are welcome!</div>
@@ -574,6 +575,16 @@ randn()  # normal (-Inf, Inf)</code>
 </pre>
               </td>
             </tr>
+            <tr>
+              <td>Random from Other Distribution</td>
+              <td>
+                <pre>
+<code>using Distributions
+my_dist = Bernoulli(0.2) # Bernoulli, for example
+rand(my_dist) </code>
+</pre>
+              </td>
+            </tr>
 
             <tr>
               <td>Type conversions</td>
@@ -642,6 +653,14 @@ catalan # 0.9159...
               <td>Select <code>i</code>th column</td>
 
               <td><code>M[:, i]</code></td>
+            </tr>
+            <tr>
+              <td>Concatenate horizontally</td>
+              <td><code>M = [a b]</code> or <code> M = hcat(a, b)</code></td>
+            </tr>
+            <tr>
+              <td>Concatenate vertically</td>
+              <td><code>M = [a ; b]</code> or <code> M = vcat(a, b)</code></td>
             </tr>
 
             <tr>
@@ -909,11 +928,11 @@ julia> mean(B,1)
             Since <span class="bold">Julia 0.5</span> the existence of potential ambiguities is still acceptable, but actually calling an ambiguous method is an <span class="bold">immediate error</span>.
           </p>
 
-          <p>Stack overflow is possible when recursive functions nest many levels deep. <a href="http://blog.zachallaun.com/post/jumping-julia" target="_blank">Trampolining</a> can be used to do 
-          tail-call optimization, as Julia does not do that automatically <a href="https://github.com/JuliaLang/julia/issues/4964" target="_blank">yet</a>. Alternatively, you can rewrite the 
+          <p>Stack overflow is possible when recursive functions nest many levels deep. <a href="http://blog.zachallaun.com/post/jumping-julia" target="_blank">Trampolining</a> can be used to do
+          tail-call optimization, as Julia does not do that automatically <a href="https://github.com/JuliaLang/julia/issues/4964" target="_blank">yet</a>. Alternatively, you can rewrite the
           tail recursion as an iteration.</p>
         </div>
-        
+
       </li>
 
       <li>
@@ -1066,7 +1085,7 @@ b = deepcopy(a)</code>
 
               <td>
                 <pre>
-<code>reshape(1:6, 3, 2)' == 
+<code>reshape(1:6, 3, 2)' ==
 [1 2 3; 4 5 6]</code>
 </pre>
               </td>
@@ -1093,9 +1112,9 @@ b = deepcopy(a)</code>
 
               <td>
                 <pre>
-<code>d = Dict(key1 =&gt; val1, 
+<code>d = Dict(key1 =&gt; val1,
          key2 =&gt; val2, ...)
-d = Dict(:key1 =&gt; val1, 
+d = Dict(:key1 =&gt; val1,
          :key2 =&gt; val2, ...)</code>
 </pre>
               </td>
@@ -1136,7 +1155,7 @@ end</code>
 
               <td>
                 <pre>
-<code>arr = collect(keys(d)) 
+<code>arr = collect(keys(d))
 arr = [k for (k,v) in d]</code>
 </pre>
               </td>
@@ -1391,11 +1410,11 @@ p = Point{Float64}(1,2)</code>
 
               <td>
                 <pre>
-<code>type NewExcep &lt;: Exception 
+<code>type NewExcep &lt;: Exception
   v::AbstractString
 end
 
-Base.showerror(io::IO, e::NewExcep) = 
+Base.showerror(io::IO, e::NewExcep) =
   print(io, "A problem with $(e.v)!")
 
 throw(NewExcep("x"))</code>
@@ -1480,7 +1499,7 @@ end</code>
                 <pre>
 <code>using ModuleName        # all exported names
 using ModuleName: x, y  # only x, y
-using ModuleName.x, 
+using ModuleName.x,
       ModuleName.y:     # only x, y
 import ModuleName       # only ModuleName
 import ModuleName: x, y # only x, y
@@ -1496,14 +1515,14 @@ import ModuleName.x,
                 <pre>
 <code>
 # Get an array of names exported by Module
-names(ModuleName) 
+names(ModuleName)
 
 # include non-exports, deprecateds
-# and compiler-generated names 
+# and compiler-generated names
 names(ModuleName, all::Bool)
 
 #also show names explicitely imported from other modules
-names(ModuleName, all::Bool, imported::Bool) 
+names(ModuleName, all::Bool, imported::Bool)
 </code>
 </pre>
               </td>
@@ -1512,7 +1531,7 @@ names(ModuleName, all::Bool, imported::Bool)
 
           <p>The main difference between <code>using</code> and <code>import</code> is that the former automatically resolves names, so you can write <code>x</code> in your code, whereas the latter
           requires the namespace too: <code>ModuleName.x</code>. Moreover, <code>using</code> only loads exported names by default while <code>import</code> loads all names defined in the module.</p>
-        
+
         </div>
       </li>
 
@@ -1533,7 +1552,7 @@ names(ModuleName, all::Bool, imported::Bool)
 
           <div class="indented">
             <pre>
-<code>x = 1       
+<code>x = 1
 line = "1 + $x"      # some code
 expr = parse(line)   # make an Expr object
 typeof(expr) == Expr # true
@@ -1685,6 +1704,13 @@ end</code>
 </pre>
               </td>
             </tr>
+            <td>Get id of executing worker</td>
+
+            <td>
+<code>myid()</code>
+            </td>
+          </tr>
+
 
             <tr>
               <td>Remove worker</td>
@@ -1742,7 +1768,7 @@ fetch(r)</code>
               <td>
                 <pre>
 <code>sum = @parallel (red) for i in 1:10^6
-  # do parallel stuff 
+  # do parallel stuff
 end</code>
 </pre>
               </td>
@@ -1764,7 +1790,6 @@ end</code>
           DeConinck</a>.</p>
         </div>
       </li>
-
       <li>
         <div class="box">
           <div class="title">
@@ -1802,8 +1827,47 @@ end</code>
             <tr>
               <td>Read CSV file</td>
 
-              <td><code>readdlm(filename, ',' header=true)</code> or <code>readcsv(filename)</code></td>
+              <td><pre>
+<code>using CSV
+CSV.read(filename)
+</code></pre></td>
             </tr>
+            <tr>
+              <td>Save Julia Object</td>
+
+              <td>
+                <pre>
+<code>using JLD
+save(filename, "object_key", object, ...)
+</code>
+</pre>
+</tr>
+<td>Load Julia Object</td>
+<td>
+  <pre>
+<code>using JLD
+d = load(filename) # Returns a dict of objects
+</code>
+</pre>
+<tr>
+  <td>Save HDF5</td>
+
+  <td>
+    <pre>
+<code>using HDF5
+h5write(filename, "key", object)
+</code>
+</pre>
+</tr>
+<td>Load HDF5</td>
+<td>
+<pre>
+<code>using HDF5
+h5read(filename, "key")
+</code>
+</pre>
+
+
           </table>
         </div>
       </li>
@@ -1816,9 +1880,20 @@ end</code>
 
           <table>
             <tr>
-              <td>Read (gzipped) CSV</td>
-
-              <td><code>df = readtable(filename)</code></td>
+              <td>Read CSV</td>
+              <td>
+              <pre>
+<code>using CSV
+CSV.read(filename)</code></pre>
+            </td>
+            </tr>
+            <tr>
+              <td>Read CSV</td>
+              <td>
+              <pre>
+<code>using CSV
+CSV.write(filename)</code></pre>
+            </td>
             </tr>
 
             <tr>
@@ -1827,12 +1902,6 @@ end</code>
               </td>
 
               <td><code>describe(df)</code></td>
-            </tr>
-
-            <tr>
-              <td>Write CSV</td>
-
-              <td><code>writetable("filename.csv", df)</code></td>
             </tr>
 
             <tr>
@@ -1893,6 +1962,56 @@ melt(df, [:col1, :col2]) [</code>
 </pre>
               </td>
             </tr>
+            <tr>
+              <td>Make Nullable</td>
+
+              <td>
+                <pre>
+<code>allowmissing!(df)</code> or <code>allowmissing!(df, :col)</code>
+</pre>
+              </td>
+            </tr>
+            <td>Filter missings</td>
+
+            <td>
+              <pre>
+<code>skipmissing(df[:col])</code>
+</pre>
+            </td>
+          </tr>
+
+          <td>Replace missings</td>
+
+          <td>
+            <pre>
+<code>df[:col] = collect(Missings.replace(df[:col], 1))</code>
+</pre>
+          </td>
+        </tr>
+        <tr>
+        <td>Loop over Rows</td>
+
+        <td>
+<pre>
+<code>for r in eachrow(df)
+  # do stuff.
+  # r is Struct with fields of col names.
+end
+</code>
+</pre>
+</tr>
+<tr>
+<td>Loop over Columns</td>
+<td>
+<pre>
+<code>for c in eachcol(df)
+  # do stuff.
+  # c is tuple with name, then vector
+end
+</code>
+</pre>
+        </td>
+      </tr>
           </table>
         </div>
       </li>
@@ -2185,7 +2304,7 @@ Mocha        # deep learning</code>
             <li><a href="http://www.sublimetext.com" target="_blank">Sublime Text <a href="http://github.com/WestleyArgentum/Sublime-Julia" target="_blank">Julia plug-in</a> (editor)</li>
             <li><a href="http://www.sublimetext.com" target="_blank">Sublime Text <a href="http://github.com/quinnj/Sublime-IJulia" target="_blank">IJulia plug-in</a> (editor)</li>
           </ul>
-          
+
         </div>
       </li>
       <li>
