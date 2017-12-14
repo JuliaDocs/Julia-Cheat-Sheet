@@ -2012,6 +2012,26 @@ end
 </pre>
         </td>
       </tr>
+      <tr>
+      <td>Apply <code>func</code> to groups</td>
+      <td>
+      <code>by(df, :group_col, func)
+      </code>
+      </td>
+      </tr>
+      <tr>
+      <td>Query</td>
+      <td>
+      <pre><code>using Query
+query = @from r in df begin
+        @where r.col1 > 40
+        @select {new_name=r.col1, r.col2}
+        @collect DataFrame #Default: iterator
+        end</code></pre>
+      </td>
+      </tr>
+
+
           </table>
         </div>
       </li>
