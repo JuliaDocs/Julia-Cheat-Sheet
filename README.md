@@ -3,7 +3,7 @@ Julia Cheat Sheet copied &amp; restored from https://bitbucket.org/hell316/
 
 ### Status
 
-Currently I'm updating the content to Julia v0.5.
+Currently I'm updating the content to Julia v0.6.
 
 Any help regarding cleanups and/or expanding data is greatly appreciated. 
 
