@@ -45,7 +45,7 @@
 
           <p>Julia has a built-in package manager.</p>
 
-          <p>Julia has many built-in mathematical functions, including special functions (e.g. Airy, Bessel, Gamma), and supports complex numbers right out of the box.</p>
+          <p>Julia has many built-in mathematical functions, including special functions (e.g. Gamma), and supports complex numbers right out of the box.</p>
 
           <p>Julia allows you to generate code automagically thanks to Lisp-inspired macros.</p>
 
@@ -580,7 +580,7 @@ randn()  # normal (-Inf, Inf)</code>
               <td>
                 <pre>
 <code>using Distributions
-my_dist = Bernoulli(0.2) # Bernoulli, for example
+my_dist = Bernoulli(0.2) # For example
 rand(my_dist) </code>
 </pre>
               </td>
@@ -1248,7 +1248,6 @@ end</code>
           </table>
         </div>
       </li>
-
       <li>
         <div class="box">
           <div class="title">
@@ -1257,13 +1256,17 @@ end</code>
 
           <p>Julia has no classes and thus no class-specific methods.</p>
 
-          <p>Types mimic classes in a simple way.</p>
+          <p>Types are like classes without methods.</p>
 
           <p>Abstract types can be subtyped but not instantiated.</p>
 
           <p>Concrete types cannot be subtyped.</p>
 
+          <p>By default, <code>struct</code>s are immutable.</p>
+
           <p>Immutable types enhance performance and are thread safe, as they can be shared among threads without the need for synchronization.</p>
+
+          <p>Objects that may be one of a set of types are called <code>Union</code> types.</p>
 
           <table>
             <tr>
@@ -1277,8 +1280,8 @@ end</code>
 
               <td>
                 <pre>
-<code>type Programmer
-  name::AbstractString
+<code>struct Programmer
+  name::String
   birth_year::UInt16
   fave_language::AbstractString
 end</code>
@@ -1287,16 +1290,16 @@ end</code>
             </tr>
             <tr>
               <td>
-                <a class="tooltip" href="#">Immutable<span>Immutable types are passed around by value (i.e. copying), whereas mutable types are passed by reference.</span></a> type declaration
+                Mutable type declaration
               </td>
 
-              <td>replace <code>type</code> with <code>immutable</code></td>
+              <td>replace <code>struct</code> with <code>mutable struct</code></td>
             </tr>
 
             <tr>
               <td>Type alias</td>
 
-              <td><code>typealias Nerd Programmer</code></td>
+              <td><code>const Nerd = Programmer</code></td>
             </tr>
             <tr>
               <td>Type constructors</td>
@@ -1319,7 +1322,7 @@ me = Nerd("Ian", 1984, "Julia")</code>
               <td>
                 <pre>
 <code>abstract Programmer
-type Hacker &lt;: Programmer
+struct Hacker &lt;: Programmer
   name::AbstractString
   birth_year::UInt16
   fave_language::AbstractString
@@ -1333,12 +1336,21 @@ end</code>
 
               <td>
                 <pre>
-<code>type Point{T &lt;: Real}
+<code>struct Point{T &lt;: Real}
   x::T
   y::T
 end
 
 p = Point{Float64}(1,2)</code>
+</pre>
+              </td>
+            </tr>
+            <tr>
+              <td>Union types</td>
+
+              <td>
+                <pre>
+<code>Union{Int, String}</code>
 </pre>
               </td>
             </tr>
@@ -1529,9 +1541,7 @@ names(ModuleName, all::Bool, imported::Bool)
             </tr>
           </table>
 
-          <p>The main difference between <code>using</code> and <code>import</code> is that the former automatically resolves names, so you can write <code>x</code> in your code, whereas the latter
-          requires the namespace too: <code>ModuleName.x</code>. Moreover, <code>using</code> only loads exported names by default while <code>import</code> loads all names defined in the module.</p>
-
+          <p>There is only one difference between <code>using</code> and <code>import</code>: with <code>using</code> you need to say <code>function Foo.bar(..</code> to extend module <code>Foo</code>'s function <code>bar</code> with a new method, but with <code>import Foo.bar</code>, you only need to say <code>function bar(...</code> and it automatically extends module <code>Foo</code>'s function <code>bar</code>.</p>
         </div>
       </li>
 
@@ -1895,6 +1905,13 @@ CSV.read(filename)</code></pre>
 CSV.write(filename)</code></pre>
             </td>
             </tr>
+            <tr>
+              <td>Read Stata, SPSS, etc.</td>
+              <td>
+              <pre>
+<code>StatFiles</code> Package</pre>
+            </td>
+            </tr>
 
             <tr>
               <td>
@@ -2116,7 +2133,7 @@ query = @from r in df begin
             <tr>
               <td>Test framework</td>
 
-              <td><code>Test</code></td>
+              <td><code>Base.Test</code></td>
             </tr>
 
             <tr>
@@ -2128,7 +2145,7 @@ query = @from r in df begin
             <tr>
               <td>Statically sized arrays</td>
 
-              <td><code>ImmutableArrays</code></td>
+              <td><code>StaticArrays</code></td>
             </tr>
 
             <tr>
@@ -2275,10 +2292,6 @@ Mocha        # deep learning</code>
 
             <li>Disable the garbage collector in real-time applications: <code>disable_gc()</code>.</li>
 
-            <li>Use named instead of anonymous functions.</li>
-
-            <li>Use type annotation rather than tests for function arguments.</li>
-
             <li>Avoid the splat (<code>...</code>) operator for keyword arguments.</li>
 
             <li>Use mutating APIs (i.e. functions with <code>!</code> to avoid copying data structures.</li>
@@ -2296,9 +2309,6 @@ Mocha        # deep learning</code>
             <li>
               <a href="http://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code" target="_blank">Devectorize</a> code with <code>for</code> loops
               unlike R, MATLAB or Python.
-            </li>
-
-            <li>Split functions into <a href="http://doodlingindata.com/2015/08/11/writing-good-julia-functions" target="_blank">smaller</a> components to aid the compiler.
             </li>
 
             <li>Avoid <code>eval</code> at run-time.</li>
