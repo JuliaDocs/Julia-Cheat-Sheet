@@ -1,5 +1,5 @@
 ## Julia-Cheat-Sheet
-Julia Cheat Sheet copied &amp; restored from https://bitbucket.org/hell316/
+Julia Cheat Sheet copied &amp; restored from https://bitbucket.org/hell316/ *dead link*
 
 ### Status
 
@@ -11,7 +11,7 @@ Just clone this repo and send your pull requests.
 
 **Thanks!**
 
-[Go to GitHub Page](https://brakmic.github.io/Julia-Cheat-Sheet/)
+[Go to GitHub Page](https://juliadocs.github.io/Julia-Cheat-Sheet/)
 
 ### License
 
