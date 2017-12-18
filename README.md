@@ -15,4 +15,4 @@ Just clone this repo and send your pull requests.
 
 ### License
 
-[MIT](https://github.com/brakmic/Julia-Cheat-Sheet/blob/master/LICENSE)
+[MIT](https://github.com/JuliaDocs/Julia-Cheat-Sheet/blob/master/LICENSE)
