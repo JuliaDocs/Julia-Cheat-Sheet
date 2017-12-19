@@ -928,7 +928,7 @@ julia> mean(B,1)
             Since <span class="bold">Julia 0.5</span> the existence of potential ambiguities is still acceptable, but actually calling an ambiguous method is an <span class="bold">immediate error</span>.
           </p>
 
-          <p>Stack overflow is possible when recursive functions nest many levels deep. <a href="http://blog.zachallaun.com/post/jumping-julia" target="_blank">Trampolining</a> can be used to do
+          <p>Stack overflow is possible when recursive functions nest many levels deep. <a href="https://en.wikipedia.org/wiki/Trampoline_(computing)" target="_blank">Trampolining</a> can be used to do
           tail-call optimization, as Julia does not do that automatically <a href="https://github.com/JuliaLang/julia/issues/4964" target="_blank">yet</a>. Alternatively, you can rewrite the
           tail recursion as an iteration.</p>
         </div>
