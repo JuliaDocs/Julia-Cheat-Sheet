@@ -1077,7 +1077,7 @@ b = deepcopy(a)</code>
             <tr>
               <td>Scalar product</td>
 
-              <td><code>dot(a, b) == sum(a .* w)</code></td>
+              <td><code>dot(a, b) == sum(a .* b)</code></td>
             </tr>
 
             <tr>
@@ -1733,7 +1733,7 @@ end</code>
 
               <td>
                 <pre>
-<code>r = remotecall(pid, f, args)
+<code>r = remotecall(f, pid, args...)
 # or:
 r = @spawnat pid f(args)
 ...
@@ -1747,7 +1747,7 @@ fetch(r)</code>
 
               <td>
                 <pre>
-<code>remotecall_fetch(pid, f, args)</code>
+<code>remotecall_fetch(f, pid, args...)</code>
 </pre>
               </td>
             </tr>
