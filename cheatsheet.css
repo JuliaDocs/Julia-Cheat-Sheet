@@ -174,18 +174,18 @@ footer {
   column-gap: 0.25em;
 }
 /*
- * Note: a coloured box title for a rounded box would require a hidden overflow to 
- * avoid colour spilling over the border. This, however, clashes with tooltips in 
+ * Note: a coloured box title for a rounded box would require a hidden overflow to
+ * avoid colour spilling over the border. This, however, clashes with tooltips in
  * all but the very first column due to the absolute positioning.
  */
 .box {
   display: inline-block;
   position: relative;
-  border: 1px solid #b03e37;
+  border: 1px solid #2a2a2a;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   text-align: left;
-  background-color: #f6f6f6;
+  background-color: #e6f2ff;
   margin: 0.5em;
   padding-bottom: 0.5em;
   width: 35em;
@@ -197,7 +197,7 @@ ul {
 }
 .box .title {
   /*background: linear-gradient(180deg, #bf655f, #f6f6f6);*/
-  background: linear-gradient(180deg, darkmagenta,mediumblue);
+  background: #4d64ae;
   padding: .5em;
   margin-bottom: 1em;
 }
