@@ -446,6 +446,19 @@ round(Int, x) # integer</code>
 typename(val)          # calls convert</code>
 </pre> </td>
                </tr>
+               <tr>
+                 <td>Global constants</td>
+                 <td>
+                   <pre><code>pi      # 3.1415...
+π       # 3.1415...
+im      # real(im * im) == -1
+</code>
+</pre> </td>
+               </tr>
+               <tr>
+                 <td>More constants</td>
+                 <td> <code>using Base.MathConstants</code> </td>
+               </tr>
              </tbody>
            </table>
            <p>Julia does <em>not</em> automatically check for numerical
@@ -499,25 +512,130 @@ rand(my_dist) </code>
        <li>
          <div class="box">
            <div class="title">
-             <h1>Mathematics and Linear Algebra</h1>
+             <h1>Arrays</h1>
+           </div>
+           <table>
+             <tbody>
+               <tr>
+                 <td>Declaration</td>
+                 <td><code>arr = Float64[]</code></td>
+               </tr>
+               <tr>
+                 <td>Pre-allocation</td>
+                 <td><code>sizehint(arr, 10^4)</code></td>
+               </tr>
+               <tr>
+                 <td>Access and assignment</td>
+                 <td><code>arr = Any[1,2]<br>
+                     arr[1] = "Some text"</code></td>
+               </tr>
+               <tr>
+                 <td>Comparison</td>
+                 <td>
+                   <pre><code>a = [1:10; ]
+b = a      # b points to a
+a[1] = -99
+a == b     # true</code>
+</pre> </td>
+               </tr>
+               <tr>
+                 <td>Copy elements (not address)</td>
+                 <td>
+                   <pre><code>b = copy(a)
+b = deepcopy(a)</code>
+</pre> </td>
+               </tr>
+               <tr>
+                 <td>Select subarray from <code>m</code> to <code>n</code></td>
+                 <td><code>arr[n:m]</code></td>
+               </tr>
+               <tr>
+                 <td><code>n</code>-element array with <code>0.0</code>s</td>
+                 <td><code>zeros(n)</code></td>
+               </tr>
+               <tr>
+                 <td><code>n</code>-element array with <code>1.0</code>s</td>
+                 <td><code>ones(n)</code></td>
+               </tr>
+               <tr>
+                 <td><code>n</code>-element array with <code>#undef</code>s</td>
+                 <td><code>cell(n)</code></td>
+               </tr>
+               <tr>
+                 <td><code>n</code> equally spaced numbers from <code>start</code>
+                   to <code>stop</code></td>
+                 <td><code>linspace(start, stop, n)</code></td>
+               </tr>
+               <tr>
+                 <td>Array with <code>n</code> random <code>Int8</code>
+                   elements</td>
+                 <td><code>rand(Int8, n)</code></td>
+               </tr>
+               <tr>
+                 <td>Fill array with <code>val</code></td>
+                 <td><code>fill!(arr, val)</code></td>
+               </tr>
+               <tr>
+                 <td>Pop last element</td>
+                 <td><code>pop!(arr)</code></td>
+               </tr>
+               <tr>
+                 <td>Pop <em>first</em> element</td>
+                 <td><code>shift!(a)</code></td>
+               </tr>
+               <tr>
+                 <td>Push <code>val</code> as last element</td>
+                 <td><code>push!(arr, val)</code></td>
+               </tr>
+               <tr>
+                 <td>Push <code>val</code> as <em>first</em> element</td>
+                 <td><code>unshift!(arr, val)</code></td>
+               </tr>
+               <tr>
+                 <td>Remove element at index <code>idx</code></td>
+                 <td><code>splice!(arr, idx)</code></td>
+               </tr>
+               <tr>
+                 <td>Sort</td>
+                 <td><code>sort!(arr)</code></td>
+               </tr>
+               <tr>
+                 <td>Append <code>a</code> with <code>b</code></td>
+                 <td><code>append!(a,b)</code></td>
+               </tr>
+               <tr>
+                 <td>Check whether <code>val</code> is element</td>
+                 <td><code>in(val, arr)</code> or <code>val in arr</code></td>
+               </tr>
+               <tr>
+                 <td>Scalar product</td>
+                 <td><code>dot(a, b) == sum(a .* b)</code></td>
+               </tr>
+               <tr>
+                 <td>Change dimensions (if possible)</td>
+                 <td>
+                   <pre><code>reshape(1:6, 3, 2)' ==
+[1 2 3; 4 5 6]</code>
+</pre> </td>
+               </tr>
+               <tr>
+                 <td>To string (with delimiter <code>del</code> between
+                   elements)</td>
+                 <td><code>join(arr, del)</code></td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+       </li>
+       <li>
+         <div class="box">
+           <div class="title">
+             <h1>Linear Algebra</h1>
            </div>
            <p> For most linear algebra tools, use <code>using LinearAlgebra</code>
            </p>
            <table>
              <tbody>
-               <tr>
-                 <td>Global constants</td>
-                 <td>
-                   <pre><code>pi      # 3.1415...
-π       # 3.1415...
-im      # real(im * im) == -1
-</code>
-</pre> </td>
-               </tr>
-               <tr>
-                 <td>More constants</td>
-                 <td> <code>using Base.MathConstants</code> </td>
-               </tr>
                <tr>
                  <td>Identity matrix</td>
                  <td><code>I <br>
@@ -595,6 +713,7 @@ im      # real(im * im) == -1
            <p>Julia has built-in support for <a href="https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/"
                target="_blank">matrix
                 decompositions</a>.</p>
+            <p> Julia tries to infer whether matrices are of a special type (symmetric, hermitian, etc.), but sometimes fails. To aid Julia in dispatching the optimal algorithms, special matrices can be declared ot have a structure with functions like <code>Symmetric</code>, <code>Hermitian</code>, <code>UpperTriangular</code>, <code>LowerTriangular</code>, <code>Diagonal</code>, and more.
          </div>
        </li>
        <li>
@@ -762,124 +881,6 @@ julia&gt; mean(B,1)
              that automatically <a href="https://github.com/JuliaLang/julia/issues/4964"
                target="_blank">yet</a>.
              Alternatively, you can rewrite the tail recursion as an iteration.</p>
-         </div>
-       </li>
-       <li>
-         <div class="box">
-           <div class="title">
-             <h1>Arrays</h1>
-           </div>
-           <table>
-             <tbody>
-               <tr>
-                 <td>Declaration</td>
-                 <td><code>arr = Float64[]</code></td>
-               </tr>
-               <tr>
-                 <td>Pre-allocation</td>
-                 <td><code>sizehint(arr, 10^4)</code></td>
-               </tr>
-               <tr>
-                 <td>Access and assignment</td>
-                 <td><code>arr = Any[1,2]<br>
-                     arr[1] = "Some text"</code></td>
-               </tr>
-               <tr>
-                 <td>Comparison</td>
-                 <td>
-                   <pre><code>a = [1:10; ]
-b = a      # b points to a
-a[1] = -99
-a == b     # true</code>
-</pre> </td>
-               </tr>
-               <tr>
-                 <td>Copy elements (not address)</td>
-                 <td>
-                   <pre><code>b = copy(a)
-b = deepcopy(a)</code>
-</pre> </td>
-               </tr>
-               <tr>
-                 <td>Select subarray from <code>m</code> to <code>n</code></td>
-                 <td><code>arr[n:m]</code></td>
-               </tr>
-               <tr>
-                 <td><code>n</code>-element array with <code>0.0</code>s</td>
-                 <td><code>zeros(n)</code></td>
-               </tr>
-               <tr>
-                 <td><code>n</code>-element array with <code>1.0</code>s</td>
-                 <td><code>ones(n)</code></td>
-               </tr>
-               <tr>
-                 <td><code>n</code>-element array with <code>#undef</code>s</td>
-                 <td><code>cell(n)</code></td>
-               </tr>
-               <tr>
-                 <td><code>n</code> equally spaced numbers from <code>start</code>
-                   to <code>stop</code></td>
-                 <td><code>linspace(start, stop, n)</code></td>
-               </tr>
-               <tr>
-                 <td>Array with <code>n</code> random <code>Int8</code>
-                   elements</td>
-                 <td><code>rand(Int8, n)</code></td>
-               </tr>
-               <tr>
-                 <td>Fill array with <code>val</code></td>
-                 <td><code>fill!(arr, val)</code></td>
-               </tr>
-               <tr>
-                 <td>Pop last element</td>
-                 <td><code>pop!(arr)</code></td>
-               </tr>
-               <tr>
-                 <td>Pop <em>first</em> element</td>
-                 <td><code>shift!(a)</code></td>
-               </tr>
-               <tr>
-                 <td>Push <code>val</code> as last element</td>
-                 <td><code>push!(arr, val)</code></td>
-               </tr>
-               <tr>
-                 <td>Push <code>val</code> as <em>first</em> element</td>
-                 <td><code>unshift!(arr, val)</code></td>
-               </tr>
-               <tr>
-                 <td>Remove element at index <code>idx</code></td>
-                 <td><code>splice!(arr, idx)</code></td>
-               </tr>
-               <tr>
-                 <td>Sort</td>
-                 <td><code>sort!(arr)</code></td>
-               </tr>
-               <tr>
-                 <td>Append <code>a</code> with <code>b</code></td>
-                 <td><code>append!(a,b)</code></td>
-               </tr>
-               <tr>
-                 <td>Check whether <code>val</code> is element</td>
-                 <td><code>in(val, arr)</code> or <code>val in arr</code></td>
-               </tr>
-               <tr>
-                 <td>Scalar product</td>
-                 <td><code>dot(a, b) == sum(a .* b)</code></td>
-               </tr>
-               <tr>
-                 <td>Change dimensions (if possible)</td>
-                 <td>
-                   <pre><code>reshape(1:6, 3, 2)' ==
-[1 2 3; 4 5 6]</code>
-</pre> </td>
-               </tr>
-               <tr>
-                 <td>To string (with delimiter <code>del</code> between
-                   elements)</td>
-                 <td><code>join(arr, del)</code></td>
-               </tr>
-             </tbody>
-           </table>
          </div>
        </li>
        <li>
