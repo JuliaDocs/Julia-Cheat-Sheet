@@ -255,11 +255,16 @@ end</code>
              <h1>Package management</h1>
            </div>
            <p>Packages must be <a href="https://pkg.julialang.org" target="_blank">registered</a>
-             before they are visible to the package manager. In Julia 1.0,
-             first run <code>using Pkg.</code></p>
+             before they are visible to the package manager. In Julia 1.0, there are two ways to work with the package manager: either with <code>using Pkg</code> and using <code>Pkg</code> functions, or by typing <code>]</code> in the REPL to enter the special interactive package management mode. (To return to regular REPL, just hit <code>BACKSPACE</code> on an empty line in package management mode). Note that new tools arrive in interactive mode first, then usually also become available in regular Julia sessions through <code>Pkg</code> module. </p>
            <br>
            <table>
              <tbody>
+               <tr>
+               <td  colspan="2"><p><b>Using <code>Pkg</code> in Julia session</b></p></td>
+               </tr>
+               <tr class="blank_row">
+                   <td colspan="2">&nbsp;</td>
+               </tr>
                <tr>
                  <td>List installed packages (human-readable)</td>
                  <td><code>Pkg.status()</code></td>
@@ -277,10 +282,6 @@ end</code>
                  <td><code>Pkg.add("PackageName")</code></td>
                </tr>
                <tr>
-                 <td>Checkout <code>Package source from Git</code></td>
-                 <td><code>Pkg.checkout("Git URL")</code></td>
-               </tr>
-               <tr>
                  <td>Rebuild <code>PackageName</code></td>
                  <td><code>Pkg.build("PackageName")</code></td>
                </tr>
@@ -291,6 +292,35 @@ end</code>
                <tr>
                  <td>Remove <code>PackageName</code></td>
                  <td><code>Pkg.rm("PackageName")</code></td>
+               </tr>
+               <tr class="blank_row">
+                   <td colspan="2">&nbsp;</td>
+               </tr>
+               <tr>
+               <td  colspan="2"><p><b>In Interactive Package Mode</b></p></td>
+               </tr>
+               <tr class="blank_row">
+                   <td colspan="2">&nbsp;</td>
+               </tr>
+               <tr>
+                 <td>Add <code>PackageName</code></td>
+                 <td><code>add PackageName</code></td>
+               </tr>
+               <tr>
+                 <td>Remove <code>PackageName</code></td>
+                 <td><code>rm PackageName</code></td>
+               </tr>
+               <tr>
+                 <td>Update <code>PackageName</code></td>
+                 <td><code>update PackageName</code></td>
+               </tr>
+               <tr>
+                 <td>Use development version</td>
+                 <td><code>dev PackageName</code> or <code>dev GitRepoUrl</code></td>
+               </tr>
+               <tr>
+                 <td>Stop using development version, revert to public release</td>
+                 <td><code>free PackageName</code></td>
                </tr>
              </tbody>
            </table>
