@@ -379,15 +379,15 @@ println("a * b = $(a*b)")</code>
                </tr>
                <tr>
                  <td>First matching character or regular expression</td>
-                 <td><code>search("Julia", 'i') == 4</code></td>
+                 <td><code>findfirst(isequal('i'), "Julia") == 4</code></td>
                </tr>
                <tr>
                  <td>Replace substring or regular expression</td>
-                 <td><code>replace("Julia", "a", "us") == "Julius"</code></td>
+                 <td><code>replace("Julia", "a" => "us") == "Julius"</code></td>
                </tr>
                <tr>
                  <td>Last index (of collection)</td>
-                 <td><code>endof("Hello") == 5</code></td>
+                 <td><code>lastindex("Hello") == 5</code></td>
                </tr>
                <tr>
                  <td>Number of characters</td>
@@ -408,7 +408,7 @@ m.captures == ["1", "234"]</code>
                </tr>
                <tr>
                  <td>All occurrences</td>
-                 <td><code>matchall(pat, str)</code></td>
+                 <td><code>collect((m.match for m = eachmatch(pat, str)))</code></td>
                </tr>
                <tr>
                  <td>All occurrences (as <a href="https://slendermeans.org/julia-iterators.html"
@@ -419,7 +419,7 @@ m.captures == ["1", "234"]</code>
            </table>
            <p>Beware of multi-byte Unicode encodings in UTF-8:</p>
            <div class="centred">
-             <pre><code>10 == endof("Ångström") != length("Ångström") == 8</code>
+             <pre><code>10 == lastindex("Ångström") != length("Ångström") == 8</code>
 </pre> </div>
            <p>Strings are immutable.</p>
          </div>
@@ -589,12 +589,12 @@ b = deepcopy(a)</code>
                </tr>
                <tr>
                  <td><code>n</code>-element array with <code>#undef</code>s</td>
-                 <td><code>cell(n)</code></td>
+                 <td><code>Vector{Type}(undef,n)</code></td>
                </tr>
                <tr>
                  <td><code>n</code> equally spaced numbers from <code>start</code>
                    to <code>stop</code></td>
-                 <td><code>linspace(start, stop, n)</code></td>
+                 <td><code>range(start,stop=stop,length=n)</code></td>
                </tr>
                <tr>
                  <td>Array with <code>n</code> random <code>Int8</code>
