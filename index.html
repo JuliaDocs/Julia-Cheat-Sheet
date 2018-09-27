@@ -1198,8 +1198,8 @@ p = Point{Float64}(1,2)</code>
                <tr>
                  <td>Define <code>NewExcep</code></td>
                  <td>
-                   <pre><code>type NewExcep &lt;: Exception
-v::AbstractString
+                   <pre><code>struct NewExcep &lt;: Exception
+v::String
 end
 
 Base.showerror(io::IO, e::NewExcep) =
