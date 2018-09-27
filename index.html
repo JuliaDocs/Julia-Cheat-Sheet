@@ -408,7 +408,7 @@ m.captures == ["1", "234"]</code>
                </tr>
                <tr>
                  <td>All occurrences</td>
-                 <td><code>collect((m.match for m = eachmatch(pat, str)))</code></td>
+                 <td><code>[(m.match for m = eachmatch(pat, str))]</code></td>
                </tr>
                <tr>
                  <td>All occurrences (as <a href="https://slendermeans.org/julia-iterators.html"
