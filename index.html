@@ -611,7 +611,7 @@ b = deepcopy(a)</code>
                </tr>
                <tr>
                  <td>Pop <em>first</em> element</td>
-                 <td><code>shift!(a)</code></td>
+                 <td><code>popfirst!(a)</code></td>
                </tr>
                <tr>
                  <td>Push <code>val</code> as last element</td>
@@ -619,11 +619,11 @@ b = deepcopy(a)</code>
                </tr>
                <tr>
                  <td>Push <code>val</code> as <em>first</em> element</td>
-                 <td><code>unshift!(arr, val)</code></td>
+                 <td><code>pushfirst!(arr, val)</code></td>
                </tr>
                <tr>
                  <td>Remove element at index <code>idx</code></td>
-                 <td><code>splice!(arr, idx)</code></td>
+                 <td><code>deleteat!(arr, idx)</code></td>
                </tr>
                <tr>
                  <td>Sort</td>
@@ -1213,14 +1213,6 @@ throw(NewExcep("x"))</code>
                  <td><code>error(msg)</code></td>
                </tr>
                <tr>
-                 <td>Throw warning with <code>msg</code> text</td>
-                 <td><code>warn(msg)</code></td>
-               </tr>
-               <tr>
-                 <td>Throw information with <code>msg</code> text</td>
-                 <td><code>info(msg)</code></td>
-               </tr>
-               <tr>
                  <td>Handler</td>
                  <td>
                    <pre><code>try
@@ -1601,7 +1593,7 @@ CSV.read(filename)</code></pre>
                  </td>
                </tr>
                <tr>
-                 <td>Read CSV</td>
+                 <td>Write CSV</td>
                  <td>
                    <pre><code>using CSV
 CSV.write(filename)</code></pre>
@@ -1624,7 +1616,7 @@ CSV.write(filename)</code></pre>
                </tr>
                <tr>
                  <td>Sort by <code>col</code></td>
-                 <td><code>sort!(df, cols = [:col])</code></td>
+                 <td><code>sort!(df, [:col])</code></td>
                </tr>
                <tr>
                  <td> <a class="tooltip" href="#">Categorical<span>Similar to
@@ -1638,10 +1630,7 @@ CSV.write(filename)</code></pre>
                </tr>
                <tr>
                  <td>All observations with <code>col==val</code></td>
-                 <td>
-                   <pre><code>df[df[:col] .== val, :]
-subset(df, :(col .== val))</code>
-</pre> </td>
+                 <td><code>df[df[:col] .== val, :]</code></td>
                </tr>
                <tr>
                  <td>Reshape from wide to long format</td>
@@ -1804,7 +1793,7 @@ Gadfly        # ggplot2-like plotting<br>LightGraphs   # Network analysis
        <li>
          <div class="box">
            <div class="title">
-             <h1>Conventions</h1>
+             <h1>Naming Conventions</h1>
            </div>
            <p>The main convention in Julia is to avoid underscores unless they
              are required for legibility.</p>
@@ -1814,9 +1803,8 @@ Gadfly        # ggplot2-like plotting<br>LightGraphs   # Network analysis
            <p>Macros are in lower (or snake) case: <code>@somemacro</code>.</p>
            <p>Type names are in initial-capital camel case: <code>SomeType</code>.</p>
            <p>Julia files have the <code>jl</code> extension.</p>
-           <p>John Myles White has provided a comprehensive <a href="https://github.com/johnmyleswhite/Style.jl"
-               target="_blank">style
-                guide</a> with more details and suggestions.</p>
+           <p>For more information on Julia code style visit the manual: <a href="https://docs.julialang.org/en/stable/manual/style-guide/"
+               target="_blank">style guide</a>.</p>
          </div>
        </li>
        <li>
