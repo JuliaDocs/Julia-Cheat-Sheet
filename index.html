@@ -1638,10 +1638,7 @@ CSV.write(filename)</code></pre>
                </tr>
                <tr>
                  <td>All observations with <code>col==val</code></td>
-                 <td>
-                   <pre><code>df[df[:col] .== val, :]
-subset(df, :(col .== val))</code>
-</pre> </td>
+                 <td><code>df[df[:col] .== val, :]</code></td>
                </tr>
                <tr>
                  <td>Reshape from wide to long format</td>
