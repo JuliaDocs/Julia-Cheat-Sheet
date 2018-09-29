@@ -252,6 +252,39 @@ end</code>
        <li>
          <div class="box">
            <div class="title">
+             <h1>Standard Libraries</h1>
+           </div>
+           <p> To help Julia load faster, many core functionalities exist in standard libraries that come bundled with Julia. To make their functions available, use <code>using PackageName</code>. Here are some Standard Libraries and popular functions.</p>
+           <table>
+             <tbody>
+               <tr>
+                 <td><code>Random</code></td>
+                 <td><code>rand</code>, <code>randn</code>, <code>randsubseq</code></td>
+               </tr>
+               <tr>
+                 <td><code>Statistics</code></td>
+                 <td><code>mean</code>, <code>std</code>, <code>cor</code>, <code>median</code>, <code>quantile</code></td>
+               </tr>
+               <tr>
+                 <td><code>LinearAlgebra</code></td>
+                 <td><code>I</code>, <code>eigvals</code>, <code>eigvecs</code>, <code>det</code>, <code>cholesky</code> </td>
+               </tr>
+               <tr>
+                 <td><code>SparseArrays</code></td>
+                 <td><code>sparse</code>, <code>SparseVector</code>, <code>SparseMatrixCSC</code></td>
+               </tr>
+               <tr>
+                 <td><code>Dates</code></td>
+                 <td><code>DateTime</code>, <code>Date</code></td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+       </li>
+       <li>
+       <li>
+         <div class="box">
+           <div class="title">
              <h1>Package management</h1>
            </div>
            <p>Packages must be <a href="https://pkg.julialang.org" target="_blank">registered</a>
