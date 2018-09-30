@@ -252,6 +252,43 @@ end</code>
        <li>
          <div class="box">
            <div class="title">
+             <h1>Standard Libraries</h1>
+           </div>
+           <p> To help Julia load faster, many core functionalities exist in standard libraries that come bundled with Julia. To make their functions available, use <code>using PackageName</code>. Here are some Standard Libraries and popular functions.</p>
+           <table>
+             <tbody>
+               <tr>
+                 <td><code>Random</code></td>
+                 <td><code>rand</code>, <code>randn</code>, <code>randsubseq</code></td>
+               </tr>
+               <tr>
+                 <td><code>Statistics</code></td>
+                 <td><code>mean</code>, <code>std</code>, <code>cor</code>, <code>median</code>, <code>quantile</code></td>
+               </tr>
+               <tr>
+                 <td><code>LinearAlgebra</code></td>
+                 <td><code>I</code>, <code>eigvals</code>, <code>eigvecs</code>, <code>det</code>, <code>cholesky</code> </td>
+               </tr>
+               <tr>
+                 <td><code>SparseArrays</code></td>
+                 <td><code>sparse</code>, <code>SparseVector</code>, <code>SparseMatrixCSC</code></td>
+               </tr>
+               <tr>
+                 <td><code>Distributed</code></td>
+                 <td><code>@distributed</code>, <code>pmap</code>, <code>addprocs</code></td>
+               </tr>
+               <tr>
+                 <td><code>Dates</code></td>
+                 <td><code>DateTime</code>, <code>Date</code></td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+       </li>
+       <li>
+       <li>
+         <div class="box">
+           <div class="title">
              <h1>Package management</h1>
            </div>
            <p>Packages must be <a href="https://pkg.julialang.org" target="_blank">registered</a>
@@ -1360,7 +1397,7 @@ end</code>
 @spawn          # run at some worker
 @spawnat        # run at specified worker
 @async          # asynchronous task
-@parallel       # parallel for loop
+@distributed       # parallel for loop
 @everywhere     # make available to workers</code>
 </pre> </td>
                </tr>
@@ -1374,6 +1411,7 @@ end</code>
            </ul>
          </div>
        </li>
+<!--
        <li>
          <div class="box">
            <div class="title">
@@ -1411,11 +1449,13 @@ end</code>
            </table>
          </div>
        </li>
+-->
        <li>
          <div class="box">
            <div class="title">
              <h1>Parallel Computing</h1>
            </div>
+           <p> Parallel computing tools are available in the <code>Distributed</code> standard library.</p>
            <table>
              <tbody>
                <tr>
@@ -1485,7 +1525,7 @@ fetch(r)</code>
                        (independent) workers.</span></a> function <code>red</code>
                  </td>
                  <td>
-                   <pre><code>sum = @parallel (red) for i in 1:10^6
+                   <pre><code>sum = @distributed (red) for i in 1:10^6
 # do parallel stuff
 end</code>
 </pre> </td>
