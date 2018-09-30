@@ -274,6 +274,10 @@ end</code>
                  <td><code>sparse</code>, <code>SparseVector</code>, <code>SparseMatrixCSC</code></td>
                </tr>
                <tr>
+                 <td><code>Distributed</code></td>
+                 <td><code>@distributed</code>, <code>pmap</code>, <code>addprocs</code></td>
+               </tr>
+               <tr>
                  <td><code>Dates</code></td>
                  <td><code>DateTime</code>, <code>Date</code></td>
                </tr>
@@ -1393,7 +1397,7 @@ end</code>
 @spawn          # run at some worker
 @spawnat        # run at specified worker
 @async          # asynchronous task
-@parallel       # parallel for loop
+@distributed       # parallel for loop
 @everywhere     # make available to workers</code>
 </pre> </td>
                </tr>
@@ -1451,6 +1455,7 @@ end</code>
            <div class="title">
              <h1>Parallel Computing</h1>
            </div>
+           <p> Parallel computing tools are available in the <code>Distributed</code> standard library.</p>
            <table>
              <tbody>
                <tr>
@@ -1520,7 +1525,7 @@ fetch(r)</code>
                        (independent) workers.</span></a> function <code>red</code>
                  </td>
                  <td>
-                   <pre><code>sum = @parallel (red) for i in 1:10^6
+                   <pre><code>sum = @distributed (red) for i in 1:10^6
 # do parallel stuff
 end</code>
 </pre> </td>
