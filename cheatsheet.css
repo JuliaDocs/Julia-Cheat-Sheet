@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
 /*******************************************************************
  * CSS reset adapted from http://meyerweb.com/eric/tools/css/reset *
  *******************************************************************/
@@ -123,6 +123,7 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
 }
 /******************
  * Custom styling *
@@ -141,9 +142,16 @@ h1 {
   text-align: right;
 }
 h2 {
+  font-size: 1.2em;
+  margin: 8px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+#top h2 {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 120%;
   text-align: right;
+  font-weight: normal;
 }
 footer {
   font-size: 80%;
@@ -211,6 +219,7 @@ ul {
 }
 .box p {
   padding: 0.25em 0.5em 0.25em 0.5em;
+  text-align: justify;
 }
 .box em {
   font-style: italic;
@@ -218,7 +227,6 @@ ul {
 le .box table {
   border-spacing: 0.1em;
   border-collapse: collapse;
-  width: 33em;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
@@ -252,6 +260,9 @@ code {
   display: inline-block;
   font-family: 'Ubuntu Mono', monospace;
   color: darkgreen;
+}
+pre code {
+  margin-left: 20px;
 }
 a {
   color: #7182dc;
