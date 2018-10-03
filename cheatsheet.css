@@ -143,9 +143,12 @@ h1 {
 }
 h2 {
   font-size: 1.2em;
-  margin: 8px;
-  margin-left: 20px;
+  margin: 8px 0px 8px 20px;
   font-weight: bold;
+}
+#top h1 {
+  display: block;
+  text-align: right;
 }
 #top h2 {
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -313,6 +316,10 @@ a.tooltip span {
 .github-info {
   font-style: italic;
   font-size: smaller;
+}
+small {
+  font-size: smaller;
+  font-style: italic;
 }
 
 @media(min-width:576px){}

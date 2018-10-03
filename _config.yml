@@ -3,3 +3,21 @@ baseurl: "/Julia-Cheat-Sheet/"
 description: "The Fast Track to Julia - Julia Cheat Sheet"
 github_username: JuliaDocs
 markdown: kramdown
+
+t:
+  en:
+    name: "English"
+    fast-track: "The Fast Track to"
+    quick-dirty: "A quick and dirty overview of"
+    github-1: "This page's source is"
+    github-2: "located here"
+    github-3: "Pull requests are welcome!"
+    translate: "Help translate!" # Not used for `en`
+  br:
+    name: "Português do Brasil"
+    fast-track: "A via rápida para"
+    quick-dirty: "Uma visão geral ágil e simples para"
+    github-1: "O código fonte desta página está"
+    github-2: "localizado aqui"
+    github-3: "Pull requests são bem-vindos!"
+    translate: "Ajude a traduzir!"
