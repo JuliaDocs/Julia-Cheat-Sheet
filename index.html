@@ -25,7 +25,7 @@ Pull requests are welcome!</div>
         <div class="title">
           <h1>{{ block.title }}</h1>
         </div>
-        {% capture this_block %}{% include {{ block.file }} %}{% endcapture %}
+        {% capture this_block %}{% include en/{{ block.file }} %}{% endcapture %}
         {{ this_block | markdownify }}
       </div>
       {% endfor %}
