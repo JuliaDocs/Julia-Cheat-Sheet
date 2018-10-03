@@ -143,9 +143,12 @@ h1 {
 }
 h2 {
   font-size: 1.2em;
-  margin: 8px;
-  margin-left: 20px;
+  margin: 8px 0px 8px 20px;
   font-weight: bold;
+}
+#top h1 {
+  display: block;
+  text-align: right;
 }
 #top h2 {
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -313,6 +316,53 @@ a.tooltip span {
 .github-info {
   font-style: italic;
   font-size: smaller;
+}
+small {
+  font-size: smaller;
+  font-style: italic;
+}
+.languages {
+  display: inline-block;
+  float: left;
+  left: 20px;
+  margin: 20px;
+  text-align: left;
+  position: absolute;
+  transition: 0.1s;
+}
+.language {
+  width: 32px;
+  padding: 3px;
+  vertical-align: middle;
+}
+.language-link {
+  font-size: 1.25em;
+  background: #e6f2ff;
+  padding: 5px;
+}
+.language-link:hover {
+  background: #fafcff;
+}
+.others {
+  border: 2px #4d64ae solid;
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  min-width: 260px;
+  transform: translateY(-2em);
+  transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.2s;
+}
+.languages:hover .others {
+  visibility: visible;
+  transform: translateY(0em);
+  opacity: 1;
+  transition-delay: 0s, 0s;
+}
+
+.languages a {
+  text-decoration: none;
+  color: black;
 }
 
 @media(min-width:576px){}
