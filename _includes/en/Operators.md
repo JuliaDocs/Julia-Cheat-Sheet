@@ -7,7 +7,6 @@
 | Remainder        | `x % y` or `rem(x,y)` |
 | Negation         | `!true == false`      |
 | Equality         | `a == b`              |
-| Equality (<a class="tooltip" href="#">composite types<span>The default comparison operator compares only memory addresses for composite types.</span></a>) | `is(a, b) # done on bit level` |
 | Inequality               | `a != b` or `a ≠ b`                                                            |
 | Less and larger than     | `<` and `>`                                                                    |
 | Less than or equal to    | `<=` or `≤`                                                                    |
