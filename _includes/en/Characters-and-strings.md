@@ -4,7 +4,7 @@
 | String                                         | `str = "A string"`                                                                                                 |
 | Character code                                 | `Int('J') == 74`                                                                                                   |
 | Character from code                            | `Char(74) == 'J'`                                                                                                  |
-| Any UTF character                              | `chr = '\uXXXX'     # 4-digit HEX`<br>`chr = '\uXXXXXXXX' # 8-digit HEX`                                           |
+| Any UTF character                              | `chr = '\uXXXX'     # 4-digit HEX`<br>`chr = '\UXXXXXXXX' # 8-digit HEX`                                           |
 | Loop through characters                        | `for c in str`<br>`    println(c)`<br>`end`                                                                        |
 | Concatenation                                  | `str = "Learn" * " " * "Julia"`                                                                                    |
 | String interpolation                           | `a = b = 2`<br>`println("a * b = $(a*b)")`                                                                         |
