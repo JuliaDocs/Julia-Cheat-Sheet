@@ -17,7 +17,7 @@ Para a maioria das ferramentas de Álgebra Linear, use `using LinearAlgebra`.
 | Autovalores                    | `eigvals(M)`                                                                                                                               |
 | Autovetores                    | `eigvecs(M)`                                                                                                                               |
 | Matriz Inversa                 | `inv(M)`                                                                                                                                   |
-| Resolver `M*x == v`            | `M\v         ` é <a class="tooltip" href="#">melhor <span> Numericamente mais estável e também mais rápido. </span></a> than `inv(M)*v`    |
+| Resolver `M*x == v`            | `M\v         ` é <a class="tooltip" href="#"> melhor <span> Numericamente mais estável e também mais rápido.</span></a> que `inv(M)*v`     |
 | Moore-Penrose pseudo-inverse   | `pinv(M)`                                                                                                                                  |
 
 Julia foi construída para dar suporte a [decomposições matriciais](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/).
