@@ -2,22 +2,22 @@
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Caractere                                      | `chr = 'C'`                                                                                                        |
 | String                                         | `str = "A string"`                                                                                                 |
-| Character code                                 | `Int('J') == 74`                                                                                                   |
-| Caractere para código                          | `Char(74) == 'J'`                                                                                                  |
+| Caractere do código                            | `Int('J') == 74`                                                                                                   |
+| Caractere apartir do código                    | `Char(74) == 'J'`                                                                                                  |
 | Qualquer caractere UTF                         | `chr = '\uXXXX'     # 4-digit HEX`<br>`chr = '\UXXXXXXXX' # 8-digit HEX`                                           |
-| Loop through characters                        | `for c in str`<br>`    println(c)`<br>`end`                                                                        |
-| Concatenation                                  | `str = "Learn" * " " * "Julia"`                                                                                    |
-| String interpolation                           | `a = b = 2`<br>`println("a * b = $(a*b)")`                                                                         |
-| First matching character or regular expression | `findfirst(isequal('i'), "Julia") == 4`                                                                            |
-| Replace substring or regular expression        | `replace("Julia", "a" => "us") == "Julius"`                                                                        |
-| Last index (of collection)                     | `lastindex("Hello") == 5`                                                                                          |
-| Número de caraters                             | `length("Hello") == 5`                                                                                             |
-| Regular expression                             | `pattern = r"l[aeiou]"`                                                                                            |
-| Subexpressions                                 | `str = "+1 234 567 890"`<br>`pat = r"\+([0-9]) ([0-9]+)"`<br>`m = match(pat, str)`<br>`m.captures == ["1", "234"]` |
-| All occurrences                                | `[m.match for m = eachmatch(pat, str)]`                                                                            |
-| All occurrences (as iterator)                  | `eachmatch(pat, str)`                                                                                              |
+| Fazer loop pelos caracteres                    | `for c in str`<br>`    println(c)`<br>`end`                                                                        |
+| Concatenação                                   | `str = "Learn" * " " * "Julia"`                                                                                    |
+| Interpolação de String                         | `a = b = 2`<br>`println("a * b = $(a*b)")`                                                                         |
+| Primeiro caractere correspondente ou expressão regular  | `findfirst(isequal('i'), "Julia") == 4`                                                                            |
+| Substituir substring ou expressão regular        | `replace("Julia", "a" => "us") == "Julius"`                                                                        |
+| Último índice (da coleção)                     | `lastindex("Hello") == 5`                                                                                          |
+| Número de caracteres                             | `length("Hello") == 5`                                                                                             |
+| Expressão regular                              | `pattern = r"l[aeiou]"`                                                                                            |
+| Sub-expressões                                 | `str = "+1 234 567 890"`<br>`pat = r"\+([0-9]) ([0-9]+)"`<br>`m = match(pat, str)`<br>`m.captures == ["1", "234"]` |
+| Todas as ocorrêcias                            | `[m.match for m = eachmatch(pat, str)]`                                                                            |
+| Todas as ocorrêcias (como iterador)            | `eachmatch(pat, str)`                                                                                              |
 
 
-Beware of multi-byte Unicode encodings in UTF-8:
+Cuidado com multi-byte Unicode codificações em UTF-8:
 `10 == lastindex("Ångström") != length("Ångström") == 8`
-Strings are immutable.
+Strings são imutáveis.
