@@ -1,16 +1,17 @@
-The main convention in Julia is to avoid underscores unless they are required for legibility.
+A principal convenção em júlia é evitar sublinhados, a menos que seja requirido por legibilidade.
 
-Variable names are in lower (or snake) case: `somevariable`.
 
-Constants are in upper case: `SOMECONSTANT`.
+Nomes de variáveis são minúsculas: `somevariable`.
 
-Functions are in lower (or snake) case: `somefunction`.
+Constantes em maiúsculo: `SOMECONSTANT`.
 
-Macros are in lower (or snake) case: `@somemacro`.
+Funções em minúsculo:  `somefunction`.
 
-Type names are in initial-capital camel case: `SomeType`.
+Macros em minúsculos: `@somemacro`.
 
-Julia files have the `jl` extension.
+Nomes de tipo são da forma: `SomeType`. 
 
-For more information on Julia code style visit the manual: [style
-guide](https://docs.julialang.org/en/stable/manual/style-guide/) .
+Arquivos em Julia possuem uma extensão `jl`.
+
+Para mais informações do estilo de código do Julia, visite o manual
+[guia de estilos](https://docs.julialang.org/en/stable/manual/style-guide/) .
