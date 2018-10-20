@@ -3,7 +3,7 @@
 | Caractere                                      | `chr = 'C'`                                                                                                        |
 | String                                         | `str = "A string"`                                                                                                 |
 | Caractere do código                            | `Int('J') == 74`                                                                                                   |
-| Caractere apartir do código                    | `Char(74) == 'J'`                                                                                                  |
+| Caractere a partir do código                    | `Char(74) == 'J'`                                                                                                  |
 | Qualquer caractere UTF                         | `chr = '\uXXXX'     # 4-digit HEX`<br>`chr = '\UXXXXXXXX' # 8-digit HEX`                                           |
 | Fazer loop pelos caracteres                    | `for c in str`<br>`    println(c)`<br>`end`                                                                        |
 | Concatenação                                   | `str = "Learn" * " " * "Julia"`                                                                                    |
