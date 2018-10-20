@@ -1,23 +1,23 @@
-Julia is homoiconic: programs are represented as data structures of the
-language itself. In fact, everything is an expression `Expr`.
+Julia é homoicônico: Programas são representados como estruturas de dados
+da própria linguaguem. De fato, tudo é uma expressão `Expr`.
 
-Symbols are <a class="tooltip" href="#">interned strings <span> Only one copy of each distinct
-(immutable) string value is stored. </span></a> prefixed with a colon.
-Symbols are more efficient and they are typically used as identifiers,
-keys (in dictionaries), or columns in data frames. Symbols cannot be
-concatenated.
-
-Quoting `:( ... )` or `quote ... end` creates an expression, just
-like <a class="tooltip" href="#">`parse(str)` <span> This form is probably most familiar to
-people with knowledge of dynamic SQL. The `parse` function is similar
-to Oracle"s and PostgreSQL"s `EXECUTE IMMEDIATE` statement or SQL
-Server's `sp_executesql()` procedure. </span></a> , and `Expr(:call, ...)`.
+Símbolos são <a class="tooltip" href="#">sequências internas <span> 
+Apenas uma cópia de cada valor de sequência distinta é armazenado.
+  (Imutável).</span></a> preficaso com dois pontos.
+  
+Símbolos são mais eficientes e são tipicamente utilizado como identificadores,
+chaves (em dicionários), ou colunas em `data frames`. Símbolos não podem ser concatenados.
+Citação `:( ... )` ou `quote ... end` cria uma expressão, como 
+<a class="tooltip" href="#">`parse(str)` <span> Essa forma é provávelmente a mais familiar
+  a pessoas com conhecimento de Dinâmicas em SQL. A função `parse` é similiar à declaração
+  `EXECUTE IMMEDIATE` da Oracle e da PostgreSQL ou do procedimento `sp_executesql()` do servidor SQL·</span></a>
+  e `Expr(:call, ...)`.
 
 ```
 x = 1
-line = "1 + $x"      # some code
-expr = parse(line)   # make an Expr object
-typeof(expr) == Expr # true
-dump(expr)           # generate abstract syntax tree
-eval(expr) == 2      # evaluate Expr object: true
+line = "1 + $x"      # algum código
+expr = parse(line)   # Cria um objeto de expressão (Expr)
+typeof(expr) == Expr # Verdadeiro
+dump(expr)           # Gera uma árvore de sintaxes abstratas
+eval(expr) == 2      # Avalia um objeto Expr se é verdadeiro
 ```
