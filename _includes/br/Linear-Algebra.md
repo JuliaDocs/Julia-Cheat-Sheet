@@ -1,5 +1,4 @@
-For most linear algebra tools, use `using LinearAlgebra`.
-Para mais ferramentas de Álgebra Linear, use `using LinearAlgebra`.
+Para a maioria das ferramentas de Álgebra Linear, use `using LinearAlgebra`.
 
 |                                |                                                                                                                                            |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -23,8 +22,8 @@ Para mais ferramentas de Álgebra Linear, use `using LinearAlgebra`.
 
 Julia foi construída para dar suporte a [decomposições matriciais](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/).
 
-Julia tries to infer whether matrices are of a special type (symmetric,
-hermitian, etc.), but sometimes fails. To aid Julia in dispatching the
-optimal algorithms, special matrices can be declared to have a structure
-with functions like `Symmetric` , `Hermitian` , `UpperTriangular`, `LowerTriangular`,
-`Diagonal` , and more.
+Julia tenta inferir se as matrizes são de tipos especiais (Simétricas,
+Hermitianas, etc.), mas as vezes falha. Para ajudar Julia a despachar
+algoritmos ótimos, matrizes especiais podem ser declaradas para ter uma
+estrutura de funções como `Symmetric` , `Hermitian` , `UpperTriangular`, `LowerTriangular`,
+`Diagonal`, e muito mais.
