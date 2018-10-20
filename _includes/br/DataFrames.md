@@ -1,4 +1,4 @@
-For `dplyr`-like tools, see
+Para ferramentas tipo `dplyr`, veja
 [DataFramesMeta.jl.](https://github.com/JuliaStats/DataFramesMeta.jl)
 
 |                                                                                                         |                                                                                                                                                                   |
