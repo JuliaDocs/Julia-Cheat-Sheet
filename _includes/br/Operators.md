@@ -3,7 +3,7 @@
 | Aritmética Básica | `+`, `-`,`*`,`/`      |
 | Exponencial   | `2^3 == 8`            |
 | Divisão         | `3/12 == 0.25`        |
-| Número Inverso | `7\3 == 3/7`          |
+| Divisao Inversa | `7\3 == 3/7`          |
 | Resto da Divisão        | `x % y` ou `rem(x,y)` |
 | Negação         | `!true == false`      |
 | Igualdade         | `a == b`              |
