@@ -5,7 +5,7 @@
 | Acesso e atribuição	                          | `arr = Any[1,2]`<br>`arr[1] = "Some text"`                                           |
 | Comparação                                      | `a = [1:10;]`<br>`b = a      # b points to a`<br>`a[1] = -99`<br>`a == b     # true` |
 | Copiar elementos (não endereços)                | `b = copy(a)`<br>`b = deepcopy(a)`                                                   |
-| Selecionar a subarray de m para n               | `arr[n:m]`                                                                           |
+| Selecionar a subarray de m para n               | `arr[m:n]`                                                                           |
 | n-elemento array com 0.0s                       | `zeros(n)`                                                                           |
 | n-elemento array com 1.0s                       | `ones(n)`                                                                            |
 | n-elemento array com #undefs                    | `Vector{Type}(undef,n)`                                                              |
