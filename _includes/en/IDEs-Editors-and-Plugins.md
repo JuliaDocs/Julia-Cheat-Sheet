@@ -8,7 +8,3 @@
 - [VS Code
   extension](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
   (editor)
-- [Sublime Text](https://www.sublimetext.com) [Julia
-  plug-in](https://github.com/WestleyArgentum/Sublime-Julia) (editor)
-- [Sublime Text](https://www.sublimetext.com) [IJulia
-  plug-in](https://github.com/quinnj/Sublime-IJulia) (editor)
