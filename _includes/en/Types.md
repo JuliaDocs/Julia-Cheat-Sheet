@@ -21,7 +21,7 @@ Objects that may be one of a set of types are called `Union` types.
 | Type alias               | `const Nerd = Programmer`                                                                                                |
 | Type constructors        | `methods(TypeName)`                                                                                                      |
 | Type instantiation       | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")`                                             |
-| Subtype declaration      | `abstract type Programmer`<br>`name::AbstractString`<br>`birth_year::UInt16`<br>`fave_language::AbstractString`<br>`end` |
+| Subtype declaration      | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`pond::String`<br>`end`                                             |
 | Parametric type          | `struct Point{T <: Real}`<br>`x::T`<br>`y::T`<br>`end`<br><br>`p =Point{Float64}(1,2)`<br>                               |
 | Union types              | `Union{Int, String}`                                                                                                     |
 | Traverse type hierarchy  | `supertype(TypeName)` and `subtypes(TypeName)`                                                                           |
