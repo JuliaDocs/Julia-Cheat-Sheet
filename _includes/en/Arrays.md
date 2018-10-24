@@ -5,7 +5,7 @@
 | Access and assignment	                          | `arr = Any[1,2]`<br>`arr[1] = "Some text"`                                           |
 | Comparison                                      | `a = [1:10;]`<br>`b = a      # b points to a`<br>`a[1] = -99`<br>`a == b     # true` |
 | Copy elements (not address)                     | `b = copy(a)`<br>`b = deepcopy(a)`                                                   |
-| Select subarray from m to n                     | `arr[n:m]`                                                                           |
+| Select subarray from m to n                     | `arr[m:n]`                                                                           |
 | n-element array with 0.0s                       | `zeros(n)`                                                                           |
 | n-element array with 1.0s                       | `ones(n)`                                                                            |
 | n-element array with #undefs                    | `Vector{Type}(undef,n)`                                                              |
