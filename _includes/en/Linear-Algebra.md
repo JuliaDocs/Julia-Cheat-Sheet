@@ -8,7 +8,7 @@ For most linear algebra tools, use `using LinearAlgebra`.
 | Select `i` th row              | `M[i, :]`                                                                                                                                  |
 | Select `i` th column           | `M[:, i]`                                                                                                                                  |
 | Concatenate horizontally       | `M = [a b]` or `M = hcat(a, b)`                                                                                                            |
-| Concatenate vertically         | `M = [a ; b` or `M = vcat(a, b)`                                                                                                           |
+| Concatenate vertically         | `M = [a ; b]` or `M = vcat(a, b)`                                                                                                           |
 | Matrix transposition           | `transpose(M)`                                                                                                                             |
 | Conjugate matrix transposition | `M'` or `adjoint(M)`                                                                                                                       |
 | Matrix trace                   | `tr(M)`                                                                                                                                    |
