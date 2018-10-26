@@ -1,4 +1,7 @@
-Para ajudar Julia a carregar rapidamente, muitas das funcionalidades principais existem nas bibliotecas padrão que vem junto com Julia. Para fazer as funções disponíveis, use `using PackageName`. Aqui estão algumas Bibliotecas Padrão e funções comuns.
+Para ajudar Julia a carregar rapidamente, muitas das funcionalidades principais
+existem nas bibliotecas padrão que vem junto com Julia. Para fazer as funções
+disponíveis, use `using PackageName`. Aqui estão algumas Bibliotecas Padrão e
+funções comuns.
 
 |                 |                                              |
 | --------------- | -------------------------------------------- |
