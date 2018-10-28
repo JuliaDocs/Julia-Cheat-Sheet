@@ -1,11 +1,11 @@
 
-|                                |                                                                                              |
-| ------------------------------ | -------------------------------------------------------------------------------------------- |
-| Dictionary                     | `d = Dict(key1 => val1, key2 => val2, ...)`<br>`d = Dict(:key1 => val1, :key2 => val2, ...)` |
-| All keys (iterator)            | `keys(d)`                                                                                    |
-| All values (iterator)          | `values(d)`                                                                                  |
-| Loop through key-value pairs   | `for (k,v) in d`<br>`println("key: $k, value: $v")`<br>`end`                                 |
-| Check for key `:k`             | `haskey(d, :k)`                                                                              |
-| Copy keys (or values) to array | `arr = collect(keys(d))`<br>`arr = [k for (k,v) in d]`                                       |
+|                                             |                                                                                              |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Dicionário                                  | `d = Dict(key1 => val1, key2 => val2, ...)`<br>`d = Dict(:key1 => val1, :key2 => val2, ...)` |
+| Todas as chaves (iterador)                  | `keys(d)`                                                                                    |
+| Todos os valores (iterador)                 | `values(d)`                                                                                  |
+| Repetição através de pares de chave-valor   | `for (k,v) in d`<br>`println("key: $k, value: $v")`<br>`end`                                 |
+| Verificar chave `:k`                        | `haskey(d, :k)`                                                                              |
+| Copiar chaves (ou valores) para um vetor    | `arr = collect(keys(d))`<br>`arr = [k for (k,v) in d]`                                       |
 
-Dictionaries are mutable; when symbols are used as keys, the keys are immutable.
+Dicionários são mutáveis; quando símbolos são usados como chaves, as chaves são imutáveis.
