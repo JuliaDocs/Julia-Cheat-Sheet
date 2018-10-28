@@ -13,4 +13,4 @@
 
 O Julia não checa automaticamente o overflow numérico. Use o pacote
 [SaferIntegers](https://github.com/JeffreySarnoff/SaferIntegers.jl) para inteiros
-com verificação de de overflow.
+com verificação de overflow.
