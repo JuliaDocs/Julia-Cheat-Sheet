@@ -13,4 +13,4 @@ Type names are in initial-capital camel case: `SomeType`.
 Julia files have the `jl` extension.
 
 For more information on Julia code style visit the manual: [style
-guide](https://docs.julialang.org/en/stable/manual/style-guide/) .
+guide](https://docs.julialang.org/en/v1/manual/style-guide/index.html) .
