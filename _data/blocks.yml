@@ -1,65 +1,96 @@
 - file: What-is.md
   title: What is…?
   br: O que é…?
+  zh-cn: ...是什么？
 - file: Basics.md
   title: Basics
+  zh-cn: 基础语法
 - file: Operators.md
   title: Operators
+  zh-cn: 运算符
 - file: The-shell-aka-REPL.md
   title: The shell a.k.a. REPL
+  zh-cn: shell/REPL 环境
 - file: Standard-libraries.md
   title: Standard libraries
+  zh-cn: 标准库
 - file: Package-management.md
   title: Package management
+  zh-cn: 包管理
 - file: Characters-and-strings.md
   title: Characters and strings
+  zh-cn: 字符与字符串
 - file: Numbers.md
   title: Numbers
+  zh-cn: 数字相关
 - file: Random-Numbers.md
   title: Random Numbers
+  zh-cn: 随机数
 - file: Arrays.md
   title: Arrays
+  zh-cn: 数组
 - file: Linear-Algebra.md
   title: Linear Algebra
+  zh-cn: 线性代数
 - file: Control-flow-and-loops.md
   title: Control flow and loops
+  zh-cn: 控制流与循环
 - file: Functions.md
   title: Functions
+  zh-cn: 函数
 - file: Dictionaries.md
   title: Dictionaries
+  zh-cn: 字典
 - file: Sets.md
   title: Sets
+  zh-cn: Sets
 - file: Collection-functions.md
   title: Collection functions
+  zh-cn: Collection 相关函数
 - file: Types.md
   title: Types
+  zh-cn: 类型
 - file: Missing-and-Nothing.md
   title: Missing and Nothing
+  zh-cn: 缺失值与空值
 - file: Exceptions.md
   title: Exceptions
+  zh-cn: 异常处理
 - file: Modules.md
   title: Modules
+  zh-cn: 模块
 - file: Expressions.md
   title: Expressions
+  zh-cn: 表达式
 - file: Macros.md
   title: Macros
+  zh-cn: 宏
 - file: Parallel-Computing.md
   title: Parallel Computing
+  zh-cn: 并行计算
 - file: IO.md
   title: I/O
+  zh-cn: 输入/输出
 - file: DataFrames.md
   title: DataFrames
+  zh-cn: DataFrames
 - file: Introspection-and-reflection.md
   title: Introspection and reflection
 - file: Noteworthy-packages-and-projects.md
   title: Noteworthy packages and projects
+  zh-cn: 值得关注的包与项目
 - file: Naming-Conventions.md
   title: Naming Conventions
+  zh-cn: 命名规范
 - file: Performance-tips.md
   title: Performance tips
+  zh-cn: 性能改进建议
 - file: IDEs-Editors-and-Plugins.md
   title: IDEs, Editors and Plug-ins
+  zh-cn: IDE、编辑器和插件
 - file: Resources.md
   title: Resources
+  zh-cn: 学习资源
 - file: Videos.md
   title: Videos
+  zh-cn: 相关视频
