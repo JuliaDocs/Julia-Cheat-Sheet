@@ -6,8 +6,8 @@
 | Complex types                      | `Complex{T}`                                                                         |
 | Imaginary unit                     | `im`                                                                                 |
 | Machine precision                  | `eps() # same as eps(Float64)`                                                       |
-| Rounding                           | `round() # floating-point`<br>`round(Int, x) # integer`                             |
-| Type conversions                   | `convert(TypeName, val) # attempt/error`<br>`typename(val) # calls convert` |
+| Rounding                           | `round()       # floating-point`<br>`round(Int, x) # integer`                             |
+| Type conversions                   | `convert(TypeName, val)  # attempt/error`<br>`typename(val)           # calls convert` |
 | Global constants                   | `pi # 3.1415...`<br>`π  # 3.1415...`<br>`im # real(im * im) == -1`   |
 | More constants                     | `using Base.MathConstants`                                                           |
 

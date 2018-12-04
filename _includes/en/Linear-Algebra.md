@@ -17,7 +17,7 @@ For most linear algebra tools, use `using LinearAlgebra`.
 | Matrix eigenvalues             | `eigvals(M)`                                                                                                                               |
 | Matrix eigenvectors            | `eigvecs(M)`                                                                                                                               |
 | Matrix inverse                 | `inv(M)`                                                                                                                                   |
-| Solve `M*x == v`               | `M\v         ` is <a class="tooltip" href="#">better <span> Numerically more stable and typically also faster. </span></a> than `inv(M)*v` |
+| Solve `M*x == v`               | `M\v` is <a class="tooltip" href="#">better <span> Numerically more stable and typically also faster. </span></a> than `inv(M)*v` |
 | Moore-Penrose pseudo-inverse   | `pinv(M)`                                                                                                                                  |
 
 Julia has built-in support for [matrix
