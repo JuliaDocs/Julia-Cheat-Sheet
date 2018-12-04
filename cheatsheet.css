@@ -261,6 +261,7 @@ pre {
 }
 code {
   display: inline-block;
+  white-space: pre-wrap;
   font-family: 'Ubuntu Mono', monospace;
   color: darkgreen;
 }
