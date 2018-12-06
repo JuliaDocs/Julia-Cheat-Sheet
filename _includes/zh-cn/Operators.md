@@ -1,18 +1,18 @@
-|                  |                       |
-| ---------------- | --------------------- |
-| Basic arithmetic | `+`, `-`,`*`,`/`      |
-| Exponentiation   | `2^3 == 8`            |
-| Division         | `3/12 == 0.25`        |
-| Inverse division | `7\3 == 3/7`          |
-| Remainder        | `x % y` or `rem(x,y)` |
-| Negation         | `!true == false`      |
-| Equality         | `a == b`              |
-| Inequality               | `a != b` or `a ≠ b`                                                            |
-| Less and larger than     | `<` and `>`                                                                    |
-| Less than or equal to    | `<=` or `≤`                                                                    |
-| Greater than or equal to | `>=` or `≥`                                                                    |
-| Element-wise operation   | `[1, 2, 3] .+ [1, 2, 3] == [2, 4, 6]`<br>`[1, 2, 3] .* [1, 2, 3] == [1, 4, 9]` |
-| Not a number             | `isnan(NaN)` not(!) `NaN == NaN`                                               |
-| Ternary operator         | `a == b ? "Equal" : "Not equal"`                                               |
-| Short-circuited AND and OR | `a && b` and <code>a || b</code> |
-| Object equivalence | `a === b` |
+|                      |                                                 |
+| -------------------- | ----------------------------------------------- |
+| 基本算数运算          | `+`, `-`, `*`, `/`                              |
+| 幂运算               | `2^3 == 8`                                      |
+| 除法                 | `3/12 == 0.25`                                  |
+| 反向除法             | `7\3 == 3/7`                                    |
+| 取余                 | `x % y` 或 `rem(x,y)`                           |
+| 取反                 | `!true == false`                                |
+| 等于                 | `a == b`                                        |
+| 不等于               | `a != b` 或 `a ≠ b`                             |
+| 小于与大于           | `<` 和 `>`                                      |
+| 小于等于             | `<=` 或 `≤`                                     |
+| 大于等于             | `>=` 或 `≥`                                     |
+| 逐元素运算           | `[1, 2, 3] .+ [1, 2, 3] == [2, 4, 6]`<br>`[1, 2, 3] .* [1, 2, 3] == [1, 4, 9]` |
+| 非数值(NaN)          | `isnan(NaN)` **而不是** `NaN == NaN`             |
+| 三元运算符           | `a == b ? "Equal" : "Not equal"`                |
+| 短路 AND 和 OR 表达式 | `a && b` 和 `a || b`                           |
+| 对象等价             | `a === b`                                       |

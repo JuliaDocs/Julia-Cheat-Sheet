@@ -1,13 +1,13 @@
-|                                        |                              |
-| -------------------------------------- | ---------------------------- |
-| Recall last result                     | `ans`                        |
-| Interrupt execution                    | \[Ctrl\] + \[C\]             |
-| Clear screen                           | \[Ctrl\] + \[L\]             |
-| Run program                            | `include("filename.jl")`     |
-| Get help for `func` is defined         | `?func`                      |
-| See all places where `func` is defined | `apropos("func")`            |
-| Command line mode                      | `;`                          |
-| Package Manager mode                   | \]                           |
-| Help mode                              | ?                            |
-| Exit special mode / Return to REPL     | \[Backspace\] on empty line  |
-| Exit REPL                              | `exit()` or \[Ctrl\] + \[D\] |
+|                              |                              |
+| ---------------------------- | ---------------------------- |
+| 上一次运算的结果              | `ans`                        |
+| 中断命令执行                  | \[Ctrl\] + \[C\]             |
+| 清屏                         | \[Ctrl\] + \[L\]             |
+| 运行程序文件                  | `include("filename.jl")`     |
+| 查找 `func` 相关的帮助        | `?func`                      |
+| 查找 `func` 的所有定义        | `apropos("func")`            |
+| 命令行模式                    | `;`                          |
+| 包管理模式                    | \]                           |
+| 帮助模式                      | ?                            |
+| 退出特殊模式 / 返回到 REPL     | 在空行上按 \[Backspace\]      |
+| 退出 REPL                     | `exit()` 或 \[Ctrl\] + \[D\] |
