@@ -1,29 +1,30 @@
-Packages must be [registered](https://pkg.julialang.org) before they are visible to the
-package manager. In Julia 1.0, there are two ways to work with the package manager:
-either with `using Pkg` and using `Pkg` functions, or by typing `]` in the REPL to
-enter the special interactive package management mode. (To return to regular REPL, just
-hit `BACKSPACE` on an empty line in package management mode). Note
-that new tools arrive in interactive mode first, then usually also
-become available in regular Julia sessions through `Pkg` module.
+一个程序包必须先[注册](https://github.com/JuliaLang/METADATA.jl)，然后才能在包管理器中看到它。
 
-## Using `Pkg` in Julia session
+在 Julia 1.0 中，有两种使用包管理器的方法：
+- 一是通过 `using Pkg` 导入 `Pkg` 模块，然后用它的函数管理其他包；
+- 或者在 REPL 中输入 `]`，然后按回车。进入特殊的交互式包管理模式。
+  (要从包管理模式返回 REPL，只需要在空行上按退格键 `BACKSPACE` 就行了) 
 
-|                                            |                            |
-| ------------------------------------------ | -------------------------- |
-| List installed packages (human-readable)   | `Pkg.status()`             |
-| List installed packages (machine-readable) | `Pkg.installed()`          |
-| Update all packages                        | `Pkg.update()`             |
-| Install `PackageName`                      | `Pkg.add("PackageName")`   |
-| Rebuild `PackageName`                      | `Pkg.build("PackageName")` |
-| Use `PackageName` (after install)          | `using PackageName`        |
-| Remove `PackageName`                       | `Pkg.rm("PackageName")`    |
+注意新的工具总是先添加到交互式模式中，然后才会加入 `Pkg` 模块。
 
-## In Interactive Package Mode
+## 在 Julia 会话中使用 `Pkg` 管理包
 
-|                                                          |                                       |
-| -------------------------------------------------------- | ------------------------------------- |
-| Add `PackageName`                                        | `add PackageName`                     |
-| Remove `PackageName`                                     | `rm PackageName`                      |
-| Update `PackageName`                                     | `update PackageName`                  |
-| Use development version                                  | `dev PackageName` or `dev GitRepoUrl` |
-| Stop using development version, revert to public release | `free PackageName`                    |
+|                                  |                            |
+| -------------------------------- | -------------------------- |
+| 列出已安装的包 (人类可读版)        | `Pkg.status()`             |
+| 列出已安装的包 (机器可读版)        | `Pkg.installed()`          |
+| 更新所有包                       | `Pkg.update()`             |
+| 安装包 `PackageName`             | `Pkg.add("PackageName")`   |
+| 重新构建包 `PackageName`         | `Pkg.build("PackageName")` |
+| (在安装之后) 使用包 `PackageName` | `using PackageName`        |
+| 删除包 `PackageName`             | `Pkg.rm("PackageName")`    |
+
+## 交互式包管理模式
+
+|                               |                                       |
+| ----------------------------- | ------------------------------------- |
+| 添加包 `PackageName`           | `add PackageName`                     |
+| 删除包 `PackageName`           | `rm PackageName`                      |
+| 更新包 `PackageName`           | `update PackageName`                  |
+| 使用开发版本                   | `dev PackageName` 或 `dev GitRepoUrl` |
+| 停止使用开发板，返回普通的发行版 | `free PackageName`                    |

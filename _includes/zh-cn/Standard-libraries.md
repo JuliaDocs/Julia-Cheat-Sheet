@@ -1,6 +1,6 @@
-To help Julia load faster, many core functionalities exist in standard libraries that
-come bundled with Julia. To make their functions available, use `using PackageName`. Here
-are some Standard Libraries and popular functions.
+为了让 Julia 能加载的更快，许多核心组件都放在与 Julia 捆绑在一起的标准库中。
+当你想用某一个标准库时，就输入 `using PackageName`。
+以下是一些标准库及其常用的函数。
 
 |                 |                                              |
 | --------------- | -------------------------------------------- |
