@@ -1,23 +1,23 @@
-Julia is homoiconic: programs are represented as data structures of the
-language itself. In fact, everything is an expression `Expr`.
+Julia 具有同像性：程序被表示为语言本身的数据结构。
+实际上 Julia 语言里的任何东西都是一个表达式 `Expr`。
 
-Symbols are <a class="tooltip" href="#">interned strings <span> Only one copy of each distinct
-(immutable) string value is stored. </span></a> prefixed with a colon.
-Symbols are more efficient and they are typically used as identifiers,
-keys (in dictionaries), or columns in data frames. Symbols cannot be
-concatenated.
+符号(Symbols)是<a class="tooltip" href="#">受限的字符串
+<span>不同的(不可变)字符串只存在一个副本。</span></a>，以冒号 `:` 为前缀。
+相对于其他类型来说，符号效率更高。它也经常用作标识符、字典的键或者数据表里的列名。
+符号不能进行拼接。
 
-Quoting `:( ... )` or `quote ... end` creates an expression, just
-like <a class="tooltip" href="#">`parse(str)` <span> This form is probably most familiar to
-people with knowledge of dynamic SQL. The `parse` function is similar
-to Oracle"s and PostgreSQL"s `EXECUTE IMMEDIATE` statement or SQL
-Server's `sp_executesql()` procedure. </span></a> , and `Expr(:call, ...)`.
+使用引用 `:( ... )` 或块引用 `quote ... end` 可以创建一个表达式，就像
+<a class="tooltip" href="#">`parse(str)`<span> 
+了解动态 SQL 的人可能会熟悉这种形式。
+这里的 `parse` 函数类似于 Oracle 和 PostgreSQL 的 `EXECUTE IMMEDIATE` 语句，
+或 SQL
+Server 的 `sp_executesql()` 过程。</span></a>，和 `Expr(:call, ...)`。
 
-```
+```julia
 x = 1
-line = "1 + $x"      # some code
-expr = parse(line)   # make an Expr object
-typeof(expr) == Expr # true
-dump(expr)           # generate abstract syntax tree
-eval(expr) == 2      # evaluate Expr object: true
+line = "1 + $x"         # 一些代码
+expr = Meta.parse(line) # 生成一个 Expr 对象
+typeof(expr) == Expr    # true
+dump(expr)              # 打印生成抽象语法(AST)
+eval(expr) == 2         # 对 Expr 对象求值: true
 ```
