@@ -1,15 +1,14 @@
-Macros allow generated code (i.e. expressions) to be included in a
-program.
+宏允许你在程序中自动生成代码（如：表达式）。
 
-|                 |                                                            |
-| --------------- | ---------------------------------------------------------- |
-| Definition      | `macro macroname(expr)`<br>`    # do stuff`<br>`end`       |
-| Usage           | `macroname(ex1, ex2, ...)` or `@macroname ex1, ex2, ...`   |
-| Built-in macros | `@test           # equal (exact)`<br>`@test_approx_eq # equal (modulo numerical errors)`<br>`@test x ≈ y    # isapprox(x, y)`<br>`@assert         # assert (unit test)`<br>`@which          # types used`<br>`@time           # time and memory statistics`<br>`@elapsed        # time elapsed`<br>`@allocated      # memory allocated`<br>`@profile        # profile`<br>`@spawn          # run at some worker`<br>`@spawnat        # run at specified worker`<br>`@async          # asynchronous task`<br>`@distributed    # parallel for loop`<br>`@everywhere     # make available to workers` |
+|         |                                                            |
+| ------- | ---------------------------------------------------------- |
+| 定义    | `macro macroname(expr)`<br>`    # 做点啥`<br>`end`          |
+| 使用    | `macroname(ex1, ex2, ...)` 或 `@macroname ex1, ex2, ...`    |
+| 内置的宏 | `@test           # 精确相等`<br>`@test x ≈ y    # 近似相等 isapprox(x, y)`<br>`@assert         # assert (单元测试)`<br>`@which          # 查看对特定参数使用的方法/查找函数所在的模块`<br>`@time           # 运行时间与内存分配统计`<br>`@elapsed        # 返回执行用时`<br>`@allocated      # 查看内存分配`<br>`@async          # 异步任务` |
 
 
-Rules for creating *hygienic* macros:
+创建 *卫生宏* (hygienic macros)的规则：
 
-- Declare variables inside macro with `local` .
-- Do not call `eval` inside macro.
-- Escape interpolated expressions to avoid expansion: `$(esc(expr))`
+- 在宏的内部只通过 `local` 声明本地变量。
+- 在宏的内部不使用 `eval`。
+- 转义插值表达式以避免宏变大：`$(esc(expr))`
