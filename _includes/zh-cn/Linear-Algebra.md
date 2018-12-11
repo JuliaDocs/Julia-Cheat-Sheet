@@ -1,30 +1,26 @@
-For most linear algebra tools, use `using LinearAlgebra`.
+想要使用线性代数相关的工具，请用：`using LinearAlgebra`。
 
-|                                |                                             |
-| ------------------------------ | ------------------------------------------- |
-| Identity matrix                | `I  # just use variable I. Will automatically conform to dimensions required.` |
-| Define matrix                  | `M = [1 0; 0 1]`                            |
-| Matrix dimensions              | `size(M)`                                   |
-| Select `i` th row              | `M[i, :]`                                   |
-| Select `i` th column           | `M[:, i]`                                   |
-| Concatenate horizontally       | `M = [a b]` or `M = hcat(a, b)`             |
-| Concatenate vertically         | `M = [a ; b]` or `M = vcat(a, b)`           |
-| Matrix transposition           | `transpose(M)`                              |
-| Conjugate matrix transposition | `M'` or `adjoint(M)`                        |
-| Matrix trace                   | `tr(M)`                                     |
-| Matrix determinant             | `det(M)`                                    |
-| Matrix rank                    | `rank(M)`                                   |
-| Matrix eigenvalues             | `eigvals(M)`                                |
-| Matrix eigenvectors            | `eigvecs(M)`                                |
-| Matrix inverse                 | `inv(M)`                                    |
-| Solve `M*x == v`               | `M\v` is <a class="tooltip" href="#">better <span> Numerically more stable and typically also faster. </span></a> than `inv(M)*v` |
-| Moore-Penrose pseudo-inverse   | `pinv(M)`                                   |
+|                      |                                             |
+| -------------------- | ------------------------------------------- |
+| 单位矩阵              | `I # 直接用 I 就好。会自动转换到所需的维数。`  |
+| 定义矩阵              | `M = [1 0; 0 1]`                            |
+| 矩阵维数              | `size(M)`                                   |
+| 选出第 `i` 行         | `M[i, :]`                                   |
+| 选出第 `j` 列         | `M[:, j]`                                   |
+| 水平拼接              | `M = [a b]` 或 `M = hcat(a, b)`             |
+| 竖直拼接              | `M = [a ; b]` 或 `M = vcat(a, b)`           |
+| 矩阵转置              | `transpose(M)`                              |
+| 共轭转置              | `M'` 或 `adjoint(M)`                        |
+| 迹(trace)             | `tr(M)`                                     |
+| 行列式                | `det(M)`                                    |
+| 秩(rank)              | `rank(M)`                                   |
+| 特征值                | `eigvals(M)`                                |
+| 特征向量              | `eigvecs(M)`                                |
+| 矩阵求逆              | `inv(M)`                                    |
+| 解矩阵方程 `M*x == v` | `M\v` 比 `inv(M)*v` <a class="tooltip" href="#">更好<span> 数值上更稳定，通常速度也更快。 </span></a>。 |
+| 求 Moore-Penrose 伪逆 | `pinv(M)`                                   |
 
-Julia has built-in support for [matrix
-decompositions](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/).
+Julia 有内置的[矩阵分解函数](http://docs.juliacn.com/latest/stdlib/LinearAlgebra/#%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3-1)。
 
-Julia tries to infer whether matrices are of a special type (symmetric,
-hermitian, etc.), but sometimes fails. To aid Julia in dispatching the
-optimal algorithms, special matrices can be declared to have a structure
-with functions like `Symmetric` , `Hermitian` , `UpperTriangular`, `LowerTriangular`,
-`Diagonal` , and more.
+Julia 会试图推断矩阵是否为特殊矩阵(对称矩阵、厄米矩阵等)，但有时会失败。
+为了帮助 Julia 分派最优的算法，可以声明矩阵具有特殊的结构。如：对称矩阵、厄密矩阵(Hermitian)、上三角矩阵、下三角矩阵、对角矩阵等。
