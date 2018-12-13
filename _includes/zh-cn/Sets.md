@@ -1,10 +1,10 @@
-|                        |                                   |
-| ---------------------- | --------------------------------- |
-| Declaration            | `s = Set([1, 2, 3, "Some text"])` |
-| Union `s1 ∪ s2`        | `union(s1, s2)`                   |
-| Intersection `s1 ∩ s2` | `intersect(s1, s2)`               |
-| Difference `s1 \\ s2`  | `setdiff(s1, s2)`                 |
-| Difference `s1 △ s2`   | `symdiff(s1, s2)`                 |
-| Subset `s1 ⊆ s2`       | `issubset(s1, s2)      `          |
+|                |                                   |
+| -------------- | --------------------------------- |
+| 声明变量        | `s = Set([1, 2, 3, "Some text"])` |
+| 并集 `s1 ∪ s2`  | `union(s1, s2)`                   |
+| 交集 `s1 ∩ s2`  | `intersect(s1, s2)`               |
+| 差集 `s1 \\ s2` | `setdiff(s1, s2)`                 |
+| 差集 `s1 △ s2`  | `symdiff(s1, s2)`                 |
+| 子集? `s1 ⊆ s2` | `issubset(s1, s2)      `          |
 
-Checking whether an element is contained in a set is done in O(1).
+检查元素是否在集合(set)内可以在 O(1) 的时间内完成。

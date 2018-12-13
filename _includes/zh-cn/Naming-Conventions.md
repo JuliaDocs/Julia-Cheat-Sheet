@@ -1,16 +1,15 @@
-The main convention in Julia is to avoid underscores unless they are required for legibility.
+Julia 代码风格主要的约定是：尽量避免使用下划线，除非不用就难于理解。
 
-Variable names are in lower (or snake) case: `somevariable`.
+变量名小写或使用蛇形命名(snake_case)：`somevariable`。
 
-Constants are in upper case: `SOMECONSTANT`.
+常数全部大写：`SOMECONSTANT`。
 
-Functions are in lower (or snake) case: `somefunction`.
+函数名小写或使用蛇形命名(snake_case)：`somefunction`。
 
-Macros are in lower (or snake) case: `@somemacro`.
+宏小写或使用蛇形命名(snake_case)：`@somemacro`。
 
-Type names are in initial-capital camel case: `SomeType`.
+类型名用首字母大写的驼峰命名：`SomeType`。
 
-Julia files have the `jl` extension.
+Julia 代码文件以 `.jl` 为后缀。
 
-For more information on Julia code style visit the manual: [style
-guide](https://docs.julialang.org/en/v1/manual/style-guide/index.html) .
+更详细的代码风格规范请参阅手册：[代码风格指南](http://docs.juliacn.com/latest/manual/style-guide/)
