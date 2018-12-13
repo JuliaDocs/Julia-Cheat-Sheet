@@ -7,4 +7,3 @@
 | 链式操作        | `x = y = z = 1   # 从右向左`<br>`0 < x < 3       # true`<br>`5 < x != y < 5  # false` |
 | 函数定义        | `function add_one(i)`<br>`    return i + 1`<br>`end`        |
 | 插入 LaTeX 符号 | `\delta` + [Tab] `# δ`                                      |
-| 查找帮助        | `?☆ # "☆" can be typed by \bigwhitestar<tab>`               |

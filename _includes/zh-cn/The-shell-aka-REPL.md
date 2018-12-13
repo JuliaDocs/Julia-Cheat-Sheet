@@ -9,5 +9,6 @@
 | 命令行模式                    | `;`                          |
 | 包管理模式                    | \]                           |
 | 帮助模式                      | ?                            |
+| 查找特殊符号输入方式           | `?☆ # "☆" can be typed by \bigwhitestar<tab>` |
 | 退出特殊模式 / 返回到 REPL     | 在空行上按 \[Backspace\]      |
 | 退出 REPL                     | `exit()` 或 \[Ctrl\] + \[D\] |
