@@ -14,17 +14,17 @@
 | 列出已安装的包 (人类可读版)        | `Pkg.status()`             |
 | 列出已安装的包 (机器可读版)        | `Pkg.installed()`          |
 | 更新所有包                       | `Pkg.update()`             |
-| 安装包 `PackageName`             | `Pkg.add("PackageName")`   |
-| 重新构建包 `PackageName`         | `Pkg.build("PackageName")` |
-| (在安装之后) 使用包 `PackageName` | `using PackageName`        |
-| 删除包 `PackageName`             | `Pkg.rm("PackageName")`    |
+| 安装包                           | `Pkg.add("PackageName")`   |
+| 重新构建包                       | `Pkg.build("PackageName")` |
+| (在安装之后) 使用包               | `using PackageName`        |
+| 删除包                           | `Pkg.rm("PackageName")`    |
 
 ## 交互式包管理模式
 
 |                               |                                       |
 | ----------------------------- | ------------------------------------- |
-| 添加包 `PackageName`           | `add PackageName`                     |
-| 删除包 `PackageName`           | `rm PackageName`                      |
-| 更新包 `PackageName`           | `update PackageName`                  |
+| 添加包                         | `add PackageName`                     |
+| 删除包                         | `rm PackageName`                      |
+| 更新包                         | `update PackageName`                  |
 | 使用开发版本                   | `dev PackageName` 或 `dev GitRepoUrl` |
 | 停止使用开发板，返回普通的发行版 | `free PackageName`                    |

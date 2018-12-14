@@ -1,4 +1,4 @@
-|                |                                                                                 |
+
 | -------------- | ------------------------------------------------------------------------------- |
 | 读取流          | `stream = stdin`<br>`for line in eachline(stream)`<br>`    # 做点啥`<br>`end` |
 | 读取文件        | `open(filename) do file`<br>`    for line in eachline(file)`<br>`        # 做点啥`<br>`    end`<br>`end` |
