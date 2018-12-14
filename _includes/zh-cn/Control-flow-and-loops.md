@@ -6,4 +6,4 @@
 | 枚举         | `for (idx, val) in enumerate(arr)`<br>`    println("the $idx-th element is $val")`<br>`end` |
 | `while` 循环 | `while bool_expr`<br>`    # 做点啥`<br>`end`             |
 | 退出循环     | `break`                                                  |
-| 退出迭代     | `continue`                                               |
+| 退出本次循环  | `continue`                                               |
