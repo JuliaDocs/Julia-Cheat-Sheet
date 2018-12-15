@@ -20,7 +20,7 @@ Julia 没有类，因此也没有类相关的方法。
 | 类型别名      | `const Nerd = Programmer`                                                    |
 | 类型构造器    | `methods(TypeName)`                                                          |
 | 类型实例      | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")` |
-| 子类型声明    | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`pond::String`<br>`end` |
+| 子类型声明    | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`    pond::String`<br>`end` |
 | 参数化类型    | `struct Point{T <: Real}`<br>`    x::T`<br>`    y::T`<br>`end`<br><br>`p = Point{Float64}(1,2)`<br> |
 | 联合类型      | `Union{Int, String}`                                                         |
 | 遍历类型层级  | `supertype(TypeName)` 和 `subtypes(TypeName)`                                |
