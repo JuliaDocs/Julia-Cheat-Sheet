@@ -1,8 +1,9 @@
 - [Julia 中文文档](http://docs.juliacn.com/latest/)
 - [Julia 中文社区](http://discourse.juliacn.com/)   
-<br>
 
-英文资源：
+
+## 英文资源
+
 - [Julia 官方文档](https://docs.julialang.org/en/latest)
 - [学习 Julia 的在线资源](https://julialang.org/learning)
 - [Julia 之月](https://github.com/DataWookie/MonthOfJulia)

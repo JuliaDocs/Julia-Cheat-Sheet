@@ -43,10 +43,10 @@
   zh-cn: 字典
 - file: Sets.md
   title: Sets
-  zh-cn: Sets
+  zh-cn: 集合
 - file: Collection-functions.md
   title: Collection functions
-  zh-cn: Collection 相关函数
+  zh-cn: 收集相关函数
 - file: Types.md
   title: Types
   zh-cn: 类型
@@ -76,6 +76,7 @@
   zh-cn: DataFrames
 - file: Introspection-and-reflection.md
   title: Introspection and reflection
+  zh-cn: 自我检查与反射
 - file: Noteworthy-packages-and-projects.md
   title: Noteworthy packages and projects
   zh-cn: 值得关注的包与项目
