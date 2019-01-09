@@ -1,8 +1,7 @@
-Todos os argumentos das funções são passadas por referências.
+All arguments to functions are passed by reference.
 
 Functions with `!` appended change at least one argument, typically the first:
 `sort!(arr)`.
-
 
 Required arguments are separated with a comma and use the positional notation.
 

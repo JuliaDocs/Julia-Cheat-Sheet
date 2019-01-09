@@ -2,9 +2,11 @@
   title: What is…?
   br: O que é…?
   zh-cn: ...是什么？
+  es: ¿Qué es...?
 - file: Basics.md
   title: Basics
   zh-cn: 基础语法
+  es: Básico
 - file: Operators.md
   title: Operators
   zh-cn: 运算符

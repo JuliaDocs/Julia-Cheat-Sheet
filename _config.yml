@@ -29,3 +29,11 @@ t:
     github-2: "Github 上"
     github-3: "欢迎提交改进！"
     translate: "帮助我们完善翻译!" 
+  es:
+    name: "Español de España"
+    fast-track: "La Via Rápida hacia"
+    quick-dirty: "Una aproximación rápida y simple a"
+    github-1: "El código fonte de esta página está"
+    github-2: "localizado aquí"
+    github-3: "¡Los pull requests serán bien recibidos!"
+    translate: "¡Ayude con la traducción!"
