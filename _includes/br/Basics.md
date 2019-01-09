@@ -5,5 +5,5 @@
 | Comentário de final de linha  | `i = 1 # This is a comment`                                                                 |
 | Comentário deliminitado       | `#= This is another comment =#`                                                             |
 | Encadeamento                  | `x = y = z = 1  # right-to-left`<br>`0 < x < 3          # true`<br>`5 < x != y < 5 # false` |
-| Definição de Funçãon          | `function add_one(i)`<br>`    return i + 1`<br>`end`                                        |
+| Definição de Função           | `function add_one(i)`<br>`    return i + 1`<br>`end`                                        |
 | Inserir simbolos LaTex        | `\delta` + [Tab]                                                                            |

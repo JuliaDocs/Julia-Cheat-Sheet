@@ -1,9 +1,9 @@
-|                   |                                                                                         |
-| ----------------- | --------------------------------------------------------------------------------------- |
-| Conditional       | `if-elseif-else-end`                                                                    |
-| Simple `for` loop | `for i in 1:10`<br>`println(i)`<br>`end`                                                |
-| Unnested for loop | `for i in 1:10, j = 1:5`<br>`println(i*j)`<br>`end`                                     |
-| Enumeration       | `for (idx, val) in enumerate(arr)`<br>`println("the $idx-th element is $val")`<br>`end` |
-| `while` loop      | `while bool_expr`<br>`# do stuff`<br>`end`                                              |
-| Exit loop         | `break`                                                                                 |
-| Exit iteration    | `continue`                                                                              |
+|                       |                                                                                          |
+| --------------------- | ---------------------------------------------------------------------------------------- |
+| Condicional           | `if-elseif-else-end`                                                                     |
+| Laço `for` simples    | `for i in 1:10`<br>`println(i)`<br>`end`                                                 |
+| Mais de um laço `for` | `for i in 1:10, j = 1:5`<br>`println(i*j)`<br>`end`                                      |
+| Enumeração            | `for (idx, val) in enumerate(arr)`<br>`println("o $idx-ésimo elemento é $val")`<br>`end` |
+| Laço `while`          | `while expressão_booleana`<br>`# comandos`<br>`end`                                       |
+| Sair do laço          | `break`                                                                                  |
+| Sair da iteração      | `continue`                                                                               |

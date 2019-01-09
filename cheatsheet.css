@@ -38,7 +38,6 @@ s,
 samp,
 small,
 strike,
-strong,
 sub,
 sup,
 tt,
@@ -261,6 +260,7 @@ pre {
 }
 code {
   display: inline-block;
+  white-space: pre-wrap;
   font-family: 'Ubuntu Mono', monospace;
   color: darkgreen;
 }

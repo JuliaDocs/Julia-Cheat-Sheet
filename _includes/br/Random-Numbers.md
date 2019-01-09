@@ -1,9 +1,9 @@
-Many random number functions require `using Random`.
+Muitas funções de números aleatórios requerem `using Random`.
 
 |                                                               |                                                                                      |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Set seed                                                      | `seed!(seed)`                                                                        |
-| Random numbers                                                | `rand()   # uniform [0,1)`<br>`randn()  # normal (-Inf, Inf)`                        |
-| Random from Other Distribution                                | `using Distributions`<br>`my_dist = Bernoulli(0.2) # For example`<br>`rand(my_dist)` |
-| Random subsample elements from A with inclusion probability p | `randsubseq(A, p)`                                                                   |
-| Random permutation elements of A                              | `shuffle(A)`                                                                         |
+| Definir semente                                               | `seed!(seed)`                                                                        |
+| Números aleatórios                                            | `rand()   # uniforme [0,1)`<br>`randn()  # normal (-Inf, Inf)`                        |
+| Aleatório de outras distribuições                             | `using Distributions`<br>`minha_dist = Bernoulli(0.2) # Por exemplo`<br>`rand(minha_dist)` |
+| Subamostra aleatória de elementos de A com probabilidade p de inclusão | `randsubseq(A, p)`                                                                   |
+| Permutação aleatória de elementos de A                              | `shuffle(A)`                                                                         |

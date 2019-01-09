@@ -1,6 +1,7 @@
-To help Julia load faster, many core functionalities exist in standard libraries that
-come bundled with Julia. To make their functions available, use `using PackageName`. Here
-are some Standard Libraries and popular functions.
+Para ajudar Julia a carregar rapidamente, muitas das funcionalidades principais
+existem nas bibliotecas padrão que vem junto com Julia. Para fazer as funções
+disponíveis, use `using PackageName`. Aqui estão algumas Bibliotecas Padrão e
+funções comuns.
 
 |                 |                                              |
 | --------------- | -------------------------------------------- |
