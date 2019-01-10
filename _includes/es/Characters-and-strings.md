@@ -1,24 +1,24 @@
-|                                                |                                             |
-| ---------------------------------------------- | ------------------------------------------- |
-| Character                                      | `chr = 'C'`                                 |
-| String                                         | `str = "A string"`                          |
-| Character code                                 | `Int('J') == 74`                            |
-| Character from code                            | `Char(74) == 'J'`                           |
-| Any UTF character                              | `chr = '\uXXXX'     # 4-digit HEX`<br>`chr = '\UXXXXXXXX' # 8-digit HEX` |
-| Loop through characters                        | `for c in str`<br>`    println(c)`<br>`end` |
-| Concatenation                                  | `str = "Learn" * " " * "Julia"`             |
-| String interpolation                           | `a = b = 2`<br>`println("a * b = $(a*b)")`  |
-| First matching character or regular expression | `findfirst(isequal('i'), "Julia") == 4`     |
-| Replace substring or regular expression        | `replace("Julia", "a" => "us") == "Julius"` |
-| Last index (of collection)                     | `lastindex("Hello") == 5`                   |
-| Number of characters                           | `length("Hello") == 5`                      |
-| Regular expression                             | `pattern = r"l[aeiou]"`                     |
-| Subexpressions                                 | `str = "+1 234 567 890"`<br>`pat = r"\+([0-9]) ([0-9]+)"`<br>`m = match(pat, str)`<br>`m.captures == ["1", "234"]` |
-| All occurrences                                | `[m.match for m = eachmatch(pat, str)]`     |
-| All occurrences (as iterator)                  | `eachmatch(pat, str)`                       |
+|                                                 |                                             |
+| ----------------------------------------------- | ------------------------------------------- |
+| Carácter                                        | `chr = 'C'`                                 |
+| Cadena de texto                                 | `str = "A string"`                          |
+| Código del carácter                             | `Int('J') == 74`                            |
+| Carácter del código                             | `Char(74) == 'J'`                           |
+| Cualquier carácter UTF                          | `chr = '\uXXXX'     # HEX 4-dígitos`<br>`chr = '\UXXXXXXXX' # HEX 8-dígitos` |
+| Bucle por los caracteres de la cadena           | `for c in str`<br>`    println(c)`<br>`end` |
+| Concatenación                                   | `str = "Learn" * " " * "Julia"`             |
+| Interpolación de cadena                         | `a = b = 2`<br>`println("a * b = $(a*b)")`  |
+| Primer carácter coincidente o expresión regular | `findfirst(isequal('i'), "Julia") == 4`     |
+| Substituir subcadena o expresión regular        | `replace("Julia", "a" => "us") == "Julius"` |
+| Último índice (de la colección)                 | `lastindex("Hello") == 5`                   |
+| Número de caracteres                            | `length("Hello") == 5`                      |
+| Expresión regular                               | `pattern = r"l[aeiou]"`                     |
+| Subexpresiones                                  | `str = "+1 234 567 890"`<br>`pat = r"\+([0-9]) ([0-9]+)"`<br>`m = match(pat, str)`<br>`m.captures == ["1", "234"]` |
+| Todas las ocurrencias                           | `[m.match for m = eachmatch(pat, str)]`     |
+| Todas las ocurrencias (como iterador)           | `eachmatch(pat, str)`                       |
 
 
-Beware of multi-byte Unicode encodings in UTF-8: <br>
+Atención a las codificaciones Unicode multi-byte en UTF-8: <br>
 `10 == lastindex("Ångström") != length("Ångström") == 8`
 
-Strings are immutable.
+Las cadenas de texto son inmutables.

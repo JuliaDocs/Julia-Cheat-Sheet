@@ -1,29 +1,30 @@
-Packages must be [registered](https://pkg.julialang.org) before they are visible to the
-package manager. In Julia 1.0, there are two ways to work with the package manager:
-either with `using Pkg` and using `Pkg` functions, or by typing `]` in the REPL to
-enter the special interactive package management mode. (To return to regular REPL, just
-hit `BACKSPACE` on an empty line in package management mode). Note
-that new tools arrive in interactive mode first, then usually also
-become available in regular Julia sessions through `Pkg` module.
+Los paquetes han de estar [registrados](https://pkg.julialang.org) antes de ser visibles
+para el gestor de paquetes. En Julia 1.0, hay dos formas de trabajar con el gestor de
+paquetes: bien con las funciones `using Pkg` y `Pkg`, o bien tecleando `]` en el REPL
+para entrar en el modo especial Gestión de Paquetes Interactiva. (Para volver al REPL
+normal sólo hay que presionar `BACKSPACE` en una línea vacía en el modo de gestión de
+paquetes). Tenga en cuenta que las herramientas nuevas llegan antes al modo interactivo,
+y después usualmente también se hacen disponibles en sesiones normales de Julia por
+medio del módulo `Pkg`.
 
-## Using `Pkg` in Julia session
+## Utilizando `Pkg` en una sesión Julia
 
-|                                            |                            |
-| ------------------------------------------ | -------------------------- |
-| List installed packages (human-readable)   | `Pkg.status()`             |
-| List installed packages (machine-readable) | `Pkg.installed()`          |
-| Update all packages                        | `Pkg.update()`             |
-| Install `PackageName`                      | `Pkg.add("PackageName")`   |
-| Rebuild `PackageName`                      | `Pkg.build("PackageName")` |
-| Use `PackageName` (after install)          | `using PackageName`        |
-| Remove `PackageName`                       | `Pkg.rm("PackageName")`    |
+|                                               |                            |
+| --------------------------------------------- | -------------------------- |
+| Listar paquetes instalados (human-readable)   | `Pkg.status()`             |
+| Listar paquetes instalados (machine-readable) | `Pkg.installed()`          |
+| Actualizar todos los paquetes                 | `Pkg.update()`             |
+| Instalar `PackageName`                        | `Pkg.add("PackageName")`   |
+| Compilar `PackageName`                        | `Pkg.build("PackageName")` |
+| Utilizar `PackageName` (después de instalar)  | `using PackageName`        |
+| Eliminar `PackageName`                        | `Pkg.rm("PackageName")`    |
 
-## In Interactive Package Mode
+## En Modo Gestión de Paquetes Interactiva
 
-|                                                          |                                       |
-| -------------------------------------------------------- | ------------------------------------- |
-| Add `PackageName`                                        | `add PackageName`                     |
-| Remove `PackageName`                                     | `rm PackageName`                      |
-| Update `PackageName`                                     | `update PackageName`                  |
-| Use development version                                  | `dev PackageName` or `dev GitRepoUrl` |
-| Stop using development version, revert to public release | `free PackageName`                    |
+|                                                                 |                                       |
+| --------------------------------------------------------------- | ------------------------------------- |
+| Instalar `PackageName`                                          | `add PackageName`                     |
+| Eliminar `PackageName`                                          | `rm PackageName`                      |
+| Actualizar `PackageName`                                        | `update PackageName`                  |
+| Usar versión de desarrollo                                      | `dev PackageName` o `dev GitRepoUrl`  |
+| Parar el uso de versión de desarrollo, volver a versión pública | `free PackageName`                    |
