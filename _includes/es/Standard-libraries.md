@@ -1,6 +1,6 @@
-To help Julia load faster, many core functionalities exist in standard libraries that
-come bundled with Julia. To make their functions available, use `using PackageName`. Here
-are some Standard Libraries and popular functions.
+Para ayudar a carga Julia más rápido, muchas de las funciones principales están en
+las bibliotecas incluídas por defecto con Julia. Para disponibilizarlas, use `using
+PackageName`. A continuación algunas Bibliotecas Estándar y funciones populares.
 
 |                 |                                              |
 | --------------- | -------------------------------------------- |
@@ -10,4 +10,3 @@ are some Standard Libraries and popular functions.
 | `SparseArrays`  | `sparse`, `SparseVector`, `SparseMatrixCSC`  |
 | `Distributed`   | `@distributed`, `pmap`, `addprocs`           |
 | `Dates`         | `DateTime`, `Date`                           |
-
