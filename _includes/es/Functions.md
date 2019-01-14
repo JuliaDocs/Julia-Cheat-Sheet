@@ -1,14 +1,14 @@
-All arguments to functions are passed by reference.
+Todos los argumentos se pasan a la función por referencia.
 
-Functions with `!` appended change at least one argument, typically the first:
-`sort!(arr)`.
+Las funciones con un `!` añadido cambian por lo menos uno de los argumentos,
+habitualmente el primero: `sort!(arr)`.
 
-Required arguments are separated with a comma and use the positional notation.
+Los argumentos obligatorios son separados por una coma y usan la notación posicional.
 
-Optional arguments need a default value in the signature, defined with `=`.
+Los argumentos opcionales necesitan un valor en la firma, definida con `=`.
 
-Keyword arguments use the named notation and are listed in the function's
-signature after the semicolon:
+Los argumentos clave-valor utilizan la notación nominativa y son listados en la firma
+de la función después del punto y coma:
 
 ````
 function func(req1, req2; key1=dflt1, key2=dflt2)
@@ -16,14 +16,14 @@ function func(req1, req2; key1=dflt1, key2=dflt2)
 end
 ````
 
-The semicolon is *not* required in the call to a function that accepts keyword arguments.
+El punto y coma *no* es necesario en una llamada a una función que acepta argumentos clave-valor.
 
-The `return` statement is optional but highly recommended.
+La sentencia `return` es opcional pero altamente recomendable.
 
-Multiple data structures can be returned as a tuple in a single `return` statement.
+Se pueden devolver estructuras de datos múltiples como un tuple e una única sentencia `return`.
 
-Command line arguments `julia script.jl arg1 arg2...` can be processed from global
-constant `ARGS`:
+Los argumentos de la línea de comandos `julia script.jl arg1 arg2...` pueden ser procesados con
+la constante global `ARGS`:
 
 ```
 for arg in ARGS
@@ -31,10 +31,10 @@ for arg in ARGS
 end
 ```
 
-Anonymous functions can best be used in collection functions or list comprehensions:
+Las funciones anónimas son óptimas para funciones de colecciones o listas por comprensión:
 `x -> x^2`.
 
-Functions can accept a variable number of arguments:
+Las funciones pueden aceptar un número variable de argumentos:
 
 ```
 function func(a...)
@@ -44,20 +44,20 @@ end
 func(1, 2, [3:5]) # tuple: (1, 2, UnitRange{Int64}[3:5])
 ```
 
-Functions can be nested:
+Las funciones pueden ser anidadas:
 
 ```
 function outerfunction()
-    # do some outer stuff
+    # bloque de código de función outerfunction
     function innerfunction()
-        # do inner stuff
-        # can access prior outer definitions
+        # bloque de código de función innerfunction
+        # puede acceder definiciones anteriores de outerfunction
     end
-    # do more outer stuff
+    # bloque de código adicional de función outerfunction
 end
 ```
 
-Functions can have explicit return types
+Las funciones pueden devolver tipos explícitos
 
 ```
 # take any Number subtype and return it as a String
@@ -66,13 +66,13 @@ function stringifynumber(num::T)::String where T <: Number
 end
 ```
 
-Functions can be
-[vectorized](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized-1)
-by using the Dot Syntax
+Las funciones son
+[vectorizables](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized-1)
+por medio de la sintaxis de punto (Dot Syntax)
 
 ```
-# here we broadcast the subtraction of each mean value
-# by using the dot operator
+# aqui emitimos la resta de cada valor medio
+# por medio del operador punto
 julia> using Statistics
 julia> A = rand(3, 4);
 julia> B = A .- mean(A, dims=1)
@@ -85,22 +85,21 @@ julia> mean(B, dims=1)
  -7.40149e-17  7.40149e-17  1.85037e-17  3.70074e-17
 ```
 
-Julia generates <a class="tooltip" href="#">specialized versions<span> Multiple dispatch a type of
-polymorphism that dynamically determines which version of a function to
-call. In this context, dynamic means that it is resolved at run-time,
-whereas method overloading is resolved at compile time. Julia manages
-multiple dispatch completely in the background. Of course, you can
-provide custom function overloadings with type annotations. </span></a>
-of functions based on data types. When a function is called with the
-same argument types again, Julia can look up the native machine code and
-skip the compilation process.
+Julia crea <a class="tooltip" href="#">versiones especializadas<span> El despacho múltiple es un tipo
+polimorfismo que determina dinámicamente qué versión de una función debe ser llamada.
+En este contexto significa que es resuelto en tiempo de ejecución, mientras que la
+sobrecarga de métodos es resuelta en tiempo de compilado. Julia gestiona el despacho
+múltiple completamente en segundo plano. Por supuesto, se pueden proporcionar
+sobrecargas de función personalizadas con anotaciones de tipo. </span></a>
+de funciones basada en los tipos de los datos. Cuando una función es llamada con
+los mismos tipos de argumento de nuevo, Julia puede consultar el código 
+máquina nativo y saltarse el proceso de compilado.
 
-Since **Julia 0.5** the existence of potential
-ambiguities is still acceptable, but actually calling an ambiguous
-method is an **immediate error**.
+Desde **Julia 0.5** la existencia de ambigüedades potenciales de tipo 
+es aún aceptable, pero llamar um método ambiguo supone un **error inmediato**.
 
-Stack overflow is possible when recursive functions nest many levels
-deep. [Trampolining](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia) can
-be used to do tail-call optimization, as Julia does not do that
-automatically [yet](https://github.com/JuliaLang/julia/issues/4964).
-Alternatively, you can rewrite the tail recursion as an iteration.
+El desbordamiento de pila es posible en el caso de funciones recursivas se anidan
+a lo largo de varios niveles. El ["Trampolining"](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia) 
+se puede utilizar para hacer una optimización de recursión con llamadas de cola, ya que Julia no lo hace automáticamente
+[aún](https://github.com/JuliaLang/julia/issues/4964).
+Como alternativa, puede reescribir la recursión d cola como una iteración.

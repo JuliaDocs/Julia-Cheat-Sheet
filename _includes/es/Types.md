@@ -1,29 +1,29 @@
-Julia has no classes and thus no class-specific methods.
+Julia no tiene clases y por tanto no tiene métodos específicos de clase.
 
-Types are like classes without methods.
+Los tipos son como clases sin métodos.
 
-Abstract types can be subtyped but not instantiated.
+Los tipos abstractos pueden ser subtipados pero no instanciados.
 
-Concrete types cannot be subtyped.
+Tipos concretos no pueden ser instanciados.
 
-By default, `struct` s are immutable.
+Por defecto los `struct` s son inmutables.
 
-Immutable types enhance performance and are thread safe, as they can be
-shared among threads without the need for synchronization.
+Los tipos inmutables mejoran el rendimiento y son seguros para hilos de ejecución,
+ya que pueden ser compartidos entre diferentes hilos sin necesidad de sincronización
 
-Objects that may be one of a set of types are called `Union` types.
+Los objetos formados por un conjunto de tipos se denominan tipos `Union`.
 
 |                          |                                                   |
 | ------------------------ | ------------------------------------------------- |
 | Type annotation          | `var::TypeName`                                   |
 | Type declaration         | `struct Programmer`<br>`    name::String`<br>`    birth_year::UInt16`<br>`    fave_language::AbstractString`<br>`end` |
-| Mutable type declaration | replace struct with mutable struct                |
-| Type alias               | `const Nerd = Programmer`                         |
-| Type constructors        | `methods(TypeName)`                               |
-| Type instantiation       | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")` |
-| Subtype declaration      | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`    pond::String`<br>`end` |
-| Parametric type          | `struct Point{T <: Real}`<br>`    x::T`<br>`    y::T`<br>`end`<br><br>`p =Point{Float64}(1,2)`<br> |
-| Union types              | `Union{Int, String}`                              |
+| Declaración de tipo mutable | replace struct with mutable struct                |
+| Alias de tipo               | `const Nerd = Programmer`                         |
+| Constructores de tipo        | `methods(TypeName)`                               |
+| Instanciado de tipo       | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")` |
+| Declaración de subtipo      | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`    pond::String`<br>`end` |
+| Tipo Paramétrico         | `struct Point{T <: Real}`<br>`    x::T`<br>`    y::T`<br>`end`<br><br>`p =Point{Float64}(1,2)`<br> |
+| Tipos union              | `Union{Int, String}`                              |
 | Traverse type hierarchy  | `supertype(TypeName)` and `subtypes(TypeName)`    |
 | Default supertype        | `Any`                                             |
 | All fields               | `fieldnames(TypeName)`                            |

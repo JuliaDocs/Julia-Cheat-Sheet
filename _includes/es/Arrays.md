@@ -1,25 +1,25 @@
 |                                   |                                             |
 | --------------------------------- | ------------------------------------------- |
-| Declaration                       | `arr = Float64[]`                           |
-| Pre-allocation                    | `sizehint!(arr, 10^4)`                      |
-| Access and assignment             | `arr = Any[1,2]`<br>`arr[1] = "Some text"`  |
-| Comparison | `a = [1:10;]`<br>`b = a      # b points to a`<br>`a[1] = -99`<br>`a == b     # true` |
-| Copy elements (not address)       | `b = copy(a)`<br>`b = deepcopy(a)`          |
-| Select subarray from m to n       | `arr[m:n]`                                  |
-| n-element array with 0.0s         | `zeros(n)`                                  |
-| n-element array with 1.0s         | `ones(n)`                                   |
-| n-element array with #undefs      | `Vector{Type}(undef,n)`                     |
-| n equally spaced numbers from start to stop | `range(start,stop=stop,length=n)` |
-| Array with n random Int8 elements | `rand(Int8, n)`                             |
-| Fill array with val               | `fill!(arr, val)`                           |
-| Pop last element                  | `pop!(arr)`                                 |
-| Pop first element                 | `popfirst!(a)`                              |
-| Push val as last element          | `push!(arr, val)`                           |
-| Push val as first element         | `pushfirst!(arr, val)`                      |
-| Remove element at index idx       | `deleteat!(arr, idx)`                       |
-| Sort                              | `sort!(arr)`                                |
-| Append a with b                   | `append!(a,b)`                              |
-| Check whether val is element      | `in(val, arr) or val in arr`                |
-| Scalar product                    | `dot(a, b) == sum(a .* b)`                  |
-| Change dimensions (if possible)   | `reshape(1:6, 3, 2)' == [1 2 3; 4 5 6]`     |
-| To string (with delimiter del between elements) | `join(arr, del)`              |
+| Declaración                       | `arr = Float64[]`                           |
+| Preasignación de memoria                    | `sizehint!(arr, 10^4)`                      |
+| Acceso y asignación               | `arr = Any[1,2]`<br>`arr[1] = "Some text"`  |
+| Comparación | `a = [1:10;]`<br>`b = a      # b points to a`<br>`a[1] = -99`<br>`a == b     # true` |
+| Copiar elementos (no la dirección)       | `b = copy(a)`<br>`b = deepcopy(a)`          |
+| Seleccionar submatriz de m hasta n       | `arr[m:n]`                                  |
+| Matriz de n-elementos con 0.0s         | `zeros(n)`                                  |
+| Matriz de n-elementos con 1.0s         | `ones(n)`                                   |
+| Matriz de n-elementos #undefs      | `Vector{Type}(undef,n)`                     |
+| n números separados igualmente desde start hasta stop | `range(start,stop=stop,length=n)` |
+| Matriz con n elementos Int8 aleatorios | `rand(Int8, n)`                             |
+| Llenar la matriz con el valor val               | `fill!(arr, val)`                           |
+| Pop del último elemento                 | `pop!(arr)`                                 |
+| Pop del primer elemento                 | `popfirst!(a)`                              |
+| Push el valor val como último elemento          | `push!(arr, val)`                           |
+| Push el valor val como primer elemento         | `pushfirst!(arr, val)`                      |
+| Eliminar elelemto con índice idx       | `deleteat!(arr, idx)`                       |
+| Ordenar                              | `sort!(arr)`                                |
+| Añadir b al final de a                   | `append!(a,b)`                              |
+| Verificar si arr contiene val      | `in(val, arr) or val in arr`                |
+| Producto escalar                    | `dot(a, b) == sum(a .* b)`                  |
+| Cambiar las dimensiones (si posible)   | `reshape(1:6, 3, 2)' == [1 2 3; 4 5 6]`     |
+| Matriz a cadena de caracteres (con delimitador del entre elementos) | `join(arr, del)`              |

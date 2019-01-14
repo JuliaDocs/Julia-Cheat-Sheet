@@ -1,5 +1,5 @@
 |                                            |                                    |
 | ------------------------------------------ | ---------------------------------- |
-| Apply f to all elements of collection coll | `map(f, coll)` or<br>`map(coll) do elem`<br>`    # do stuff with elem`<br>`    # must contain return`<br>`end` |
-| Filter coll for true values of f           | `filter(f, coll)`                  |
-| List comprehension                         | `arr = [f(elem) for elem in coll]` |
+| Aplicar f a todos los elementos de la colección coll | `map(f, coll)` or<br>`map(coll) do elem`<br>`    # hacer cosas con elem`<br>`    # debe contener return`<br>`end` |
+| Filtra coll para los valores verdaderos de f           | `filter(f, coll)`                  |
+| Lista por comprensión                         | `arr = [f(elem) for elem in coll]` |

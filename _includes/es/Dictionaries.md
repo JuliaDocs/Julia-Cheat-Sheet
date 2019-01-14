@@ -1,11 +1,11 @@
 
 |                                |                                                                  |
 | ------------------------------ | ---------------------------------------------------------------- |
-| Dictionary | `d = Dict(key1 => val1, key2 => val2, ...)`<br>`d = Dict(:key1 => val1, :key2 => val2, ...)` |
-| All keys (iterator)            | `keys(d)`                                                        |
-| All values (iterator)          | `values(d)`                                                      |
-| Loop through key-value pairs   | `for (k,v) in d`<br>`    println("key: $k, value: $v")`<br>`end` |
-| Check for key `:k`             | `haskey(d, :k)`                                                  |
-| Copy keys (or values) to array | `arr = collect(keys(d))`<br>`arr = [k for (k,v) in d]`           |
+| Diccionario | `d = Dict(key1 => val1, key2 => val2, ...)`<br>`d = Dict(:key1 => val1, :key2 => val2, ...)` |
+| Todas las claves (iterador)            | `keys(d)`                                                        |
+| Todos los valores (iterador)          | `values(d)`                                                      |
+| Bucle por los pares clave-valor   | `for (k,v) in d`<br>`    println("key: $k, value: $v")`<br>`end` |
+| Verificar la clave `:k`             | `haskey(d, :k)`                                                  |
+| Copiar claves (o valores) a la matriz | `arr = collect(keys(d))`<br>`arr = [k for (k,v) in d]`           |
 
-Dictionaries are mutable; when symbols are used as keys, the keys are immutable.
+Los diccionarios son mutables; cuando se utilizan símbolos como claves, las claves son inmutábles.
