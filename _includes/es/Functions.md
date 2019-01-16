@@ -5,7 +5,7 @@ habitualmente el primero: `sort!(arr)`.
 
 Los argumentos obligatorios son separados por una coma y usan la notación posicional.
 
-Los argumentos opcionales necesitan un valor en la firma, definida con `=`.
+Los argumentos opcionales necesitan un valor en la firma de la función, definida con `=`.
 
 Los argumentos clave-valor utilizan la notación nominativa y son listados en la firma
 de la función después del punto y coma:
@@ -102,4 +102,4 @@ El desbordamiento de pila es posible en el caso de funciones recursivas se anida
 a lo largo de varios niveles. El ["Trampolining"](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia) 
 se puede utilizar para hacer una optimización de recursión con llamadas de cola, ya que Julia no lo hace automáticamente
 [aún](https://github.com/JuliaLang/julia/issues/4964).
-Como alternativa, puede reescribir la recursión d cola como una iteración.
+Como alternativa, puede reescribir la recursión de cola como una iteración.

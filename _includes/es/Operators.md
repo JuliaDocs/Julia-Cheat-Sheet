@@ -14,5 +14,5 @@
 | Operación elemento a elemento  | `[1, 2, 3] .+ [1, 2, 3] == [2, 4, 6]`<br>`[1, 2, 3] .* [1, 2, 3] == [1, 4, 9]` |
 | `Not a number`<br> `(No es un número)`  | `isnan(NaN)` not(!) `NaN == NaN`   |
 | Operador ternario          | `a == b ? "Equal" : "Not equal"`                |
-| Evaluación de cortocircuito AND y OR | `a && b` and `a || b`                           |
+| Evaluación de cortocircuito AND y OR | `a && b` and `a || b`                 |
 | Equivalencia de Objetos    | `a === b`                                       |

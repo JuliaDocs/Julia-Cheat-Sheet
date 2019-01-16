@@ -1,15 +1,14 @@
-Macros allow generated code (i.e. expressions) to be included in a
-program.
+Las macros permiten que sea incluido en un programa código generado (o sea, expresiones).
 
-|                 |                                                            |
-| --------------- | ---------------------------------------------------------- |
-| Definition      | `macro macroname(expr)`<br>`    # do stuff`<br>`end`       |
-| Usage           | `macroname(ex1, ex2, ...)` or `@macroname ex1, ex2, ...`   |
-| Built-in macros | `@test           # equal (exact)`<br>`@test_approx_eq # equal (modulo numerical errors)`<br>`@test x ≈ y    # isapprox(x, y)`<br>`@assert         # assert (unit test)`<br>`@which          # types used`<br>`@time           # time and memory statistics`<br>`@elapsed        # time elapsed`<br>`@allocated      # memory allocated`<br>`@profile        # profile`<br>`@spawn          # run at some worker`<br>`@spawnat        # run at specified worker`<br>`@async          # asynchronous task`<br>`@distributed    # parallel for loop`<br>`@everywhere     # make available to workers` |
+|                       |                                                            |
+| --------------------- | ---------------------------------------------------------- |
+| Definición            | `macro macroname(expr)`<br>`    # bloque de código`<br>`end`       |
+| Uso                   | `macroname(ex1, ex2, ...)` or `@macroname ex1, ex2, ...`   |
+| Macros incorporadas   | `@test           # equal (exact)`<br>`@test_approx_eq # equal (modulo numerical errors)`<br>`@test x ≈ y    # isapprox(x, y)`<br>`@assert         # assert (unit test)`<br>`@which          # tipos utilizados`<br>`@time           # estadísticas de memoria y tiempo`<br>`@elapsed        # tiempo transcurrido`<br>`@allocated      # memoria asignada`<br>`@profile        # perfil`<br>`@spawn          # ejecutar en un worker`<br>`@spawnat        # ejecutar en worker específico`<br>`@async          # tarea asíncrona`<br>`@distributed    # bucle for paralelo`<br>`@everywhere     # poner a disposición de los workers` |
 
 
-Rules for creating *hygienic* macros:
+Reglas para crear macros *limpias*:
 
-- Declare variables inside macro with `local` .
-- Do not call `eval` inside macro.
-- Escape interpolated expressions to avoid expansion: `$(esc(expr))`
+- Declarar las variables dentro de la macro con `local` .
+- No llamar `eval` dentro de la macro.
+- Hacer secuencia de escape sobre expresiones interpoladas para evitar expansión: `$(esc(expr))`

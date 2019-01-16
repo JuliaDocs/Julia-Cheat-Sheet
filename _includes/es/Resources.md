@@ -1,5 +1,5 @@
-- [Official documentation](https://docs.julialang.org/en/latest) .
-- [Learning Julia](https://julialang.org/learning) page.
+- [Documentación Oficial en inglés](https://docs.julialang.org/en/latest) .
+- Página [Learning Julia](https://julialang.org/learning) en inglés.
 - [Month of Julia](https://github.com/DataWookie/MonthOfJulia)
 - [Community standards](https://julialang.org/community/standards) .
 - [Julia: A fresh approach to numerical

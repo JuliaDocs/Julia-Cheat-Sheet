@@ -1,19 +1,18 @@
-- Write
-  [type-stable](https://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia)
-  code.
-- In fact, use immutable types where possible.
-- Use `sizehint` for large arrays.
-- Free up memory for large arrays with `arr = nothing`.
-- Access arrays along columns, because multi-dimensional arrays are stored in column-major order.
-- Pre-allocate resultant data structures.
-- Disable the garbage collector in real-time applications: `disable_gc()`.
-- Avoid the splat (`...`) operator for keyword arguments.
-- Use mutating APIs (i.e. functions with `!` to avoid copying data structures.
-- Use array (element-wise) operations instead of list comprehensions.
-- Avoid `try`-`catch` in (computation-intensive) loops.
-- Avoid `Any` in collections.
-- Avoid abstract types in collections.
-- Avoid string interpolation in I/O.
-- [Vectorizing](https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code "https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code")
-  does not improve speed (unlike R, MATLAB or Python).
-- Avoid `eval` at run-time.
+- Escriba código con 
+  [tipos estables](https://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia).
+- De hecho, utilice tipos inmutábles cuando sea posible.
+- Use `sizehint` para matrices grandes.
+- Libere memoria para matrices grandes con `arr = nothing`.
+- Accese las matrices por medio de columnas, ja que las matrices multidimensionales son guardadas por orden de columna.
+- Pre-asigne las estructuras de datos resultantes.
+- Desactive el recolector de basura e operaciones en tiempo real: `disable_gc()`.
+- Evite el operador de propagación (`...`) para argumentos clave-valor.
+- Use APIs mutables (es decir, funciones con `!` para evitar la copia de estructuras de datos).
+- Utilice operaciones de matrices de elemento a elemento matriz en lugar de listas por comprensión.
+- Evite `try`-`catch` en bucles de cálculo intensivo.
+- Evite `Any` en colecciones.
+- Evite tipos abstractos en colecciones.
+- Evite interpolación de cadenas de texto en E/S.
+- La [Vectorización](https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code "https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code")
+  no mejora la velocidad (a diferencia de R, MATLAB o Python).
+- Evite `eval` en tiempo de ejecución.
