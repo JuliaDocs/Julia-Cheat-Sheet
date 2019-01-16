@@ -10,90 +10,119 @@
 - file: Operators.md
   title: Operators
   zh-cn: 运算符
+  es: Operadores
 - file: The-shell-aka-REPL.md
   title: The shell a.k.a. REPL
   zh-cn: shell/REPL 环境
+  es: La consola o REPL
 - file: Standard-libraries.md
   title: Standard libraries
   zh-cn: 标准库
+  es: Bibliotecas Estándar
 - file: Package-management.md
   title: Package management
   zh-cn: 包管理
+  es: Gestión de paquetes
 - file: Characters-and-strings.md
   title: Characters and strings
   zh-cn: 字符与字符串
+  es: Caracteres y cadenas
 - file: Numbers.md
   title: Numbers
   zh-cn: 数字相关
+  es: Números
 - file: Random-Numbers.md
   title: Random Numbers
   zh-cn: 随机数
+  es: Números aleatórios
 - file: Arrays.md
   title: Arrays
   zh-cn: 数组
+  es: Matrices
 - file: Linear-Algebra.md
   title: Linear Algebra
   zh-cn: 线性代数
+  es: Algebra lineal
 - file: Control-flow-and-loops.md
   title: Control flow and loops
   zh-cn: 控制流与循环
+  es: Estructuras de control y bucles
 - file: Functions.md
   title: Functions
   zh-cn: 函数
+  es: Funciones
 - file: Dictionaries.md
   title: Dictionaries
   zh-cn: 字典
+  es: Diccionarios
 - file: Sets.md
   title: Sets
   zh-cn: 集合
+  es: Conjuntos
 - file: Collection-functions.md
   title: Collection functions
   zh-cn: 收集相关函数
+  es: Funciones para colecciones
 - file: Types.md
   title: Types
   zh-cn: 类型
+  es: Tipos
 - file: Missing-and-Nothing.md
   title: Missing and Nothing
   zh-cn: 缺失值与空值
+  es: Missing y nothing (info faltante)
 - file: Exceptions.md
   title: Exceptions
   zh-cn: 异常处理
+  es: Excepciones
 - file: Modules.md
   title: Modules
   zh-cn: 模块
+  es: Módulos
 - file: Expressions.md
   title: Expressions
   zh-cn: 表达式
+  es: Expresiones
 - file: Macros.md
   title: Macros
   zh-cn: 宏
+  es: Macros
 - file: Parallel-Computing.md
   title: Parallel Computing
   zh-cn: 并行计算
+  es: Cálculo distribuido
 - file: IO.md
   title: I/O
   zh-cn: 输入/输出
+  es: E/S
 - file: DataFrames.md
   title: DataFrames
   zh-cn: DataFrames
+  es: DataFrames
 - file: Introspection-and-reflection.md
   title: Introspection and reflection
   zh-cn: 自我检查与反射
+  es: Introspección y reflexión
 - file: Noteworthy-packages-and-projects.md
   title: Noteworthy packages and projects
   zh-cn: 值得关注的包与项目
+  es: Paquetes y proyectos notables
 - file: Naming-Conventions.md
   title: Naming Conventions
   zh-cn: 命名规范
+  es: Convenciones de nombres
 - file: Performance-tips.md
   title: Performance tips
   zh-cn: 性能改进建议
+  es: Trucos para rendimiento
 - file: IDEs-Editors-and-Plugins.md
   title: IDEs, Editors and Plug-ins
   zh-cn: IDE、编辑器和插件
+  es: IDEs, editores y Plugins
 - file: Resources.md
   title: Resources
   zh-cn: 学习资源
+  es: Recursos
 - file: Videos.md
   title: Videos
   zh-cn: 相关视频

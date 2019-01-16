@@ -1,4 +1,4 @@
-Las herramientas de cálculo en paralelo están disponibles en la biblioteca standard `Distributed`.
+Las herramientas de cálculo en paralelo están disponibles en la biblioteca estándar `Distributed`.
 
 |                                            |                                   |
 | ------------------------------------------ | --------------------------------- |
