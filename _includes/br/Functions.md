@@ -1,4 +1,4 @@
-Todos os argumentos das funções são passadas por referências.
+Todos os argumentos das funções são passados por referências.
 
 Functions with `!` appended change at least one argument, typically the first:
 `sort!(arr)`.
