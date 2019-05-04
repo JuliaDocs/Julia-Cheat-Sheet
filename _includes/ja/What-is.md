@@ -1,37 +1,29 @@
-[Julia](https://julialang.org) is an open-source, multi-platform,
-high-level, high-performance programming language for technical
-computing.
+[Julia](https://julialang.org)は，技術計算のためのオープンソース，マルチプラットフォーム，高レベル，高性能なプログラミング言語です。
 
-Julia has an
-<a class="tooltip" href="#">LLVM<span> Low-Level Virtual Machine (LLVM) is a compiler
-infrastructure to build intermediate and/or binary machine code.
-</span></a>-based
-<a class="tooltip" href="#">JIT<span> Just-In-Time compilation occurs at
-run-time rather than prior to execution, which means it offers both the
-speed of compiled code and the flexibility of interpretation. The
-compiler parses the code and infers types, after which the LLVM code is
-generated, which in turn is compiled into native code. </span></a>
-compiler that allows it to match the performance of languages such as C
-and FORTRAN without the hassle of low-level code. Because the code is
-compiled on the fly you can run (bits of) code in a shell or
-<a class="tooltip" href="#">REPL <span> Read-Eval-Print-Loop </span></a>,
-which is part of the recommended
-[workflow](https://docs.julialang.org/en/stable/manual/workflow-tips) .
+Juliaは<a class="tooltip" href="#">LLVM<span>Low-Level Virtual Machine (LLVM) は，
+中間コードあるいはマシンコードを作るためのコンパイラ・インフラストラクチャです。</span></a>ベースの<a class="tooltip" href="#">JIT<span>
+Just-In-Timeコンパイルは，実行前ではなく実行時に実行されます。
+したがって，コンパイルされたコードの速度と解釈の柔軟性が得られます。
+コンパイラはコードを解析して型を推定します。LLVMコードが生成された後に，ネイティブコードにコンパイルされます。</span></a>コンパイラを持ちます。
+これは，低レベルコードの煩わしさなしに，
+CやFORTRANなどの言語と同等の性能を引き出します。
+コードは，その場でコンパイルされるため，シェルすなわち<a class="tooltip" href="#">REPL <span> Read-Eval-Print-Loop; 対話型評価環境</span></a>内でコード（の断片）を実行できます。
+これは推奨されるワークフロー([workflow](https://docs.julialang.org/en/stable/manual/workflow-tips)の一部です。
 
 Julia is dynamically typed, provides
 <a class="tooltip" href="#">multiple dispatch <span> Because
 function argument types are determined at run-time, the compiler can
 choose the implementation that is optimized for the provided arguments
-and the processor architecture. </span></a> , and is designed for
+and the processor architecture.  , and is designed for
 parallelism and distributed computation.
+Juliaは動的型付けされていて，
+<a class="tooltip" href="#">マルチプル・ディスパッチ<span>
+関数の引数の型は実行時に決まるので，コンパイラは与えられた型に最適化された実装を選ぶことができます。</span></a>の機能を提供し，並列性と分散計算を目的に設計されました。
 
-Julia has a built-in package manager.
+Juliaには，パッケージマネージャが組み込まれています。
 
-Julia has many built-in mathematical functions, including special
-functions (e.g. Gamma), and supports complex numbers right out of the
-box.
+Juliaには，特殊関数(例:ガンマ関数)を含む多くの数学関数が組み込まれています。また，複素数をすぐに利用できます。
 
-Julia allows you to generate code automagically thanks to Lisp-inspired
-macros.
+Juliaでは，Lispに影響を受けたマクロのおかげでコードを自動生成することができます。
 
-Julia was born in 2012.
+Juliaは2012年に生まれました。
