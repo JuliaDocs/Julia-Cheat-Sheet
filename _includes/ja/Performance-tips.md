@@ -13,5 +13,5 @@
 - コレクション内では `Any` を避けましょう。
 - コレクション内では，抽象(アブストラクト)型を避けましょう。
 - 入出力では，文字列の補間を避けましょう。
-- ベクトル化 ([Vectorizing](https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code "https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code"))は，速度を向上させません (R，MATLAB，Pythonとは異なる)。
+- ベクトル化 ([Vectorizing](https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code "https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code"))は，速度を向上させません (R，MATLAB，Pythonとは異なります)。
 - 実行時は `eval` の使用を避けましょう。
