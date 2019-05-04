@@ -1,6 +1,7 @@
-To help Julia load faster, many core functionalities exist in standard libraries that
-come bundled with Julia. To make their functions available, use `using PackageName`. Here
-are some Standard Libraries and popular functions.
+Juliaのロードを高速化するため，多くのコア機能が Juliaに付属する標準ライブラリに入っています．
+これらの機能を使えるようにするには，`using PackageName` を使います．
+以下に，標準ライブラリの一部と，よく使う関数を示します．
+
 
 |                 |                                              |
 | --------------- | -------------------------------------------- |
@@ -10,4 +11,3 @@ are some Standard Libraries and popular functions.
 | `SparseArrays`  | `sparse`, `SparseVector`, `SparseMatrixCSC`  |
 | `Distributed`   | `@distributed`, `pmap`, `addprocs`           |
 | `Dates`         | `DateTime`, `Date`                           |
-
