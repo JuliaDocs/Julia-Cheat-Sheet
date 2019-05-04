@@ -1,16 +1,18 @@
-The main convention in Julia is to avoid underscores unless they are required for legibility.
+Juliaでの主な慣習は，読みやすくするために必要でない限り，下線 (アンダースコア, `_` )を避けることです。
 
-Variable names are in lower (or snake) case: `somevariable`.
+変数名は小文字とします。: `somevariable`.
+あるいは，スネークケース (スペースをアンダースコアに置き換えた綴り方) にします。
 
-Constants are in upper case: `SOMECONSTANT`.
+定数名は大文字とします : `SOMECONSTANT`
 
-Functions are in lower (or snake) case: `somefunction`.
+関数名は，小文字とします。`somefunction` (あるいは，スネークケースにします)
 
 Macros are in lower (or snake) case: `@somemacro`.
+マクロ名は，小文字とします。`@somemacro` (あるいは，スネークケースにします)
 
-Type names are in initial-capital camel case: `SomeType`.
+型の名前は，頭文字を大文字としたキャメル・ケース (空白を詰めて次の語を大文字から始めた綴り方) とします。 `SomeType`
 
-Julia files have the `jl` extension.
+Juliaファイルは，拡張子 `jl` を持ちます。
 
-For more information on Julia code style visit the manual: [style
-guide](https://docs.julialang.org/en/v1/manual/style-guide/index.html) .
+Juliaのコードスタイルの詳細は，マニュアル [style
+guide](https://docs.julialang.org/en/v1/manual/style-guide/index.html) を参照してください。
