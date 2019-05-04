@@ -1,9 +1,9 @@
 |                   |                                                          |
 | ----------------- | -------------------------------------------------------- |
-| Conditional       | `if-elseif-else-end`                                     |
-| Simple `for` loop | `for i in 1:10`<br>`    println(i)`<br>`end`             |
-| Unnested for loop | `for i in 1:10, j = 1:5`<br>`    println(i*j)`<br>`end`  |
-| Enumeration       | `for (idx, val) in enumerate(arr)`<br>`    println("the $idx-th element is $val")`<br>`end` |
-| `while` loop      | `while bool_expr`<br>`    # do stuff`<br>`end`           |
-| Exit loop         | `break`                                                  |
-| Exit iteration    | `continue`                                               |
+| 条件分岐       | `if-elseif-else-end`                                     |
+| 単純な `for` ループ | `for i in 1:10`<br>`    println(i)`<br>`end`             |
+| ２つのループ変数を，一つの `for` ループに入れる | `for i in 1:10, j = 1:5`<br>`    println(i*j)`<br>`end`  |
+| 数えながら繰り返す  | `for (idx, val) in enumerate(arr)`<br>`    println("the $idx-th element is $val")`<br>`end` |
+| `while` ループ    | `while bool_expr`<br>`    # do stuff`<br>`end`           |
+| ループから抜け出す     | `break`                                                  |
+| 残りの処理をスキップする | `continue`                                               |
