@@ -10,12 +10,6 @@ CやFORTRANなどの言語と同等の性能を引き出します。
 コードは，その場でコンパイルされるため，シェルすなわち<a class="tooltip" href="#">REPL <span> Read-Eval-Print-Loop; 対話型評価環境</span></a>内でコード（の断片）を実行できます。
 これは推奨されるワークフロー([workflow](https://docs.julialang.org/en/stable/manual/workflow-tips)の一部です。
 
-Julia is dynamically typed, provides
-<a class="tooltip" href="#">multiple dispatch <span> Because
-function argument types are determined at run-time, the compiler can
-choose the implementation that is optimized for the provided arguments
-and the processor architecture.  , and is designed for
-parallelism and distributed computation.
 Juliaは動的型付けされていて，
 <a class="tooltip" href="#">マルチプル・ディスパッチ<span>
 関数の引数の型は実行時に決まるので，コンパイラは与えられた型に最適化された実装を選ぶことができます。</span></a>の機能を提供し，並列性と分散計算を目的に設計されました。
