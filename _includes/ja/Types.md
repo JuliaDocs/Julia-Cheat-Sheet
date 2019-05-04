@@ -1,33 +1,32 @@
-Julia has no classes and thus no class-specific methods.
+Juliaにはクラスがなく，クラス固有のメソッドもありません。
 
-Types are like classes without methods.
+型は，メソッドを持たないクラスのようなものです。
 
-Abstract types can be subtyped but not instantiated.
+抽象(アブストラクト)型は下位型(サブタイプ)を作れますが，インスタンス化はできません。
 
-Concrete types cannot be subtyped.
+具象(コンクリート)型は下位型(サブタイプ)を作れません。
 
-By default, `struct` s are immutable.
+既定(デフォルト)では，構造体はイミュータブル(不変，変更不能な)です。
 
-Immutable types enhance performance and are thread safe, as they can be
-shared among threads without the need for synchronization.
+イミュータブルな型は，性能を向上させ，スレッドセーフです。それらが，スレッド間で同期を行わずに共有できるからです。
 
-Objects that may be one of a set of types are called `Union` types.
+型の集合の一つをとるようなオブジェクトは，共用(ユニオン)型と呼ばれます。
 
 |                          |                                                   |
 | ------------------------ | ------------------------------------------------- |
-| Type annotation          | `var::TypeName`                                   |
-| Type declaration         | `struct Programmer`<br>`    name::String`<br>`    birth_year::UInt16`<br>`    fave_language::AbstractString`<br>`end` |
-| Mutable type declaration | replace struct with mutable struct                |
-| Type alias               | `const Nerd = Programmer`                         |
+| 型注釈 (アノテーション) Type annotation          | `var::TypeName`                                   |
+| 型宣言        | `struct Programmer`<br>`    name::String`<br>`    birth_year::UInt16`<br>`    fave_language::AbstractString`<br>`end` |
+| ミュータブル(変更可能な)型の宣言 | replace struct with mutable struct                |
+| 型の別名(エイリアス)         | `const Nerd = Programmer`                         |
 | Type constructors        | `methods(TypeName)`                               |
-| Type instantiation       | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")` |
-| Subtype declaration      | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`    pond::String`<br>`end` |
-| Parametric type          | `struct Point{T <: Real}`<br>`    x::T`<br>`    y::T`<br>`end`<br><br>`p =Point{Float64}(1,2)`<br> |
-| Union types              | `Union{Int, String}`                              |
-| Traverse type hierarchy  | `supertype(TypeName)` and `subtypes(TypeName)`    |
-| Default supertype        | `Any`                                             |
-| All fields               | `fieldnames(TypeName)`                            |
-| All field types          | `TypeName.types`                                  |
+| 型のインスタンス化    | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")` |
+| 下位型(サブタイプ)の宣言  | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`    pond::String`<br>`end` |
+| パラメトリック型     | `struct Point{T <: Real}`<br>`    x::T`<br>`    y::T`<br>`end`<br><br>`p =Point{Float64}(1,2)`<br> |
+| 共用(ユニオン)型   | `Union{Int, String}`                              |
+| 型の階層を探索する | `supertype(TypeName)` and `subtypes(TypeName)`    |
+| 既定の上位型 (スーパータイプ)   | `Any`                                             |
+| 全てのフィールド名   | `fieldnames(TypeName)`                            |
+| 全てのフィールドの型     | `TypeName.types`                                  |
 
 When a type is defined with an *inner* constructor, the default *outer*
 constructors are not available and have to be defined manually if need
