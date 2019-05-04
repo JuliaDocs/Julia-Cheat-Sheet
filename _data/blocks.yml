@@ -91,9 +91,12 @@
 - file: IDEs-Editors-and-Plugins.md
   title: IDEs, Editors and Plug-ins
   zh-cn: IDE、编辑器和插件
+  ja: IDE(統合開発環境)，エディタ，プラグイン
 - file: Resources.md
   title: Resources
   zh-cn: 学习资源
+  ja: 参考資料
 - file: Videos.md
   title: Videos
   zh-cn: 相关视频
+  ja: 動画

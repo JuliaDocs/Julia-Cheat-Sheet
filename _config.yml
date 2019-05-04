@@ -28,7 +28,7 @@ t:
     github-1: "页面的源文件放在"
     github-2: "Github 上"
     github-3: "欢迎提交改进！"
-    translate: "帮助我们完善翻译!" 
+    translate: "帮助我们完善翻译!"
   es:
     name: "Español de España"
     fast-track: "La Via Rápida hacia"
@@ -37,3 +37,11 @@ t:
     github-2: "localizado aquí"
     github-3: "¡Los pull requests serán bien recibidos!"
     translate: "¡Ayude con la traducción!"
+  ja:
+    name: "日本語"
+    fast-track: "The Fast Track to"
+    quick-dirty: "A quick and dirty overview of"
+    github-1: "This page's source is"
+    github-2: "located here"
+    github-3: "Pull requests are welcome!"
+    translate: "Help translate!" # Not used for `en`
