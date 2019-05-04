@@ -1,20 +1,17 @@
-- Avoid global variables.
-- Write
-  [type-stable](https://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia)
-  code.
-- Use immutable types where possible.
-- Use `sizehint` for large arrays.
-- Free up memory for large arrays with `arr = nothing`.
-- Access arrays along columns, because multi-dimensional arrays are stored in column-major order.
-- Pre-allocate resultant data structures.
-- Disable the garbage collector in real-time applications: `disable_gc()`.
-- Avoid the splat (`...`) operator for keyword arguments.
-- Use mutating APIs (i.e. functions with `!` to avoid copying data structures.
-- Use array (element-wise) operations instead of list comprehensions.
-- Avoid `try`-`catch` in (computation-intensive) loops.
-- Avoid `Any` in collections.
-- Avoid abstract types in collections.
-- Avoid string interpolation in I/O.
-- [Vectorizing](https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code "https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code")
-  does not improve speed (unlike R, MATLAB or Python).
-- Avoid `eval` at run-time.
+- 全域(グローバル)変数は使用しないでください。
+- [型安定](https://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia)なコードを書きましょう。
+- 可能な限り，イミュータブル(不変, 変更不能)な型を使いましょう。
+- 大きな配列には`sizehint`を使います。
+- 大きな配列は，`arr=nothing` を使ってメモリを解放しましょう。
+- 配列は列(第1の軸)に沿ってアクセスしましょう。多次元配列は column-major の順序で格納されるからです。
+- 結果を格納するデータ構造は，事前に割り当てておきましょう。
+- リアルタイムなアプリケーションでは，ガベージコレクタを無効にします:`disable_gc()`。
+- キーワード引数にsplat (`...`) 演算子を使用しないでください。
+- 更新 (mutating) API (名前に `!`がつく関数) を使いましょう。データ構造のコピーを回避できます。
+- リストの内包表記よりも，配列 (要素毎の)演算を使いましょう。
+- (計算が集中して行われる)繰返し(ループ)では，`try`-`catch` を使用しないでください。
+- コレクション内では `Any` を避けましょう。
+- コレクション内では，抽象(アブストラクト)型を避けましょう。
+- 入出力では，文字列の補間を避けましょう。
+- ベクトル化 ([Vectorizing](https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code "https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code"))は，速度を向上させません (R，MATLAB，Pythonとは異なる)。
+- 実行時は `eval` の使用を避けましょう。
