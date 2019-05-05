@@ -10,7 +10,7 @@
 | 寸法 n で、要素が全て 1.0 の配列を作る        | `ones(n)`                                   |
 | 寸法 n で、要素が全て #undef の配列を作る    | `Vector{Type}(undef,n)`                     |
 | start から stop まで、等間隔の n 個の数字の列を作る | `range(start,stop=stop,length=n)` |
-| n 個のInt8 型の乱数からなる配列を作る | `rand(Int8, n)`                             |
+| Int8 型の乱数 n 個を要素とする配列を作る | `rand(Int8, n)`                             |
 | 配列 arr を値 val で満たす   | `fill!(arr, val)`                           |
 | 末尾の配列要素をポップする         | `pop!(arr)`                                 |
 | 最初の配列要素をポップする                 | `popfirst!(a)`                              |
@@ -22,4 +22,4 @@
 | val が要素として含まれているかを検査する | `in(val, arr) or val in arr`                |
 | スカラー積 (内積)    | `dot(a, b) == sum(a .* b)`                  |
 | (可能なら)寸法を変える  | `reshape(1:6, 3, 2)' == [1 2 3; 4 5 6]`     |
-| 配列を文字列に変える (要素の間にデリミタ del を挿入する | `join(arr, del)`              |
+| 配列を文字列に変える (要素の間にデリミタ del を挿入する) | `join(arr, del)`              |
