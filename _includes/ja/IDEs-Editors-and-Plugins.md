@@ -1,10 +1,10 @@
-- [Juno](https://junolab.org) (editor)
-- [JuliaBox](https://www.juliabox.com) (online IJulia notebook)
-- [Jupyter](https://try.jupyter.org) (online IJulia notebook)
+- [Juno](https://junolab.org) (エディタ)
+- [JuliaBox](https://www.juliabox.com) (オンラインの IJulia notebook)
+- [Jupyter](https://try.jupyter.org) (オンラインの IJulia notebook)
 - [Emacs](https://www.gnu.org/software/emacs) [Julia
-  mode](https://www.emacswiki.org/emacs/Julia) (editor)
+  mode](https://www.emacswiki.org/emacs/Julia) (エディタ)
 - [vim](https://www.vim.org) [Julia
-  mode](https://github.com/JuliaLang/julia-vim) (editor)
+  mode](https://github.com/JuliaLang/julia-vim) (エディタ)
 - [VS Code
   extension](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
-  (editor)
+  (エディタ)
