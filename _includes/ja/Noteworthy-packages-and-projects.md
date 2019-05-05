@@ -1,14 +1,13 @@
-Many core packages are managed by communities with names of the form
-Julia\[Topic\].
+多くのコア・パッケージが Julia コミュニティにより管理されています。これらには、Julia\[Topic\] という名前がついています。
 
 |                           |                                                  |
 | ------------------------- | ------------------------------------------------ |
-| Statistics                | JuliaStats                                       |
-| Automatic differentiation | JuliaDiff                                        |
-| Numerical optimization    | JuliaOpt                                         |
-| Plotting                  | JuliaPlots                                       |
-| Network (Graph) Analysis  | JuliaGraphs                                      |
+| 統計             | JuliaStats                                       |
+| 自動微分      | JuliaDiff                                        |
+| 数値最適化  | JuliaOpt                                         |
+| プロット            | JuliaPlots                                       |
+| ネットワーク(グラフ)解析  | JuliaGraphs                                      |
 | Web                       | JuliaWeb                                         |
-| Geo-Spatial               | JuliaGeo                                         |
-| Machine Learning          | JuliaML                                          |
-| Super-used Packages       | `DataFrames    # linear/logistic regression`<br>`Distributions # Statistical distributions`<br>`Flux          # Machine learning`<br>`Gadfly        # ggplot2-likeplotting`<br>`LightGraphs   # Network analysis`<br>`TextAnalysis  # NLP` |
+| 地理空間            | JuliaGeo                                         |
+| 機械学習    | JuliaML                                          |
+| 極めてよく用いられるパッケージ    | `DataFrames    # linear/logistic regression`<br>`Distributions # Statistical distributions`<br>`Flux          # Machine learning`<br>`Gadfly        # ggplot2-likeplotting`<br>`LightGraphs   # Network analysis`<br>`TextAnalysis  # NLP` |

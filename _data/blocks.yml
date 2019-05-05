@@ -108,6 +108,7 @@
 - file: Noteworthy-packages-and-projects.md
   title: Noteworthy packages and projects
   zh-cn: 值得关注的包与项目
+  ja: 注目すべきパッケージとプロジェクト
 - file: Naming-Conventions.md
   title: Naming Conventions
   zh-cn: 命名规范
