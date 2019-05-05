@@ -1,27 +1,27 @@
-Parallel computing tools are available in the `Distributed` standard library.
+並列計算ツールは、標準ライブラリ `Distributed` を用いて利用できます。
 
 |                                            |                                   |
 | ------------------------------------------ | --------------------------------- |
-| Launch REPL with N workers                 | `julia -p N`                      |
-| Number of available workers                | `nprocs()`                        |
-| Add N workers                              | `addprocs(N)`                     |
-| See all worker ids                         | `for pid in workers()`<br>`    println(pid)`<br>`end` |
-| Get id of executing worker                 | `myid()`                          |
-| Remove worker                              | `rmprocs(pid)`                    |
-| Run f with arguments args on pid           | `r = remotecall(f, pid, args...)`<br>`# or:`<br>`r = @spawnat pid f(args)`<br>`...`<br>`fetch(r)` |
-| Run f with arguments args on pid (more efficient) | `remotecall_fetch(f, pid, args...)` |
-| Run f with arguments args on any worker    | `r = @spawn f(args) ... fetch(r)` |
-| Run f with arguments args on all workers   | `r = [@spawnat w f(args) for w in workers()] ... fetch(r)` |
-| Make expr available to all workers         | `@everywhere expr`                |
+| N個のワーカーを含む REPLを開始する     | `julia -p N`                      |
+| 利用可能なワーカーの数       | `nprocs()`                        |
+| N 個のワーカーを追加する                   | `addprocs(N)`                     |
+| 全てのワーカー id を印字する         | `for pid in workers()`<br>`    println(pid)`<br>`end` |
+| 実行中のワーカーの id を得る         | `myid()`                          |
+| ワーカーを削除する                | `rmprocs(pid)`                    |
+| pid に対して、引数 args で f を実行する       | `r = remotecall(f, pid, args...)`<br>`# or:`<br>`r = @spawnat pid f(args)`<br>`...`<br>`fetch(r)` |
+| 上と同じ (より効率のよい方法) | `remotecall_fetch(f, pid, args...)` |
+| 任意のワーカーに対して、引数 args で f を実行する  | `r = @spawn f(args) ... fetch(r)` |
+| 全てのワーカーに対して、引数 args で f を実行する   | `r = [@spawnat w f(args) for w in workers()] ... fetch(r)` |
+| 全てのワーカーに対して、式 expr を利用可能とする   | `@everywhere expr`                |
 | Parallel for loop with <a class="tooltip" href="#">reducer<span>A reducer combines the results from different (independent) workers.</span></a> function red | `sum = @distributed (red) for i in 1:10^6`<br>`    # do parallelstuff`<br>`end` |
-| Apply f to all elements in collection coll | `pmap(f, coll)`                   |
+| コレクション coll の全ての要素に対して、f を適用する | `pmap(f, coll)`                   |
 
-Workers are also known as concurrent/parallel processes.
+ワーカーは、並行(コンカレント)あるいは並列(パラレル)なプロセスとしても知られています。
 
-Modules with parallel processing capabilities are best split into a
-functions file that contains all the functions and variables needed by
-all workers, and a driver file that handles the processing of data. The
-driver file obviously has to import the functions file.
+並列処理機能を備えたモジュールは、
+「関数ファイル」と「ドライバファイル」に最もよく分割できます。
+「関数ファイル」は、全てのワーカーで必要とされる関数と変数の全てを含みます。
+データ処理を扱う「ドライバファイル」は「関数ファイル」にインポートされる必要があります。
 
-A non-trivial (word count) example of a reducer function is provided by
+reducer 関数に関する例 (word count)は、こちらを参照してください。
 [Adam DeConinck](https://blog.ajdecon.org/parallel-word-count-with-julia-an-interesting).
