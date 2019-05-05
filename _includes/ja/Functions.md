@@ -1,14 +1,14 @@
-All arguments to functions are passed by reference.
+関数の全ての引数は、参照で渡されます。
 
-Functions with `!` appended change at least one argument, typically the first:
+`!` が末尾についた関数は、少なくとも１つの引数(通常は最初の引数)を変更します。
+:
 `sort!(arr)`.
 
-Required arguments are separated with a comma and use the positional notation.
+必須の引数は,コンマ `,` で区切られます。位置による表記が用いられます。
 
-Optional arguments need a default value in the signature, defined with `=`.
+オプション引数には、既定値 (デフォルト値)が必要です。関数定義(シグネチャ)の中で `=` を用いて定義します。
 
-Keyword arguments use the named notation and are listed in the function's
-signature after the semicolon:
+キーワード引数は、キーワード名を付けた表記が用いられます。関数定義(シグネチャ)の中で、セミコロン `;` の後に列挙されます。
 
 ````
 function func(req1, req2; key1=dflt1, key2=dflt2)
@@ -16,14 +16,13 @@ function func(req1, req2; key1=dflt1, key2=dflt2)
 end
 ````
 
-The semicolon is *not* required in the call to a function that accepts keyword arguments.
+キーワード引数を受け取る関数の呼び出しでは、セミコロン `;` は*不要です*。
 
-The `return` statement is optional but highly recommended.
+`return` 文は必須ではありませんが、使うことが推奨されます。
 
-Multiple data structures can be returned as a tuple in a single `return` statement.
+複数のデータ構造は、一つの `return` 文を用いて、タプルとして戻すことができます。
 
-Command line arguments `julia script.jl arg1 arg2...` can be processed from global
-constant `ARGS`:
+コマンドライン引数 `julia script.jl arg1 arg2...` は、全域定数 `ARGS` を用いて読み出すことができます。:
 
 ```
 for arg in ARGS
@@ -31,10 +30,10 @@ for arg in ARGS
 end
 ```
 
-Anonymous functions can best be used in collection functions or list comprehensions:
+匿名関数は、コレクション関数またはリスト内包表記で使うのに適しています:
 `x -> x^2`.
 
-Functions can accept a variable number of arguments:
+関数は、可変長の引数を受け取ることもできます:
 
 ```
 function func(a...)
@@ -44,7 +43,7 @@ end
 func(1, 2, [3:5]) # tuple: (1, 2, UnitRange{Int64}[3:5])
 ```
 
-Functions can be nested:
+関数定義は、入れ子に(ネスト)できます:
 
 ```
 function outerfunction()
@@ -57,7 +56,7 @@ function outerfunction()
 end
 ```
 
-Functions can have explicit return types
+関数定義は、戻り値の型を明示することもできます。
 
 ```
 # take any Number subtype and return it as a String
@@ -66,9 +65,7 @@ function stringifynumber(num::T)::String where T <: Number
 end
 ```
 
-Functions can be
-[vectorized](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized-1)
-by using the Dot Syntax
+関数呼び出しは、ドット構文を用いてベクトル化できます ([vectorized](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized-1))。
 
 ```
 # here we broadcast the subtraction of each mean value
@@ -85,22 +82,23 @@ julia> mean(B, dims=1)
  -7.40149e-17  7.40149e-17  1.85037e-17  3.70074e-17
 ```
 
-Julia generates <a class="tooltip" href="#">specialized versions<span> Multiple dispatch a type of
-polymorphism that dynamically determines which version of a function to
-call. In this context, dynamic means that it is resolved at run-time,
-whereas method overloading is resolved at compile time. Julia manages
-multiple dispatch completely in the background. Of course, you can
-provide custom function overloadings with type annotations. </span></a>
-of functions based on data types. When a function is called with the
-same argument types again, Julia can look up the native machine code and
-skip the compilation process.
+Julia は、引数のデータ型に基づき関数の<a class="tooltip" href="#">特殊なバージョン<span>　
+多重ディスパッチ。
+どのバージョンを呼び出すかを「動的」に決める「ポリモーフィズム」の一種類です。
+この文脈では、「動的」とは実行時に決定することを意味します。
+これに対して、メソッド・オーバーロードは、コンパイル時に決定します。
+Julia は、完全にバックグラウンドで多重ディスパッチを行います。
+もちろん、型注釈(type annotation)を用いて、メソッド・オーバーロードを指定することもできます。</span></a>を生成します。
+関数が同じ引数のデータ型で再び呼び出されたときには、
+Julia は、同じ型のネイティブ・マシン・コードを検索して、
+コンパイルのプロセスをスキップします。
 
-Since **Julia 0.5** the existence of potential
-ambiguities is still acceptable, but actually calling an ambiguous
-method is an **immediate error**.
+**Julia 0.5** 以降も、潜在的な型の曖昧さの存在は許されますが、
+曖昧なメソッドの呼び出しを呼び出すことは **即時エラー** となります。
 
-Stack overflow is possible when recursive functions nest many levels
-deep. [Trampolining](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia) can
-be used to do tail-call optimization, as Julia does not do that
-automatically [yet](https://github.com/JuliaLang/julia/issues/4964).
-Alternatively, you can rewrite the tail recursion as an iteration.
+再帰関数が多くのレベルを深くネストすると、スタックオーバーフローが発生する可能性があります。
+
+末尾再帰の最適化は
+[Trampolining](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia) と呼ばれる手法で可能ですが、
+Julia では[自動的に行いません](https://github.com/JuliaLang/julia/issues/4964)。
+あるいは、プログラマが、末尾再帰を繰返しとして書き直すこともできます。

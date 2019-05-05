@@ -11,7 +11,7 @@ CやFORTRANなどの言語と同等の性能を引き出します。
 これは推奨されるワークフロー([workflow](https://docs.julialang.org/en/stable/manual/workflow-tips)の一部です。
 
 Juliaは動的型付けされていて，
-<a class="tooltip" href="#">マルチプル・ディスパッチ<span>
+<a class="tooltip" href="#">多重ディスパッチ<span>
 関数の引数の型は実行時に決まるので，コンパイラは与えられた型に最適化された実装を選ぶことができます。</span></a>の機能を提供し，並列性と分散計算を目的に設計されました。
 
 Juliaには，パッケージマネージャが組み込まれています。
