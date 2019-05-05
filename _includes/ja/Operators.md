@@ -1,18 +1,18 @@
 |                            |                                                 |
 | -------------------------- | ----------------------------------------------- |
-| Basic arithmetic           | `+`, `-`,`*`,`/`                                |
-| Exponentiation             | `2^3 == 8`                                      |
-| Division                   | `3/12 == 0.25`                                  |
-| Inverse division           | `7\3 == 3/7`                                    |
-| Remainder                  | `x % y` or `rem(x,y)`                           |
-| Negation                   | `!true == false`                                |
-| Equality                   | `a == b`                                        |
-| Inequality                 | `a != b` or `a ≠ b`                             |
-| Less and larger than       | `<` and `>`                                     |
-| Less than or equal to      | `<=` or `≤`                                     |
-| Greater than or equal to   | `>=` or `≥`                                     |
-| Element-wise operation     | `[1, 2, 3] .+ [1, 2, 3] == [2, 4, 6]`<br>`[1, 2, 3] .* [1, 2, 3] == [1, 4, 9]` |
-| Not a number               | `isnan(NaN)` not(!) `NaN == NaN`                |
-| Ternary operator           | `a == b ? "Equal" : "Not equal"`                |
-| Short-circuited AND and OR | `a && b` and `a || b`                           |
-| Object equivalence         | `a === b`                                       |
+| 基本演算           | `+`, `-`,`*`,`/`                                |
+| 指数             | `2^3 == 8`                                      |
+| 割り算 (左除法)         | `3/12 == 0.25`                                  |
+| 右除法          | `7\3 == 3/7`                                    |
+| 余り (剰余)          | `x % y` or `rem(x,y)`                           |
+| 論理否定            | `!true == false`                                |
+| 値が等しいか           | `a == b`                                        |
+| 値が異なるか           | `a != b` or `a ≠ b`                             |
+| より小さいか、より大きいか   | `<` and `>`                                     |
+| 以下か  | `<=` or `≤`                                     |
+| 以上か | `>=` or `≥`                                     |
+| 要素毎の演算  | `[1, 2, 3] .+ [1, 2, 3] == [2, 4, 6]`<br>`[1, 2, 3] .* [1, 2, 3] == [1, 4, 9]` |
+| 数ではないか   | `isnan(NaN)` not(!) `NaN == NaN`                |
+| 三項演算子  | `a == b ? "Equal" : "Not equal"`                |
+| 短絡評価 AND and OR | `a && b` and `a || b`                           |
+| オブジェクトが等価か    | `a === b`                                       |
