@@ -39,9 +39,9 @@ t:
     translate: "¡Ayude con la traducción!"
   ja:
     name: "日本語"
-    fast-track: "The Fast Track to"
-    quick-dirty: "A quick and dirty overview of"
-    github-1: "This page's source is"
-    github-2: "located here"
-    github-3: "Pull requests are welcome!"
-    translate: "Help translate!" # Not used for `en`
+    fast-track: "早わかり"
+    quick-dirty: "すぐに使える"
+    github-1: "このページのソースは"
+    github-2: "ここにあります"
+    github-3: "Pull requests は大歓迎です"
+    translate: "翻訳にご協力ください" # Not used for `en`
