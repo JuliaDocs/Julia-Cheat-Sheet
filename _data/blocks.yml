@@ -72,13 +72,15 @@
 - file: Missing-and-Nothing.md
   title: Missing and Nothing
   zh-cn: 缺失值与空值
+  ja: missing と nothing
 - file: Exceptions.md
   title: Exceptions
   zh-cn: 异常处理
-  ja: 例外
+  ja: 例外処理
 - file: Modules.md
   title: Modules
   zh-cn: 模块
+  ja: モジュール
 - file: Expressions.md
   title: Expressions
   zh-cn: 表达式
@@ -102,6 +104,7 @@
 - file: Introspection-and-reflection.md
   title: Introspection and reflection
   zh-cn: 自我检查与反射
+  ja: イントロスペクションとリフレクション
 - file: Noteworthy-packages-and-projects.md
   title: Noteworthy packages and projects
   zh-cn: 值得关注的包与项目
@@ -112,6 +115,7 @@
 - file: Performance-tips.md
   title: Performance tips
   zh-cn: 性能改进建议
+  ja: 性能向上へのヒント
 - file: IDEs-Editors-and-Plugins.md
   title: IDEs, Editors and Plug-ins
   zh-cn: IDE、编辑器和插件
