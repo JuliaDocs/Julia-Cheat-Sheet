@@ -5,7 +5,7 @@
 | 型 type で表される最も小さい数、最も大きい数 | `typemin(Int8)`<br>`typemax(Int64)`                                |
 | 複素数型                | `Complex{T}`                                                       |
 | 虚数単位              | `im`                                                               |
-| 計算機精度                | `eps() # same as eps(Float64)`                                     |
+| 計算機イプシロン      | `eps() # same as eps(Float64)`                                     |
 | 丸める                    | `round()       # floating-point`<br>`round(Int, x) # integer`      |
 | 型を変換する                | `convert(TypeName, val)  # attempt/error`<br>`typename(val)           # calls convert` |
 | 全域の定数                | `pi # 3.1415...`<br>`π  # 3.1415...`<br>`im # real(im * im) == -1` |
