@@ -1,13 +1,13 @@
 |                                        |                              |
 | -------------------------------------- | ---------------------------- |
-| Recall last result                     | `ans`                        |
-| Interrupt execution                    | \[Ctrl\] + \[C\]             |
-| Clear screen                           | \[Ctrl\] + \[L\]             |
-| Run program                            | `include("filename.jl")`     |
-| Get help for `func` is defined         | `?func`                      |
-| See all places where `func` is defined | `apropos("func")`            |
-| Command line mode                      | `;`                          |
-| Package Manager mode                   | \]                           |
-| Help mode                              | ?                            |
-| Exit special mode / Return to REPL     | \[Backspace\] on empty line  |
-| Exit REPL                              | `exit()` or \[Ctrl\] + \[D\] |
+| 最後の結果を使う              | `ans`                        |
+| 実行を中断する                | \[Ctrl\] + \[C\]             |
+| スクリーンを消去する                  | \[Ctrl\] + \[L\]             |
+| (ファイルに書かれた)プログラムを実行する       | `include("filename.jl")`     |
+| `func` の定義に関してヘルプを見る   | `?func`                      |
+| 文字列 `func` が用いられた全ての定義を見る | `apropos("func")`            |
+| コマンド・ラインのモードに入る        | `;`                          |
+| パッケージ・マネージャのモードに入る           | \]                           |
+| ヘルプのモードに入る                 | ?                            |
+| 特別なモードを抜ける / REPLに戻る  | \[Backspace\] on empty line  |
+| REPL を抜ける                   | `exit()` or \[Ctrl\] + \[D\] |
