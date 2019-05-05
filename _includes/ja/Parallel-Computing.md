@@ -13,7 +13,7 @@
 | 任意のワーカーに対して、引数 args で f を実行する  | `r = @spawn f(args) ... fetch(r)` |
 | 全てのワーカーに対して、引数 args で f を実行する   | `r = [@spawnat w f(args) for w in workers()] ... fetch(r)` |
 | 全てのワーカーに対して、式 expr を利用可能とする   | `@everywhere expr`                |
-| Parallel for loop with <a class="tooltip" href="#">reducer<span>A reducer combines the results from different (independent) workers.</span></a> function red | `sum = @distributed (red) for i in 1:10^6`<br>`    # do parallelstuff`<br>`end` |
+| <a class="tooltip" href="#">reducer<span>reducerは、異なる(独立な)ワーカーからの結果を結合します</span></a>関数 red を用いた並列ループ | `sum = @distributed (red) for i in 1:10^6`<br>`    # do parallelstuff`<br>`end` |
 | コレクション coll の全ての要素に対して、f を適用する | `pmap(f, coll)`                   |
 
 ワーカーは、並行(コンカレント)あるいは並列(パラレル)なプロセスとしても知られています。
