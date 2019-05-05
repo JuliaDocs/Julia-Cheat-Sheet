@@ -6,10 +6,10 @@
 | 比較 | `a = [1:10;]`<br>`b = a      # b points to a`<br>`a[1] = -99`<br>`a == b     # true` |
 | 全ての要素を複製する (not address)       | `b = copy(a)`<br>`b = deepcopy(a)`          |
 | インデックス m から n までのサブ配列を選ぶ   | `arr[m:n]`                                  |
-| 寸法 n で、要素が全て 0.0 の配列を作る    | `zeros(n)`                                  |
-| 寸法 n で、要素が全て 1.0 の配列を作る        | `ones(n)`                                   |
-| 寸法 n で、要素が全て #undef の配列を作る    | `Vector{Type}(undef,n)`                     |
-| start から stop まで、等間隔の n 個の数字の列を作る | `range(start,stop=stop,length=n)` |
+| 寸法 n で，要素が全て 0.0 の配列を作る    | `zeros(n)`                                  |
+| 寸法 n で，要素が全て 1.0 の配列を作る        | `ones(n)`                                   |
+| 寸法 n で，要素が全て #undef の配列を作る    | `Vector{Type}(undef,n)`                     |
+| start から stop まで，等間隔の n 個の数字の列を作る | `range(start,stop=stop,length=n)` |
 | Int8 型の乱数 n 個を要素とする配列を作る | `rand(Int8, n)`                             |
 | 配列 arr を値 val で満たす   | `fill!(arr, val)`                           |
 | 末尾の配列要素をポップする         | `pop!(arr)`                                 |

@@ -1,4 +1,4 @@
-線形代数のツールの多くを使う場合には、`using LinearAlgebra` してください。
+線形代数のツールの多くを使う場合には，`using LinearAlgebra` してください．
 
 |                                |                                             |
 | ------------------------------ | ------------------------------------------- |
@@ -20,10 +20,10 @@
 | 行列方程式 `M*x == v` を解く              | `M\v` is <a class="tooltip" href="#">better <span> Numerically more stable and typically also faster. </span></a> than `inv(M)*v` |
 | Moore-Penrose の擬似逆行列  | `pinv(M)`                                   |
 
-Julia は、行列の分解([matrix
-decompositions](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/))を組み込みで用意しています。
+Julia は，行列の分解([matrix
+decompositions](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/))を組み込みで用意しています．
 
-Julia は、行列が特別な種類(対称、エルミートなど)であるかを推定しようとするが、
-失敗することもあります。
-Julia が、最適なアルゴリズムを選択するのを助けるために、
-特別な行列は、その構造を表した関数 (`Symmetric` , `Hermitian` , `UpperTriangular`, `LowerTriangular`, `Diagonal` など) を用いて定義することもできます。
+Julia は，行列が特別な種類(対称，エルミートなど)であるかを推定しようとするが，
+失敗することもあります．
+Julia が，最適なアルゴリズムを選択するのを助けるために，
+特別な行列は，その構造を表した関数 (`Symmetric` , `Hermitian` , `UpperTriangular`, `LowerTriangular`, `Diagonal` など) を用いて定義することもできます．
