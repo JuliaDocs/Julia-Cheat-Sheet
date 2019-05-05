@@ -1,4 +1,3 @@
-Modules are separate global variable workspaces that group together similar functionality.
 モジュールとは、個別の全域変数の作業領域で、似たような機能を一箇所にまとめたものです。
 
 |                       |                                                      |
