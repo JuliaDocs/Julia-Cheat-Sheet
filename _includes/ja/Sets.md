@@ -1,10 +1,10 @@
 |                        |                                   |
 | ---------------------- | --------------------------------- |
-| Declaration            | `s = Set([1, 2, 3, "Some text"])` |
-| Union `s1 ∪ s2`        | `union(s1, s2)`                   |
-| Intersection `s1 ∩ s2` | `intersect(s1, s2)`               |
-| Difference `s1 \\ s2`  | `setdiff(s1, s2)`                 |
-| Difference `s1 △ s2`   | `symdiff(s1, s2)`                 |
-| Subset `s1 ⊆ s2`       | `issubset(s1, s2)      `          |
+| 集合の定義     | `s = Set([1, 2, 3, "Some text"])` |
+| 和集合 `s1 ∪ s2`        | `union(s1, s2)`                   |
+| 共通集合 `s1 ∩ s2` | `intersect(s1, s2)`               |
+| 差集合 `s1 \\ s2`  | `setdiff(s1, s2)`                 |
+| 対称差集合 `s1 △ s2`   | `symdiff(s1, s2)`                 |
+| 部分集合か？ `s1 ⊆ s2`       | `issubset(s1, s2)      `          |
 
-Checking whether an element is contained in a set is done in O(1).
+要素が集合に含まれるかどうかのチェックは O (1) で行われる。
