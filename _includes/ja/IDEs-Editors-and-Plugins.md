@@ -1,6 +1,6 @@
 - [Juno](https://junolab.org) (エディタ)
-- [JuliaBox](https://www.juliabox.com) (オンラインの IJulia notebook)
-- [Jupyter](https://try.jupyter.org) (オンラインの IJulia notebook)
+- [JuliaBox](https://www.juliabox.com) (オンラインの Jupyter(IJulia) notebook)
+- [Jupyter](https://try.jupyter.org) (オンラインの Jupyter(IJulia) notebook)
 - [Emacs](https://www.gnu.org/software/emacs) [Julia
   mode](https://www.emacswiki.org/emacs/Julia) (エディタ)
 - [vim](https://www.vim.org) [Julia
