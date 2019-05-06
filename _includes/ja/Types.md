@@ -17,7 +17,7 @@ Juliaにはクラスがなく，クラス固有のメソッドもありません
 | ------------------------ | ------------------------------------------------- |
 | 型注釈 (アノテーション)      | `var::TypeName`                                   |
 | 型宣言        | `struct Programmer`<br>`    name::String`<br>`    birth_year::UInt16`<br>`    fave_language::AbstractString`<br>`end` |
-| ミュータブル(変更可能な)型の宣言 | replace struct with mutable struct                |
+| ミュータブル(変更可能な)型の宣言 | `struct` を `mutable struct` に置き換える                |
 | 型の別名(エイリアス)         | `const Nerd = Programmer`                         |
 | Type constructors        | `methods(TypeName)`                               |
 | 型のインスタンス化    | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")` |
