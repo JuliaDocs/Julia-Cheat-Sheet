@@ -8,13 +8,14 @@ Juliaにはクラスがなく，クラス固有のメソッドもありません
 
 既定(デフォルト)では，構造体はイミュータブル(不変，変更不能)です．
 
-イミュータブルな型は，性能を向上させ，スレッドセーフです．それらが，スレッド間で同期を行わずに共有できるからです．
+イミュータブルな型は，性能を向上させ，スレッドセーフです (それらは，スレッド間で同期を行わずに共有できるからです)．
+
 
 型の集合の一つをとるようなオブジェクトは，共用(ユニオン)型と呼ばれます．
 
 |                          |                                                   |
 | ------------------------ | ------------------------------------------------- |
-| 型注釈 (アノテーション) Type annotation          | `var::TypeName`                                   |
+| 型注釈 (アノテーション)      | `var::TypeName`                                   |
 | 型宣言        | `struct Programmer`<br>`    name::String`<br>`    birth_year::UInt16`<br>`    fave_language::AbstractString`<br>`end` |
 | ミュータブル(変更可能な)型の宣言 | replace struct with mutable struct                |
 | 型の別名(エイリアス)         | `const Nerd = Programmer`                         |
@@ -28,18 +29,20 @@ Juliaにはクラスがなく，クラス固有のメソッドもありません
 | 全てのフィールド名   | `fieldnames(TypeName)`                            |
 | 全てのフィールドの型     | `TypeName.types`                                  |
 
-When a type is defined with an *inner* constructor, the default *outer*
-constructors are not available and have to be defined manually if need
-be. An inner constructor is best used to check whether the parameters
-conform to certain (invariance) conditions. Obviously, these invariants
-can be violated by accessing and modifying the fields directly, unless
-the type is defined as immutable. The `new` keyword may be used to
-create an object of the same type.
+型が*内部*コンストラクタで定義された場合，
+デフォルトの*外部*コンストラクタは使用できません
+ (必要に応じて手動で定義する必要があります)．
+内部コンストラクタは，
+パラメータが invariant (不変性)の条件を満たすことをチェックする場合に使うのに，
+適しています．なぜなら，
+この型がイミュータブル(不変，変更不能)と定義されていなければ，
+フィールドに直接アクセスして変更しようとすると，この不変性が破られるからです．
+`new`キーワードは，同じ型のオブジェクトを作成するために用いられます．
 
-Type parameters are invariant, which means that `Point{Float64} <: Point{Real}` is
-false, even though `Float64 <: Real`.
-Tuple types, on the other hand, are covariant: `Tuple{Float64} <: Tuple{Real}`.
+ここで，型パラメータが invariant (不変) であるとは，
+( `Float64 <: Real` にもかかわらず )
+`Point{Float64} <: Point{Real}` が成り立たないことを意味します．
 
-The type-inferred form of Julia's internal representation can be found
-with `code_typed()`. This is useful to identify where `Any` rather
-than type-specific native code is generated.
+型推論がなされた形の Juliaの内部表現は `code_typed()` で見ることができます．
+これは，特定の型向けのネイティブコードではなく，
+`Any`型向けのコードが，どこで生成させたのかを突き止めるのに役に立ちます．
