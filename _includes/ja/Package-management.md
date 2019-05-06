@@ -1,29 +1,28 @@
-Packages must be [registered](https://pkg.julialang.org) before they are visible to the
-package manager. In Julia 1.0, there are two ways to work with the package manager:
-either with `using Pkg` and using `Pkg` functions, or by typing `]` in the REPL to
-enter the special interactive package management mode. (To return to regular REPL, just
-hit `BACKSPACE` on an empty line in package management mode). Note
-that new tools arrive in interactive mode first, then usually also
-become available in regular Julia sessions through `Pkg` module.
+パッケージは、パッケージマネージャに表示される前に登録する必要があります。
+Julia 1.0でパッケージマネージャを使うには、２つの方法があります。
+一つは、`using Pkg` と `Pkg` パッケージの関数を使う方法です。
+もう一つは、REPLに `]` と入力して特別な対話型パッケージ管理モードに入る方法です (通常のREPLに戻るには、パッケージ管理モードで空行の`BACKSPACE`を押します。)。
 
-## Using `Pkg` in Julia session
+新しいツールは最初にインタラクティブモードになり、通常は `Pkg` モジュールを介して通常のJuliaセッションでも利用できるようになります。
+
+## Julia のセッションで、`Pkg` を使う方法
 
 |                                            |                            |
 | ------------------------------------------ | -------------------------- |
-| List installed packages (human-readable)   | `Pkg.status()`             |
-| List installed packages (machine-readable) | `Pkg.installed()`          |
-| Update all packages                        | `Pkg.update()`             |
-| Install `PackageName`                      | `Pkg.add("PackageName")`   |
-| Rebuild `PackageName`                      | `Pkg.build("PackageName")` |
-| Use `PackageName` (after install)          | `using PackageName`        |
-| Remove `PackageName`                       | `Pkg.rm("PackageName")`    |
+| インストール済のパッケージを列挙する (人間が読める形式)   | `Pkg.status()`             |
+| インストール済のパッケージを列挙する  (機械可読形式) | `Pkg.installed()`          |
+| 全てのパッケージを更新する              | `Pkg.update()`             |
+| Install `PackageName` をインストールする   | `Pkg.add("PackageName")`   |
+| `PackageName` を再構築(ビルド)する      | `Pkg.build("PackageName")` |
+| `PackageName` を使用する (インストール後)    | `using PackageName`        |
+| `PackageName` を削除する     | `Pkg.rm("PackageName")`    |
 
-## In Interactive Package Mode
+## パッケージ管理モードを使う
 
 |                                                          |                                       |
 | -------------------------------------------------------- | ------------------------------------- |
-| Add `PackageName`                                        | `add PackageName`                     |
-| Remove `PackageName`                                     | `rm PackageName`                      |
-| Update `PackageName`                                     | `update PackageName`                  |
-| Use development version                                  | `dev PackageName` or `dev GitRepoUrl` |
-| Stop using development version, revert to public release | `free PackageName`                    |
+| `PackageName` を追加する         | `add PackageName`                     |
+| `PackageName` を削除する         | `rm PackageName`                      |
+| `PackageName` を更新する         | `update PackageName`                  |
+| 開発版を使う    | `dev PackageName` または `dev GitRepoUrl` |
+| 開発版の使用を中止し、公開版に戻す | `free PackageName`                    |
