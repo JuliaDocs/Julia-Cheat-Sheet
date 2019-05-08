@@ -14,8 +14,8 @@
 | 文字数      | `length("Hello") == 5`                      |
 | 正規表現         | `pattern = r"l[aeiou]"`                     |
 | match オブジェクト             | `str = "+1 234 567 890"`<br>`pat = r"\+([0-9]) ([0-9]+)"`<br>`m = match(pat, str)`<br>`m.captures == ["1", "234"]` |
-| pat にマッチした全てのサブ文字列からなる配列      | `[m.match for m = eachmatch(pat, str)]`     |
-| pat にマッチする全ての match オブジェクトによるイテレータ  | `eachmatch(pat, str)`                       |
+| pat にマッチしたサブ文字列からなる配列      | `[m.match for m = eachmatch(pat, str)]`     |
+| pat にマッチするmatch オブジェクトによるイテレータ  | `eachmatch(pat, str)`                       |
 
 UTF-8 は，多バイトで Unicode エンコードされることに注意してください．([訳注] 文字列の最後のインデックスと文字数は異なる場合があります) <br>
 `10 == lastindex("Ångström") != length("Ångström") == 8`
