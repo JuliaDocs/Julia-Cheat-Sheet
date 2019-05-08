@@ -7,8 +7,8 @@ Just-In-Timeコンパイルは，実行前ではなく実行時に実行され�
 コンパイラはコードを解析して型を推定します．LLVMコードが生成された後に，ネイティブコードにコンパイルされます．</span></a>コンパイラを備えています．
 これは，低レベルコードの煩わしさなしに，
 CやFORTRANなどの言語と同等の性能を引き出します．
-コードは，その場でコンパイルされるため，シェルすなわち<a class="tooltip" href="#">REPL <span> Read-Eval-Print-Loop; 対話型評価ループ</span></a>内でコード（の断片）を実行できます．
-これは推奨されるワークフロー([workflow](https://docs.julialang.org/en/v1/manual/workflow-tips/#) )の一部です．
+コードは，その場でコンパイルされるため，シェルすなわち<a class="tooltip" href="#">REPL <span>Read-Eval-Print-Loop; 対話型評価ループ</span></a>内でコード（の断片）を実行できます．
+REPLは推奨されるワークフロー([workflow](https://docs.julialang.org/en/v1/manual/workflow-tips/#) )の一部です．
 
 Juliaは動的型付けされていて，
 <a class="tooltip" href="#">多重ディスパッチ<span>
