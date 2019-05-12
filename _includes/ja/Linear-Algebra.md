@@ -2,7 +2,7 @@
 
 |                                |                                             |
 | ------------------------------ | ------------------------------------------- |
-| 単位行列        | `I  # just use variable I. Will automatically conform to dimensions required.` |
+| 単位行列        | `I  # 定数 LinearAlgebra.I. 任意の寸法の行列に対して恒等変換となる.` |
 | 行列を定義する              | `M = [1 0; 0 1]`                            |
 | 行列の寸法        | `size(M)`                                   |
 | インデックス `i` の列を選ぶ      | `M[i, :]`                                   |
@@ -17,7 +17,7 @@
 | 行列の固有値       | `eigvals(M)`                                |
 | 行列の固有ベクトル        | `eigvecs(M)`                                |
 | 逆行列         | `inv(M)`                                    |
-| 行列方程式 `M*x == v` を解く              | `M\v` が<a class="tooltip" href="#">優れる．<span>右の式に比べて，数値的に安定で，計算が速い</span></a>，`inv(M)*v` |
+| 行列方程式 `M*x == v` を解く              | `M\v` の方が<a class="tooltip" href="#">優れる．<span>逆行列を使うより，数値的に安定で，計算が速い</span></a>，`inv(M)*v` |
 | Moore-Penrose の擬似逆行列  | `pinv(M)`                                   |
 
 Julia は，行列の分解([matrix
