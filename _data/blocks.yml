@@ -3,7 +3,7 @@
   br: O que é…?
   zh-cn: ...是什么？
   es: ¿Qué es...?
-  ja: これは何ですか？
+  ja: Juliaの紹介
 - file: Basics.md
   title: Basics
   zh-cn: 基础语法
@@ -40,11 +40,11 @@
 - file: Arrays.md
   title: Arrays
   zh-cn: 数组
-  ja: 配列
+  ja: (1次元)配列 (ベクトル)
 - file: Linear-Algebra.md
   title: Linear Algebra
   zh-cn: 线性代数
-  ja: 線形代数
+  ja: 線形代数と行列 (2次元配列)
 - file: Control-flow-and-loops.md
   title: Control flow and loops
   zh-cn: 控制流与循环
