@@ -27,3 +27,4 @@ Juliaをインストールした直後はパッケージ管理モードを使い
 | `PackageName` を更新する         | `update PackageName`                  |
 | 開発版を使う    | `dev PackageName` または `dev GitRepoUrl` |
 | 開発版の使用を中止し，公開版に戻す | `free PackageName`                    |
+
