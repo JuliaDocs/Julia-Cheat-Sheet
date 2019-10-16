@@ -28,4 +28,20 @@ t:
     github-1: "页面的源文件放在"
     github-2: "Github 上"
     github-3: "欢迎提交改进！"
-    translate: "帮助我们完善翻译!" 
+    translate: "帮助我们完善翻译!"
+  es:
+    name: "Español de España"
+    fast-track: "La Via Rápida hacia"
+    quick-dirty: "Una aproximación rápida y simple a"
+    github-1: "El código fonte de esta página está"
+    github-2: "localizado aquí"
+    github-3: "¡Los pull requests serán bien recibidos!"
+    translate: "¡Ayude con la traducción!"
+  ja:
+    name: "日本語"
+    fast-track: "早わかり"
+    quick-dirty: "すぐに使える"
+    github-1: "このページのソースは"
+    github-2: "ここにあります"
+    github-3: "Pull requests は大歓迎です"
+    translate: "翻訳にご協力ください" # Not used for `en`

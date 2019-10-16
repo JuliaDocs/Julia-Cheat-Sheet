@@ -4,7 +4,7 @@
 
 
 ## 文本编辑器
-- [Juno](https://junolab.org) 
+- [Juno](http://junolab.org) 
 - [Emacs](https://www.gnu.org/software/emacs) \ [Julia
   模式](https://www.emacswiki.org/emacs/Julia) 
 - [vim](https://www.vim.org) \ [Julia

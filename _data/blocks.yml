@@ -2,95 +2,130 @@
   title: What is…?
   br: O que é…?
   zh-cn: ...是什么？
+  es: ¿Qué es...?
+  ja: Juliaの紹介
 - file: Basics.md
   title: Basics
   zh-cn: 基础语法
+  es: Básico
+  ja: 基本
 - file: Operators.md
   title: Operators
   zh-cn: 运算符
+  ja: 演算子
 - file: The-shell-aka-REPL.md
   title: The shell a.k.a. REPL
   zh-cn: shell/REPL 环境
+  ja: REPL
 - file: Standard-libraries.md
   title: Standard libraries
   zh-cn: 标准库
+  ja: 標準ライブラリ
 - file: Package-management.md
   title: Package management
   zh-cn: 包管理
+  ja: パッケージ管理
 - file: Characters-and-strings.md
   title: Characters and strings
   zh-cn: 字符与字符串
+  ja: 文字と文字列
 - file: Numbers.md
   title: Numbers
   zh-cn: 数字相关
+  ja: 数
 - file: Random-Numbers.md
   title: Random Numbers
   zh-cn: 随机数
+  ja: 乱数
 - file: Arrays.md
   title: Arrays
   zh-cn: 数组
+  ja: (1次元)配列 (ベクトル)
 - file: Linear-Algebra.md
   title: Linear Algebra
   zh-cn: 线性代数
+  ja: 線形代数と行列 (2次元配列)
 - file: Control-flow-and-loops.md
   title: Control flow and loops
   zh-cn: 控制流与循环
+  ja: 制御フローと繰返し(ループ)
 - file: Functions.md
   title: Functions
   zh-cn: 函数
+  ja: 関数
 - file: Dictionaries.md
   title: Dictionaries
   zh-cn: 字典
+  ja: ディクショナリ(辞書)
 - file: Sets.md
   title: Sets
-  zh-cn: Sets
+  zh-cn: 集合
+  ja: 集合
 - file: Collection-functions.md
   title: Collection functions
-  zh-cn: Collection 相关函数
+  zh-cn: 收集相关函数
+  ja: コレクション
 - file: Types.md
   title: Types
   zh-cn: 类型
+  ja: 型
 - file: Missing-and-Nothing.md
   title: Missing and Nothing
   zh-cn: 缺失值与空值
+  ja: missing と nothing
 - file: Exceptions.md
   title: Exceptions
   zh-cn: 异常处理
+  ja: 例外処理
 - file: Modules.md
   title: Modules
   zh-cn: 模块
+  ja: モジュール
 - file: Expressions.md
   title: Expressions
   zh-cn: 表达式
+  ja: 式
 - file: Macros.md
   title: Macros
   zh-cn: 宏
+  ja: マクロ
 - file: Parallel-Computing.md
   title: Parallel Computing
   zh-cn: 并行计算
+  ja: 並列計算
 - file: IO.md
   title: I/O
   zh-cn: 输入/输出
+  ja: 入出力
 - file: DataFrames.md
   title: DataFrames
   zh-cn: DataFrames
+  ja: DataFrames
 - file: Introspection-and-reflection.md
   title: Introspection and reflection
+  zh-cn: 自我检查与反射
+  ja: イントロスペクションとリフレクション
 - file: Noteworthy-packages-and-projects.md
   title: Noteworthy packages and projects
   zh-cn: 值得关注的包与项目
+  ja: 注目すべきパッケージとプロジェクト
 - file: Naming-Conventions.md
   title: Naming Conventions
   zh-cn: 命名规范
+  ja: 命名規則
 - file: Performance-tips.md
   title: Performance tips
   zh-cn: 性能改进建议
+  ja: 性能向上へのヒント
 - file: IDEs-Editors-and-Plugins.md
   title: IDEs, Editors and Plug-ins
   zh-cn: IDE、编辑器和插件
+  ja: IDE(統合開発環境)，エディタ，プラグイン
 - file: Resources.md
   title: Resources
   zh-cn: 学习资源
+  ja: 参考資料
 - file: Videos.md
   title: Videos
   zh-cn: 相关视频
+  ja: 動画
