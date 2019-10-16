@@ -2,7 +2,7 @@
   [类型稳定](https://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia)
   的代码
 - 尽可能使用不可变类型
-- 大数组用 `sizehint` 预分配内存
+- 大数组用 `sizehint!` 预分配内存
 - 用 `arr = nothing` 释放大数组的内存
 - 使用列访问数组，因为多维数组总是以列优先的顺序储存
 - 预分配储存结果用的数据结构
