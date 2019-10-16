@@ -3,6 +3,7 @@
 |              |                                                               |
 | ------------ | ------------------------------------------------------------- |
 | 统计         | [Julia Statistics](https://github.com/JuliaStats)             |
+| 微分方程      | [Julia DiffEq](https://github.com/JuliaDiffEq)                |
 | 自动微分      | [Julia Diff](https://github.com/JuliaDiff)                     |
 | 数值优化      | [Julia Opt](https://github.com/JuliaOpt)                       |
 | 绘图         | [Julia Plots](https://github.com/JuliaPlots)                   |
