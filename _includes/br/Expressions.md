@@ -1,17 +1,17 @@
 Julia é homoicônico: Programas são representados como estruturas de dados
 da própria linguaguem. De fato, tudo é uma expressão `Expr`.
 
-Símbolos são <a class="tooltip" href="#">sequências internas <span> 
-Apenas uma cópia de cada valor de sequência distinta é armazenado.
-  (Imutável).</span></a> preficaso com dois pontos.
+Símbolos são <a class="tooltip" href="#">sequências de caracteres internas <span> 
+Apenas uma cópia de cada cadeia de caractere (imutável) distinta é armazenada.
+(Imutável).</span></a> prefixado com dois pontos.
   
-Símbolos são mais eficientes e são tipicamente utilizado como identificadores,
-chaves (em dicionários), ou colunas em `data frames`. Símbolos não podem ser concatenados.
+Símbolos são mais eficientes e são tipicamente utilizados como identificadores,
+chaves (em dicionários), ou colunas em _data frames_. Símbolos não podem ser concatenados.
 Citação `:( ... )` ou `quote ... end` cria uma expressão, como 
 <a class="tooltip" href="#">`parse(str)` <span> Essa forma é provávelmente a mais familiar
-  a pessoas com conhecimento de Dinâmicas em SQL. A função `parse` é similiar à declaração
-  `EXECUTE IMMEDIATE` da Oracle e da PostgreSQL ou do procedimento `sp_executesql()` do servidor SQL·</span></a>
-  e `Expr(:call, ...)`.
+às pessoas com conhecimentos em SQL dinâmico. A função `parse` é similiar à declaração
+`EXECUTE IMMEDIATE` da Oracle e da PostgreSQL ou do procedimento `sp_executesql()` do SQL _server_·</span></a>
+e `Expr(:call, ...)`.
 
 ```
 x = 1
