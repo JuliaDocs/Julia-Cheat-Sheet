@@ -1,30 +1,25 @@
-For most linear algebra tools, use `using LinearAlgebra`.
+Para a maioria das ferramentas de Álgebra Linear, use `using LinearAlgebra`.
 
-|                                |                                                                                                                                            |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Identity matrix                | `I  # just use variable I. Will automatically conform to dimensions required.         `                                                    |
-| Define matrix                  | `M = [1 0; 0 1]         `                                                                                                                  |
-| Matrix dimensions              | `size(M)         `                                                                                                                         |
-| Select `i` th row              | `M[i, :]`                                                                                                                                  |
-| Select `i` th column           | `M[:, i]`                                                                                                                                  |
-| Concatenate horizontally       | `M = [a b]` or `M = hcat(a, b)`                                                                                                            |
-| Concatenate vertically         | `M = [a ; b]` or `M = vcat(a, b)`                                                                                                           |
-| Matrix transposition           | `transpose(M)`                                                                                                                             |
-| Conjugate matrix transposition | `M'` or `adjoint(M)`                                                                                                                       |
-| Matrix trace                   | `tr(M)`                                                                                                                                    |
-| Matrix determinant             | `det(M)`                                                                                                                                   |
-| Matrix rank                    | `rank(M)`                                                                                                                                  |
-| Matrix eigenvalues             | `eigvals(M)`                                                                                                                               |
-| Matrix eigenvectors            | `eigvecs(M)`                                                                                                                               |
-| Matrix inverse                 | `inv(M)`                                                                                                                                   |
-| Solve `M*x == v`               | `M\v         ` is <a class="tooltip" href="#">better <span> Numerically more stable and typically also faster. </span></a> than `inv(M)*v` |
-| Moore-Penrose pseudo-inverse   | `pinv(M)`                                                                                                                                  |
+|                                   |                                                                                                                                            |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Matriz Identidade                 | `I  # use somente a variável I. Será automaticamente ajustada conforme as dimensões requeridas.         `                                  |
+| Definir Matriz                    | `M = [1 0; 0 1]         `                                                                                                                  |
+| Dimensão da Matriz                | `size(M)         `                                                                                                                         |
+| Selecionar `i`-ésima linha        | `M[i, :]`                                                                                                                                  |
+| Slecionar `i`-ésima coluna        | `M[:, i]`                                                                                                                                  |
+| Concatenar horizontalmente        | `M = [a b]` ou `M = hcat(a, b)`                                                                                                            |
+| Concatenar verticalmente          | `M = [a ; b]` ou `M = vcat(a, b)`                                                                                                          |
+| Matriz Transposta                 | `transpose(M)`                                                                                                                             |
+| Matriz Transposta Conjugada       | `M'` ou `adjoint(M)`                                                                                                                       |
+| Traço da Matriz                   | `tr(M)`                                                                                                                                    |
+| Determinante                      | `det(M)`                                                                                                                                   |
+| Posto da Matriz                   | `rank(M)`                                                                                                                                  |
+| Autovalores                       | `eigvals(M)`                                                                                                                               |
+| Autovetores                       | `eigvecs(M)`                                                                                                                               |
+| Matriz Inversa                    | `inv(M)`                                                                                                                                   |
+| Resolver `M*x == v`               | `M\v         ` é <a class="tooltip" href="#"> melhor <span> Numericamente mais estável e tipicamente mais rápido. </span></a> que `inv(M)*v`     |
+| Pseudo-inversa de Moore-Penrose   | `pinv(M)`                                                                                                                                  |
 
-Julia has built-in support for [matrix
-decompositions](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/).
+Julia tem suporte nativo a [decomposições matriciais](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/).
 
-Julia tries to infer whether matrices are of a special type (symmetric,
-hermitian, etc.), but sometimes fails. To aid Julia in dispatching the
-optimal algorithms, special matrices can be declared to have a structure
-with functions like `Symmetric` , `Hermitian` , `UpperTriangular`, `LowerTriangular`,
-`Diagonal` , and more.
+Julia tenta inferir se as matrizes são de tipos especiais (Simétricas, Hermitianas, etc.), mas as vezes falha. Para ajudar Julia a despachar algoritmos ótimos, matrizes especiais podem ser declaradas para ter uma estrutura com funções como `Symmetric` , `Hermitian` , `UpperTriangular`, `LowerTriangular`, `Diagonal`, e mais.
