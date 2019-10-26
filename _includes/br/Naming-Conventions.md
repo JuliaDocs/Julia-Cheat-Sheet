@@ -1,6 +1,6 @@
-A principal convenção em júlia é evitar sublinhados (_), a menos que seja requirido por legibilidade.
+A principal convenção em Julia é evitar sublinhados (_), a menos que seja requirido por legibilidade.
 
-Nomes de variáveis são minúsculas: `algumavariaval`.
+Nomes de variáveis são minúsculas: `algumavariavel`.
 
 Constantes em maiúsculo: `ALGUMACONSTANTE`.
 
