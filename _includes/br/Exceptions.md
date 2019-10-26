@@ -1,7 +1,7 @@
-|                           |                                                 |
-| ------------------------- | ----------------------------------------------- |
-| Throw SomeExcep           | `throw(SomeExcep())`                            |
-| Rethrow current exception | `rethrow()`                                     |
-| Define NewExcep           | `struct NewExcep <: Exception`<br>`    v::String`<br>`end`<br><br>`Base.showerror(io::IO, e::NewExcep) = print(io, "A problem with $(e.v)!")`<br><br>`throw(NewExcep("x"))` |
-| Throw error with msg text | `error(msg)`                                    |
-| Handler                   | `try`<br>`    # do something potentially iffy`<br>`catch ex`<br>`    if isa(ex, SomeExcep)`<br>`        # handle SomeExcep`<br>`    elseif isa(ex, AnotherExcep)`<br>`        # handle AnotherExcep`<br>`    else`<br>`        # handle all others`<br>`    end`<br>`finally`<br>`    # do this in any case`<br>`end` |
+|                                 |                                                 |
+| ------------------------------- | ----------------------------------------------- |
+| Lançar AlgumaExcecao            | `throw(AlgumaExcecao())`                        |
+| Relançar exceção atual          | `rethrow()`                                     |
+| Definir NovaExcecao             | `struct NovaExcecao <: Exception`<br>`    v::String`<br>`end`<br><br>`Base.showerror(io::IO, e::NovaExcecao) = print(io, "Um problema com $(e.v)!")`<br><br>`throw(NovaExcecao("x"))` |
+| Lançar erro com mensagem        | `error(mensagem)`                                    |
+| Tratamento                      | `try`<br>`    # faca algo potencialmente duvidoso`<br>`catch ex`<br>`    if isa(ex, AlgumaExcecao)`<br>`        # tratar AlgumaExcecao`<br>`    elseif isa(ex, UmaOutraExcecao)`<br>`        # tratar UmaOutraExcecao`<br>`    else`<br>`        # tratar os restantes`<br>`    end`<br>`finally`<br>`    # faça isso em qualquer caso`<br>`end` |
