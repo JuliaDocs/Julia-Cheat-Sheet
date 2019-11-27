@@ -16,7 +16,7 @@ and FORTRAN without the hassle of low-level code. Because the code is
 compiled on the fly you can run (bits of) code in a shell or
 <a class="tooltip" href="#">REPL <span> Read-Eval-Print-Loop </span></a>,
 which is part of the recommended
-[workflow](https://docs.julialang.org/en/stable/manual/workflow-tips) .
+[workflow](https://docs.julialang.org/en/v1/manual/workflow-tips) .
 
 Julia is dynamically typed, provides
 <a class="tooltip" href="#">multiple dispatch <span> Because
