@@ -23,7 +23,7 @@
 Julia は，行列の分解([matrix
 decompositions](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/))を組み込みで用意しています．
 
-Julia は，行列が特別な種類(対称，エルミートなど)であるかを推定しようとするが，
+Julia は，行列が特別な種類(対称，エルミートなど)であるかを推定しようとしますが，
 失敗することもあります．
 Julia が，最適なアルゴリズムを選択するのを助けるために，
-特別な行列は，その構造を表した関数 (`Symmetric`, `Hermitian`, `UpperTriangular`, `LowerTriangular`, `Diagonal` など) を用いて定義することもできます．
+特別な行列は，その構造を表した関数 (`Symmetric`, `Hermitian`, `UpperTriangular`, `LowerTriangular`, `Diagonal` など) を用いて定義できます．
