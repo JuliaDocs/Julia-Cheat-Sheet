@@ -1,5 +1,5 @@
 Many core packages are managed by communities with names of the form
-Julia\[Topic\].
+Julia\[Topic\]. See the full list in [Julia GitHub Groups](https://julialang.org/community/#julia_github_groups).
 
 |                           |                                                  |
 | ------------------------- | ------------------------------------------------ |
