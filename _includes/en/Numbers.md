@@ -1,6 +1,6 @@
 |                                    |                                                                    |
 | ---------------------------------- | ------------------------------------------------------------------ |
-| Integer types                      | `IntN` and `UIntN`, with `N ∈ {8, 16, 32, 64, 128}`, `BigInt`      |
+| Integer types                      | `IntN` and `UIntN`, with `N ∈ {8, 16, 32, 64, 128}`, `BigInt`<br> `Int === Int64` |
 | Floating-point types               | `FloatN` with `N ∈ {16, 32, 64}`<br>`BigFloat`                     |
 | Minimum and maximum values by type | `typemin(Int8)`<br>`typemax(Int64)`                                |
 | Complex types                      | `Complex{T}`                                                       |
