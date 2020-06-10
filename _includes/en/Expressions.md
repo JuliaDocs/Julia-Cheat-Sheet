@@ -8,16 +8,16 @@ keys (in dictionaries), or columns in data frames. Symbols cannot be
 concatenated.
 
 Quoting `:( ... )` or `quote ... end` creates an expression, just
-like <a class="tooltip" href="#">`parse(str)` <span> This form is probably most familiar to
-people with knowledge of dynamic SQL. The `parse` function is similar
+like <a class="tooltip" href="#">`Meta.parse(str)` <span> This form is probably most familiar to
+people with knowledge of dynamic SQL. The `Meta.parse` function is similar
 to Oracle"s and PostgreSQL"s `EXECUTE IMMEDIATE` statement or SQL
 Server's `sp_executesql()` procedure. </span></a> , and `Expr(:call, ...)`.
 
 ```
 x = 1
-line = "1 + $x"      # some code
-expr = parse(line)   # make an Expr object
-typeof(expr) == Expr # true
-dump(expr)           # generate abstract syntax tree
-eval(expr) == 2      # evaluate Expr object: true
+line = "1 + $x"         # some code
+expr = Meta.parse(line) # make an Expr object
+typeof(expr) == Expr    # true
+dump(expr)              # generate abstract syntax tree
+eval(expr) == 2         # evaluate Expr object: true
 ```
