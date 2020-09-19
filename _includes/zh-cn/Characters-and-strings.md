@@ -13,7 +13,7 @@
 | 收集的最后一个索引值           | `lastindex("Hello")  # 5`                     |
 | 字符串的长度                  | `length("Hello")     # 5`                     |
 | 正则表达式                    | `pattern = r"l[aeiou]"`                       |
-| 字字符串                      | `str = "+1 234 567 890"`<br>`pat = r"\+([0-9]) ([0-9]+)"`<br>`m = match(pat, str)`<br>`m.captures  # ["1", "234"]` |
+| 子字符串                      | `str = "+1 234 567 890"`<br>`pat = r"\+([0-9]) ([0-9]+)"`<br>`m = match(pat, str)`<br>`m.captures  # ["1", "234"]` |
 | 所有匹配                      | `[m.match for m = eachmatch(pat, str)]`       |
 | 所有匹配的迭代器               | `eachmatch(pat, str)`                         |
 
