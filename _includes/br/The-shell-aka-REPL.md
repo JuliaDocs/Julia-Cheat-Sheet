@@ -1,7 +1,7 @@
 |                                               |                              |
 | --------------------------------------------- | ---------------------------- |
 | Relembrar o último resultado                  | `ans`                        |
-| Interrompe a execução                         | \[Ctrl\] + \[C\]             |
+| Interromper a execução                        | \[Ctrl\] + \[C\]             |
 | Limpar tela                                   | \[Ctrl\] + \[L\]             |
 | Executar programa                             | `include("filename.jl")`     |
 | Encontrar ajuda relacionada à `func`          | `?func`                      |
