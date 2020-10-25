@@ -9,7 +9,7 @@
 | <a class="tooltip" href="#">Categorical<span>Similar to `df$col = as.factor(df$col)` in R.</span> `col` | `categorical!(df, [:col])` |
 | `col` の level を列挙する    | `levels(df[:col])`                        |
 | `col` の列の値が `val` と等しいデータを抜き出す | `df[df[:col] .== val, :]`                 |
-| wide形式からlong形式に変換する | `stack(df, [1:n; ])`<br>`stack(df, [:col1, :col2, ...]`<br>`melt(df, [:col1, :col2]) [` |
+| wide形式からlong形式に変換する | `stack(df, [1:n; ])`<br>`stack(df, [:col1, :col2, ...])`<br>`melt(df, [:col1, :col2])` |
 | long形式からwide形式に変換する | `unstack(df, :id, :val)`                  |
 | `Nullable` を許すように，列の型を変換する    | `allowmissing!(df)` or `allowmissing!(df, :col)` |
 | 列に沿って繰り返す                  | `for r in eachrow(df)`<br>`    # do stuff.`<br>`    # r is Struct with fields of col names.`<br>`end` |
