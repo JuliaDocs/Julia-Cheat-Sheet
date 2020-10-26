@@ -1,46 +1,44 @@
-Julia has no classes and thus no class-specific methods.
+Julia n'a pas de classes, et par conséquent pas de méthodes de classe. Les types
+Julia sont similaires à des classes sans méthode.
 
-Types are like classes without methods.
+Les types abstraits peuvent être sous-typés, mais pas instanciés. Les types
+concrets ne peuvent être sous-typés.
 
-Abstract types can be subtyped but not instantiated.
+Par défaut, les `struct`s sont immutables. Les types immutables améliorent la
+performance et sont *thread-safe* puisqu'on ne peut accéder à leurs instances
+qu'en lecture.
 
-Concrete types cannot be subtyped.
+Les types `Union` permettent de représenter un ensemble de types.
 
-By default, `struct` s are immutable.
+|                                                        |                                                                                                                       |
+| ------------------------                               | -------------------------------------------------                                                                     |
+| Assertion de type, annotation                          | `var::TypeName`                                                                                                       |
+| Déclaration de type                                    | `struct Programmer`<br>`    name::String`<br>`    birth_year::UInt16`<br>`    fave_language::AbstractString`<br>`end` |
+| Déclaration de type mutable                            | remplacer `struct` par `mutable struct`                                                                               |
+| Alias de type                                          | `const Nerd = Programmer`                                                                                             |
+| Liste des constructeurs d'un type                      | `methods(TypeName)`                                                                                                   |
+| Instanciation d'un type  (construction d'une instance) | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")`                                          |
+| Déclaration d'un sous-type                             | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`    pond::String`<br>`end`                                      |
+| Type paramétrique                                      | `struct Point{T <: Real}`<br>`    x::T`<br>`    y::T`<br>`end`<br><br>`p =Point{Float64}(1,2)`<br>                    |
+| Type union                                             | `Union{Int, String}`                                                                                                  |
+| Parcours de la hiérarchie de types                     | `supertype(TypeName)` and `subtypes(TypeName)`                                                                        |
+| Supertype universel                                    | `Any`                                                                                                                 |
+| Liste des champs                                       | `fieldnames(TypeName)`                                                                                                |
+| Liste des types des champs                             | `TypeName.types`                                                                                                      |
 
-Immutable types enhance performance and are thread safe, as they can be
-shared among threads without the need for synchronization.
+Lorsqu'une définition de type inclut un constructeur *interne*, les
+constructeurs *externes* par défaut ne sont plus disponibles. Ils doivent être
+définis manuellement si nécessaire. Un constructeur interne est utile pour
+garantir des invariants sur les champs d'un type. (Ces invariants pourront quand
+même être enfreints par une modification directe des champs, à moins que le type
+soit immutable). Le mot-clé `new` utilisé dans un constructeur interne permet de
+créer un objet du type adéquat.
 
-Objects that may be one of a set of types are called `Union` types.
+Les paramètres de type sont invariants, c'est à dire que `Point{Float64} <:
+Point{Real}` est faux, alors même que `Float64 <: Real`.
+En revanche, les `Tuple` sont covariants : `Tuple{Float64} <: Tuple{Real}`.
 
-|                          |                                                   |
-| ------------------------ | ------------------------------------------------- |
-| Type annotation          | `var::TypeName`                                   |
-| Type declaration         | `struct Programmer`<br>`    name::String`<br>`    birth_year::UInt16`<br>`    fave_language::AbstractString`<br>`end` |
-| Mutable type declaration | replace struct with mutable struct                |
-| Type alias               | `const Nerd = Programmer`                         |
-| Type constructors        | `methods(TypeName)`                               |
-| Type instantiation       | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")` |
-| Subtype declaration      | `abstract type Bird end`<br>`struct Duck <: Bird`<br>`    pond::String`<br>`end` |
-| Parametric type          | `struct Point{T <: Real}`<br>`    x::T`<br>`    y::T`<br>`end`<br><br>`p =Point{Float64}(1,2)`<br> |
-| Union types              | `Union{Int, String}`                              |
-| Traverse type hierarchy  | `supertype(TypeName)` and `subtypes(TypeName)`    |
-| Default supertype        | `Any`                                             |
-| All fields               | `fieldnames(TypeName)`                            |
-| All field types          | `TypeName.types`                                  |
-
-When a type is defined with an *inner* constructor, the default *outer*
-constructors are not available and have to be defined manually if need
-be. An inner constructor is best used to check whether the parameters
-conform to certain (invariance) conditions. Obviously, these invariants
-can be violated by accessing and modifying the fields directly, unless
-the type is defined as immutable. The `new` keyword may be used to
-create an object of the same type.
-
-Type parameters are invariant, which means that `Point{Float64} <: Point{Real}` is
-false, even though `Float64 <: Real`.
-Tuple types, on the other hand, are covariant: `Tuple{Float64} <: Tuple{Real}`.
-
-The type-inferred form of Julia's internal representation can be found
-with `code_typed()`. This is useful to identify where `Any` rather
-than type-specific native code is generated.
+La représentation interne d'un morceau de code après inférence de types peut
+être consultée grâce à `code_typed()`. Ceci est en particulier utile pour
+identifier les endroits où des expressions de type `Any` sont manipulées plutôt
+que du code natif de type spécifique.

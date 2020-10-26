@@ -77,6 +77,7 @@
   title: Types
   zh-cn: 类型
   ja: 型
+  fr: Types
 - file: Missing-and-Nothing.md
   title: Missing and Nothing
   zh-cn: 缺失值与空值
