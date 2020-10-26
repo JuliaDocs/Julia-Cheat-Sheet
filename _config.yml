@@ -13,6 +13,14 @@ t:
     github-2: "located here"
     github-3: "Pull requests are welcome!"
     translate: "Help translate!" # Not used for `en`
+  fr:
+    name: "Français"
+    fast-track: "Aide-mémoire"
+    quick-dirty: "Une présentation rapide de"
+    github-1: "Les sources de cette page sont"
+    github-2: "disponibles ici"
+    github-3: "Pull Requests bienvenues !"
+    translate: "Aidez à traduire !" # Not used for `en`
   br:
     name: "Português do Brasil"
     fast-track: "A via rápida para"
