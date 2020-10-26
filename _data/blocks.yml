@@ -55,6 +55,7 @@
   title: Control flow and loops
   zh-cn: 控制流与循环
   ja: 制御フローと繰返し(ループ)
+  fr: Structures de contrôle et boucles
 - file: Functions.md
   title: Functions
   zh-cn: 函数
