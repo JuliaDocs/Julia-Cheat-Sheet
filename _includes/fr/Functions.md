@@ -1,29 +1,37 @@
-All arguments to functions are passed by reference.
+Tous les arguments de fonctions sont passés par référence.
 
-Functions with `!` appended change at least one argument, typically the first:
+Par convention, les fonctions dont le nom se termine par `!` changent (mutent)
+au moins l'un de leurs arguments (en général le premier). Par exemple :
 `sort!(arr)`.
 
-Required arguments are separated with a comma and use the positional notation.
+Les arguments positionnels sont séparés par une virgule. Ils sont obligatoires,
+sauf si une valeur par défaut est fournie dans la signature de la fonction, au
+moyen du signe `=`. A partir du premier argument optionnel, tous les arguments
+positionnels suivants doivent aussi être optionnels.
 
-Optional arguments need a default value in the signature, defined with `=`.
-
-Keyword arguments use the named notation and are listed in the function's
-signature after the semicolon:
+Les arguments par mot-clé sont identifiés par leur nom, et listés dans la
+signature de fonction après un point-virgule :
 
 ````
-function func(req1, req2; key1=dflt1, key2=dflt2)
+function func(req1, req2, opt1=dflt1; key1=dflt1, key2=dflt2)
     # do stuff
 end
 ````
 
-The semicolon is *not* required in the call to a function that accepts keyword arguments.
+Le point-virgule n'est *pas* nécessaire pour identifier les arguments par
+mot-clé lors de l'appel à la fonction :
+```
+func(val_req1, val_req2, key1=val_key1)
+# opt1 et key2: valeur par défaut
+```
 
-The `return` statement is optional but highly recommended.
+Le mot-clé `return` est optionnel. S'il n'est pas présent, la valeur de la
+dernière expression évaluée est renvoyée.
 
-Multiple data structures can be returned as a tuple in a single `return` statement.
+On peut renvoyer plusieurs valeurs en utilisant un `Tuple`: `return (val1, val2)`
 
-Command line arguments `julia script.jl arg1 arg2...` can be processed from global
-constant `ARGS`:
+Les arguments passés à Julia en ligne de commande (`julia script.jl arg1
+ arg2...`) peuvent être récupérés dans la constante globale `ARGS`:
 
 ```
 for arg in ARGS
@@ -31,11 +39,11 @@ for arg in ARGS
 end
 ```
 
-Anonymous functions can best be used in collection functions or list comprehensions:
+Les fonctions anonymes sont souvent utiles en conjonction avec des fonctions
+d'ordre supérieur ou des listes en compréhension:
 `x -> x^2`.
 
-Functions can accept a variable number of arguments:
-
+Les fonctions peuvent accepter un nombre variable d'arguments:
 ```
 function func(a...)
     println(a)
@@ -44,7 +52,7 @@ end
 func(1, 2, [3:5]) # tuple: (1, 2, UnitRange{Int64}[3:5])
 ```
 
-Functions can be nested:
+Les déclarations de fonctions peuvent être imbriquées:
 
 ```
 function outerfunction()
@@ -57,24 +65,26 @@ function outerfunction()
 end
 ```
 
-Functions can have explicit return types
+Les fonctions peuvent spécifier un type pour leur arguments ainsi que leur
+résultat :
 
 ```
-# take any Number subtype and return it as a String
+# accepte n'importe quel argument sous-typant un nombre,
+# et le renvoie sous forme de chaîne de caractères
 function stringifynumber(num::T)::String where T <: Number
     return "$num"
 end
 ```
 
-Functions can be
-[vectorized](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized-1)
-by using the Dot Syntax
+Les fonctions peuvent être
+["vectorisées"](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized-1),
+(appliquées élément-par-élément) en utilisant la syntaxe "`.`" :
 
 ```
-# here we broadcast the subtraction of each mean value
-# by using the dot operator
 julia> using Statistics
 julia> A = rand(3, 4);
+
+# La soustraction est "broadcastée" ici
 julia> B = A .- mean(A, dims=1)
 3×4 Array{Float64,2}:
   0.0387438     0.112224  -0.0541478   0.455245
@@ -85,22 +95,26 @@ julia> mean(B, dims=1)
  -7.40149e-17  7.40149e-17  1.85037e-17  3.70074e-17
 ```
 
-Julia generates <a class="tooltip" href="#">specialized versions<span> Multiple dispatch a type of
-polymorphism that dynamically determines which version of a function to
-call. In this context, dynamic means that it is resolved at run-time,
-whereas method overloading is resolved at compile time. Julia manages
-multiple dispatch completely in the background. Of course, you can
-provide custom function overloadings with type annotations. </span></a>
-of functions based on data types. When a function is called with the
-same argument types again, Julia can look up the native machine code and
-skip the compilation process.
+Julia génère des <a class="tooltip" href="#">versions spécialisées<span> Le
+dispatch multiple choisit la *méthode* la plus adaptée aux types d'arguments
+fournis (dynamiquement, *i.e* sur la base des types de valeurs constatés lors de
+l'exécution). A partir du code de la méthode choisie, la spécialisation permet
+ensuite de générer un code binaire natif optimal pour les types d'arguments
+fournis. Tout ceci est différent de la surcharge de fonctions, qui s'appuie
+exclusivement sur les types connus à la compilation.</span></a> de chaque
+fonction, pour chaque type de données passées en argument. Quand une fonction
+est appelée à nouveau pour les mêmes types d'arguments, une version précédemment
+spécialisée peut être ré-utilisées ce qui évite d'avoir à repasser par une phase
+de compilation.
 
-Since **Julia 0.5** the existence of potential
-ambiguities is still acceptable, but actually calling an ambiguous
-method is an **immediate error**.
+Il est possible que l'ensemble des méthodes définies conduisent à des ambiguïtés
+*potentielles*, mais réaliser effectivement un appel à une méthode ambiguë
+provoque une **erreur** à l'exécution.
 
-Stack overflow is possible when recursive functions nest many levels
-deep. [Trampolining](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia) can
-be used to do tail-call optimization, as Julia does not do that
-automatically [yet](https://github.com/JuliaLang/julia/issues/4964).
-Alternatively, you can rewrite the tail recursion as an iteration.
+Des dépassements de pile (*Stack Overflows*) peuvent arriver lorsque des appels
+de fonctions récursives s'imbriquent sur trop de niveaux. Des techniques de
+[trampoline](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia)
+peuvent être mises en place pour émuler l'optimisation de la récursivité
+terminale (*Tail Call Optimization*), que Julia ne réalise pas ([encore
+?](https://github.com/JuliaLang/julia/issues/4964)) par défaut. Les situations
+de récursivité terminale peuvent aussi être récrites sous forme de boucle.
