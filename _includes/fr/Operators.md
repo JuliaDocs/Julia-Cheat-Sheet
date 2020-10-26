@@ -1,18 +1,18 @@
-|                            |                                                 |
-| -------------------------- | ----------------------------------------------- |
-| Basic arithmetic           | `+`, `-`,`*`,`/`                                |
-| Exponentiation             | `2^3 == 8`                                      |
-| Division                   | `3/12 == 0.25`                                  |
-| Inverse division           | `7\3 == 3/7`                                    |
-| Remainder                  | `x % y` or `rem(x,y)`                           |
-| Negation                   | `!true == false`                                |
-| Equality                   | `a == b`                                        |
-| Inequality                 | `a != b` or `a ≠ b`                             |
-| Less and larger than       | `<` and `>`                                     |
-| Less than or equal to      | `<=` or `≤`                                     |
-| Greater than or equal to   | `>=` or `≥`                                     |
-| Element-wise operation     | `[1, 2, 3] .+ [1, 2, 3] == [2, 4, 6]`<br>`[1, 2, 3] .* [1, 2, 3] == [1, 4, 9]` |
-| Not a number               | `isnan(NaN)` not(!) `NaN == NaN`                |
-| Ternary operator           | `a == b ? "Equal" : "Not equal"`                |
-| Short-circuited AND and OR | `a && b` and `a || b`                           |
-| Object equivalence         | `a === b`                                       |
+|                                     |                                                                                |
+| --------------------------          | -----------------------------------------------                                |
+| Opérations fondamentales            | `+`, `-`,`*`,`/`                                                               |
+| Exponentiation                      | `2^3 == 8`                                                                     |
+| Division                            | `3/12 == 0.25`                                                                 |
+| Division inverse                    | `7\3 == 3/7`                                                                   |
+| Reste (modulo)                      | `x % y` ou `rem(x,y)`                                                          |
+| Négation                            | `!true == false`                                                               |
+| Égalité                             | `a == b`                                                                       |
+| Non-égalité                         | `a != b` ou `a ≠ b`                                                            |
+| Inégalités strictes                 | `<` et `>`                                                                     |
+| Infériorité large                   | `<=` ou `≤`                                                                    |
+| Supériorité large                   | `>=` ou `≥`                                                                    |
+| Opérations élément-par-élément      | `[1, 2, 3] .+ [1, 2, 3] == [2, 4, 6]`<br>`[1, 2, 3] .* [1, 2, 3] == [1, 4, 9]` |
+| Not a Number                        | `isnan(NaN)` plutôt que `NaN == NaN`                                           |
+| Opérateur ternaire                  | `a == b ? "Equal" : "Not equal"`                                               |
+| ET et OU logiques (court-circuités) | `a && b` et `a || b `                                                          |
+| Équivalence d'objets                | `a === b`                                                                      |

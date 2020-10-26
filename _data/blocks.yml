@@ -15,6 +15,7 @@
   title: Operators
   zh-cn: 运算符
   ja: 演算子
+  fr: Opérateurs
 - file: The-shell-aka-REPL.md
   title: The shell a.k.a. REPL
   zh-cn: shell/REPL 环境
