@@ -25,6 +25,7 @@
   title: Standard libraries
   zh-cn: 标准库
   ja: 標準ライブラリ
+  fr: Bibliothèques standard
 - file: Package-management.md
   title: Package management
   zh-cn: 包管理
