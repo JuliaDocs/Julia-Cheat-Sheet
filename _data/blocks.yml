@@ -20,6 +20,7 @@
   title: The shell a.k.a. REPL
   zh-cn: shell/REPL 环境
   ja: REPL
+  fr: REPL
 - file: Standard-libraries.md
   title: Standard libraries
   zh-cn: 标准库
