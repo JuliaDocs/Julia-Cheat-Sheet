@@ -10,6 +10,7 @@
   zh-cn: 基础语法
   es: Básico
   ja: 基本
+  fr: Fondamentaux
 - file: Operators.md
   title: Operators
   zh-cn: 运算符
