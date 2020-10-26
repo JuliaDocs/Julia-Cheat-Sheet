@@ -1,29 +1,32 @@
-Packages must be [registered](https://pkg.julialang.org) before they are visible to the
-package manager. In Julia 1.0, there are two ways to work with the package manager:
-either with `using Pkg` and using `Pkg` functions, or by typing `]` in the REPL to
-enter the special interactive package management mode. (To return to regular REPL, just
-hit `BACKSPACE` on an empty line in package management mode). Note
-that new tools arrive in interactive mode first, then usually also
-become available in regular Julia sessions through `Pkg` module.
+Les paquets doivent être [enregistrés](https://pkg.julialang.org) avant de
+pouvoir être désignés par leur nom en utilisant le gestionnaire de paquets. La
+plupart des commandes ci-dessous acceptent aussi une URL de dépôt git pour
+identifier un paquet non-enregistré. Le gestionnaire de paquets de Julia 1.0
+peut être utilisé de deux manières : en tapant `using Pkg` puis en utilisant les
+fonctions du module `Pkg`, ou bien en entrant dans le mode REPL dédié à la
+gestion des paquets à l'aide de la touche `]` (Pour revenir au REPL Julia
+standard, tapez `[BackSpace]` dans une ligne vide). NB: les nouvelles
+fonctionnalités de `Pkg` arrivent souvent dans le mode REPL interactif, avant
+d'intégrer l'API du module `Pkg`.
 
-## Using `Pkg` in Julia session
+## Utiliser les fonctions de `Pkg` dans un code Julia
 
-|                                            |                            |
-| ------------------------------------------ | -------------------------- |
-| List installed packages (human-readable)   | `Pkg.status()`             |
-| List installed packages (machine-readable) | `Pkg.installed()`          |
-| Update all packages                        | `Pkg.update()`             |
-| Install `PackageName`                      | `Pkg.add("PackageName")`   |
-| Rebuild `PackageName`                      | `Pkg.build("PackageName")` |
-| Use `PackageName` (after install)          | `using PackageName`        |
-| Remove `PackageName`                       | `Pkg.rm("PackageName")`    |
+|                                                                   |                            |
+| ------------------------------------------                        | -------------------------- |
+| Lister les paquets installés (format pour humains)                | `Pkg.status()`             |
+| Lister les paquets installés (format pour traitement automatique) | `Pkg.installed()`          |
+| Mettre à jour les paquets                                         | `Pkg.update()`             |
+| Installer `PackageName`                                           | `Pkg.add("PackageName")`   |
+| Reconstruire `PackageName`                                        | `Pkg.build("PackageName")` |
+| Utiliser `PackageName` (après installation)                       | `using PackageName`        |
+| Supprimer `PackageName`                                           | `Pkg.rm("PackageName")`    |
 
-## In Interactive Package Mode
+## Dans le REPL interactif en mode `pkg`
 
-|                                                          |                                       |
-| -------------------------------------------------------- | ------------------------------------- |
-| Add `PackageName`                                        | `add PackageName`                     |
-| Remove `PackageName`                                     | `rm PackageName`                      |
-| Update `PackageName`                                     | `update PackageName`                  |
-| Use development version                                  | `dev PackageName` or `dev GitRepoUrl` |
-| Stop using development version, revert to public release | `free PackageName`                    |
+|                                            |                                       |
+| --------------------------------------     | ------------------------------------- |
+| Installer `PackageName`                    | `add PackageName`                     |
+| Supprimer `PackageName`                    | `rm PackageName`                      |
+| Mettre à jour `PackageName`                | `update PackageName`                  |
+| Utiliser une version de développement      | `dev PackageName` ou `dev GitRepoUrl` |
+| Après `dev`, revenir à une version publiée | `free PackageName`                    |

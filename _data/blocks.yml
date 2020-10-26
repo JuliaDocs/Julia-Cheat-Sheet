@@ -30,6 +30,7 @@
   title: Package management
   zh-cn: 包管理
   ja: パッケージ管理
+  fr: Gestionnaire de paquets
 - file: Characters-and-strings.md
   title: Characters and strings
   zh-cn: 字符与字符串
