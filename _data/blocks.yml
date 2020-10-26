@@ -90,6 +90,7 @@
   title: Modules
   zh-cn: 模块
   ja: モジュール
+  fr: modules
 - file: Expressions.md
   title: Expressions
   zh-cn: 表达式
