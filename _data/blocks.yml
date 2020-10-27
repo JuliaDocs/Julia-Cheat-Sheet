@@ -86,6 +86,7 @@
   title: Exceptions
   zh-cn: 异常处理
   ja: 例外処理
+  fr: Exceptions
 - file: Modules.md
   title: Modules
   zh-cn: 模块
