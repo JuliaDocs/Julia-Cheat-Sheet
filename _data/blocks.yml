@@ -73,6 +73,7 @@
   title: Collection functions
   zh-cn: 收集相关函数
   ja: コレクション
+  fr: Manipulation des collections
 - file: Types.md
   title: Types
   zh-cn: 类型
