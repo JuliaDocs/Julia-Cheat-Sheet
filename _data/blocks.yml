@@ -47,6 +47,7 @@
   title: Arrays
   zh-cn: 数组
   ja: (1次元)配列 (ベクトル)
+  fr: Tableaux
 - file: Linear-Algebra.md
   title: Linear Algebra
   zh-cn: 线性代数

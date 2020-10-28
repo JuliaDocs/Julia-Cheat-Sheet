@@ -1,25 +1,25 @@
-|                                   |                                             |
-| --------------------------------- | ------------------------------------------- |
-| Declaration                       | `arr = Float64[]`                           |
-| Pre-allocation                    | `sizehint!(arr, 10^4)`                      |
-| Access and assignment             | `arr = Any[1,2]`<br>`arr[1] = "Some text"`  |
-| Comparison | `a = [1:10;]`<br>`b = a      # b points to a`<br>`a[1] = -99`<br>`a == b     # true` |
-| Copy elements (not address)       | `b = copy(a)`<br>`b = deepcopy(a)`          |
-| Select subarray from m to n       | `arr[m:n]`                                  |
-| n-element array with 0.0s         | `zeros(n)`                                  |
-| n-element array with 1.0s         | `ones(n)`                                   |
-| n-element array with #undefs      | `Vector{Type}(undef,n)`                     |
-| n equally spaced numbers from start to stop | `range(start,stop=stop,length=n)` |
-| Array with n random Int8 elements | `rand(Int8, n)`                             |
-| Fill array with val               | `fill!(arr, val)`                           |
-| Pop last element                  | `pop!(arr)`                                 |
-| Pop first element                 | `popfirst!(a)`                              |
-| Push val as last element          | `push!(arr, val)`                           |
-| Push val as first element         | `pushfirst!(arr, val)`                      |
-| Remove element at index idx       | `deleteat!(arr, idx)`                       |
-| Sort                              | `sort!(arr)`                                |
-| Append a with b                   | `append!(a,b)`                              |
-| Check whether val is element      | `in(val, arr) or val in arr`                |
-| Scalar product                    | `dot(a, b) == sum(a .* b)`                  |
-| Change dimensions (if possible)   | `reshape(1:6, 3, 2)' == [1 2 3; 4 5 6]`     |
-| To string (with delimiter del between elements) | `join(arr, del)`              |
+|                                                                   |                                                                                        |
+| ---------------------------------                                 | -------------------------------------------                                            |
+| Déclaration                                                       | `arr = Float64[]`                                                                      |
+| Pré-allocation                                                    | `sizehint!(arr, 10^4)`                                                                 |
+| Accès et mutation                                                 | `arr = Any[1,2]`<br>`arr[1] = "Some text"`                                             |
+| Comparaison                                                       | `a = [1:10;]`<br>`b = a      # b pointe vers a`<br>`a[1] = -99`<br>`a == b     # true` |
+| Copie des éléments (distincte en mémoire)                         | `b = copy(a)     # un seul niveau`<br>`b = deepcopy(a) # récursivement`                |
+| Sous-tableau de `m` à `n`                                         | `arr[m:n]`                                                                             |
+| Tableau de `n` éléments, rempli de `0.0`                          | `zeros(n)`                                                                             |
+| Tableau de `n` éléments, rempli de `1.0`                          | `ones(n)`                                                                              |
+| Tableau de `n` éléments, non initialisé                           | `Vector{Type}(undef,n)`                                                                |
+| `n` nombres équi-répartis entre `start` et `stop`                 | `range(start,stop=stop,length=n)`                                                      |
+| `n` nombres (`Int8`) aléatoires                                   | `rand(Int8, n)`                                                                        |
+| Remplir `arr` avec des `val`                                      | `fill!(arr, val)`                                                                      |
+| Suppression d'un élément en fin de tableau                        | `pop!(arr)`                                                                            |
+| Suppression d'un élément en début de tableau                      | `popfirst!(a)`                                                                         |
+| Ajout d'un élément en fin de tableau                              | `push!(arr, val)`                                                                      |
+| Ajout d'un élément en début de tableau                            | `pushfirst!(arr, val)`                                                                 |
+| Suppression de l'élément d'indice `idx`                           | `deleteat!(arr, idx)`                                                                  |
+| Tri (en place)                                                    | `sort!(arr)`                                                                           |
+| Concaténation de `b` à la suite de `a` (en place)                 | `append!(a,b)`                                                                         |
+| Test si `val` est un élément de `arr`                             | `in(val, arr)` ou `val in arr`                                                           |
+| Produit scalaire                                                  | `dot(a, b) == sum(a .* b)`                                                             |
+| Changement de dimensions (si possible)                            | `reshape(1:6, 3, 2)' == [1 2 3; 4 5 6]`                                                |
+| Conversion en chaîne de caractères (éléments séparés par `delim`) | `join(arr, delim)`                                                                     |
