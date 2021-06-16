@@ -4,7 +4,7 @@ Julia\[Topic\].
 |                           |                                                  |
 | ------------------------- | ------------------------------------------------ |
 | Statistics                | JuliaStats                                       |
-| Differential Equations    | JuliaDiffEq (DifferentialEquations.jl)           |
+| Differential Equations    | SciML (DifferentialEquations.jl)           |
 | Automatic differentiation | JuliaDiff                                        |
 | Numerical optimization    | JuliaOpt                                         |
 | Plotting                  | JuliaPlots                                       |
