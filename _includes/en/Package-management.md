@@ -11,7 +11,6 @@ become available in regular Julia sessions through `Pkg` module.
 |                                            |                            |
 | ------------------------------------------ | -------------------------- |
 | List installed packages (human-readable)   | `Pkg.status()`             |
-| List installed packages (machine-readable) | `Pkg.installed()`          |
 | Update all packages                        | `Pkg.update()`             |
 | Install `PackageName`                      | `Pkg.add("PackageName")`   |
 | Rebuild `PackageName`                      | `Pkg.build("PackageName")` |
