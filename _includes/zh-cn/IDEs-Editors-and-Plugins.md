@@ -1,7 +1,6 @@
 ## 在线 IJulia 笔记本
-- [JuliaBox](https://www.juliabox.com) 
-- [Jupyter](https://try.jupyter.org) 
-
+- [Jupyter](https://jupyter.org/try) 
+- [Pluto.jl](https://plutojl.org)
 
 ## 文本编辑器
 - [Juno](http://junolab.org) 
