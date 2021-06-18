@@ -10,5 +10,8 @@ Julia\[Topic\].
 | Network (Graph) Analysis  | JuliaGraphs                                                                                                                                                                                                                                |
 | Web                       | JuliaWeb                                                                                                                                                                                                                                   |
 | Geo-Spatial               | JuliaGeo                                                                                                                                                                                                                                   |
-| Machine Learning          | JuliaML                                                                                                                                                                                                                                    |
+| Machine Learning          | JuliaML    
+|
+| Scientific Machine Learning | SciML (formerly DifferentialEquations.jl) 
+|
 | Super-used Packages       | `DataFrames    # linear/logistic regression`<br>`Distributions # Statistical distributions`<br>`Flux          # Machine learning`<br>`Gadfly        # ggplot2-likeplotting`<br>`LightGraphs   # Network analysis`<br>`TextAnalysis  # NLP` |
