@@ -14,7 +14,6 @@ d'intégrer l'API du module `Pkg`.
 |                                                                   |                            |
 | ------------------------------------------                        | -------------------------- |
 | Lister les paquets installés (format pour humains)                | `Pkg.status()`             |
-| Lister les paquets installés (format pour traitement automatique) | `Pkg.installed()`          |
 | Mettre à jour les paquets                                         | `Pkg.update()`             |
 | Installer `PackageName`                                           | `Pkg.add("PackageName")`   |
 | Reconstruire `PackageName`                                        | `Pkg.build("PackageName")` |
