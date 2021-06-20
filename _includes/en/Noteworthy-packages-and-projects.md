@@ -4,7 +4,7 @@ Julia\[Topic\].
 |                           |                                                  |
 | ------------------------- | ------------------------------------------------ |
 | Statistics                | JuliaStats                                       |
-| Scientific Machine Learning | SciML (formerly DifferentialEquations.jl)      |
+| Scientific Machine Learning | SciML (DifferentialEquations.jl)      |
 | Automatic differentiation | JuliaDiff                                        |
 | Numerical optimization    | JuliaOpt                                         |
 | Plotting                  | JuliaPlots                                       |
