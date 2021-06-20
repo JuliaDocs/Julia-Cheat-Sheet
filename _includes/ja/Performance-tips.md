@@ -1,17 +1,17 @@
-- 全域(グローバル)変数を使用しないでください．
+- 全域（グローバル）変数を使用しないでください．
 - [型安定](https://www.johnmyleswhite.com/notebook/2013/12/06/writing-type-stable-code-in-julia)なコードを書きましょう．
-- 可能な限り，イミュータブル(不変, 変更不能)な型を使いましょう．
+- 可能な限り，イミュータブル（不変, 変更不能）な型を使いましょう．
 - 大きな配列には`sizehint!`を使います．
 - 大きな配列は，`arr=nothing` を使ってメモリを解放しましょう．
-- 配列は列(第1の軸)に沿ってアクセスしましょう．多次元配列は column-major の順序で格納されるからです．
+- 配列は列（第1の軸）に沿ってアクセスしましょう．多次元配列は column-major の順序で格納されるからです．
 - 結果を格納するデータ構造は，事前に割り当てておきましょう．
-- リアルタイムなアプリケーションでは，ガベージコレクタを無効にします:`disable_gc()`．
-- キーワード引数にsplat (`...`) 演算子を使用しないでください．
-- 更新 (mutating) API (名前に `!`がつく関数) を使いましょう．データ構造のコピーを回避できます．
-- リストの内包表記よりも，配列 (要素毎の)演算を使いましょう．
-- (計算が集中して行われる)繰返し(ループ)では，`try`-`catch` を使用しないでください．
-- コレクション内では `Any` を避けましょう．
-- コレクション内では，抽象(アブストラクト)型を避けましょう．
+- リアルタイムなアプリケーションでは，`disable_gc()`を用いてガベージコレクタを無効にします．
+- キーワード引数にsplat演算子（`...`）演算子を使用しないでください．
+- 更新（mutating）API（名前の末尾に`!`がつく関数）を使いましょう．データ構造のコピーを回避できます．
+- リストの内包表記よりも，配列（要素毎の）演算を使いましょう．
+- （計算が集中して行われる）繰返し（ループ）では，`try`-`catch`を使用しないでください．
+- コレクション内では `Any`型を避けましょう．
+- コレクション内では，抽象（アブストラクト）型を避けましょう．
 - 入出力では，文字列の補間を避けましょう．
-- ベクトル化 ([Vectorizing](https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code "https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code"))は，速度を向上させません (R，MATLAB，Pythonとは異なります)．
+- ベクトル化([Vectorizing](https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code "https://www.johnmyleswhite.com/notebook/2013/12/22/the-relationship-between-vectorized-and-devectorized-code"))は，速度を向上させません（R，MATLAB，Pythonとは異なります）．
 - 実行時は `eval` の使用を避けましょう．
