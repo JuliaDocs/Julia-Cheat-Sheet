@@ -21,7 +21,7 @@
 | Moore-Penrose の擬似逆行列  | `pinv(M)`                                   |
 
 Julia は，行列の分解([matrix
-decompositions](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/))を組み込みで用意しています．
+decompositions](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/))を組み込みで用意しています．
 
 Julia は，行列が特別な種類(対称，エルミートなど)であるかを推定しようとしますが，
 失敗することもあります．
