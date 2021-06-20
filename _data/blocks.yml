@@ -4,27 +4,33 @@
   zh-cn: ...是什么？
   es: ¿Qué es...?
   ja: Juliaの紹介
+  fr: De quoi s'agit-il ?
 - file: Basics.md
   title: Basics
   zh-cn: 基础语法
   es: Básico
   ja: 基本
+  fr: Fondamentaux
 - file: Operators.md
   title: Operators
   zh-cn: 运算符
   ja: 演算子
+  fr: Opérateurs
 - file: The-shell-aka-REPL.md
   title: The shell a.k.a. REPL
   zh-cn: shell/REPL 环境
   ja: REPL
+  fr: REPL
 - file: Standard-libraries.md
   title: Standard libraries
   zh-cn: 标准库
   ja: 標準ライブラリ
+  fr: Bibliothèques standard
 - file: Package-management.md
   title: Package management
   zh-cn: 包管理
   ja: パッケージ管理
+  fr: Gestionnaire de paquets
 - file: Characters-and-strings.md
   title: Characters and strings
   zh-cn: 字符与字符串
@@ -41,6 +47,7 @@
   title: Arrays
   zh-cn: 数组
   ja: (1次元)配列 (ベクトル)
+  fr: Tableaux
 - file: Linear-Algebra.md
   title: Linear Algebra
   zh-cn: 线性代数
@@ -49,10 +56,12 @@
   title: Control flow and loops
   zh-cn: 控制流与循环
   ja: 制御フローと繰返し(ループ)
+  fr: Structures de contrôle et boucles
 - file: Functions.md
   title: Functions
   zh-cn: 函数
   ja: 関数
+  fr: Fonctions
 - file: Dictionaries.md
   title: Dictionaries
   zh-cn: 字典
@@ -65,10 +74,12 @@
   title: Collection functions
   zh-cn: 收集相关函数
   ja: コレクション
+  fr: Manipulation des collections
 - file: Types.md
   title: Types
   zh-cn: 类型
   ja: 型
+  fr: Types
 - file: Missing-and-Nothing.md
   title: Missing and Nothing
   zh-cn: 缺失值与空值
@@ -77,10 +88,12 @@
   title: Exceptions
   zh-cn: 异常处理
   ja: 例外処理
+  fr: Exceptions
 - file: Modules.md
   title: Modules
   zh-cn: 模块
   ja: モジュール
+  fr: modules
 - file: Expressions.md
   title: Expressions
   zh-cn: 表达式

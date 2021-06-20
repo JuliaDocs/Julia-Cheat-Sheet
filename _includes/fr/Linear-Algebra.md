@@ -21,7 +21,7 @@ For most linear algebra tools, use `using LinearAlgebra`.
 | Moore-Penrose pseudo-inverse   | `pinv(M)`                                   |
 
 Julia has built-in support for [matrix
-decompositions](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/).
+decompositions](https://docs.julialang.org/en/v1.0.0/stdlib/LinearAlgebra/).
 
 Julia tries to infer whether matrices are of a special type (symmetric,
 hermitian, etc.), but sometimes fails. To aid Julia in dispatching the
