@@ -1,17 +1,17 @@
-Many core packages are managed by communities with names of the form
-Julia\[Topic\].
+Vários pacotes principais são gerenciados por comunidades com nome de forma:
+Julia\[Tópico\].
 
 |                           |                                                                                                                                                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Statistics                | JuliaStats                                                                                                                                                                                                                                 |
-| Automatic differentiation | JuliaDiff                                                                                                                                                                                                                                  |
-| Numerical optimization    | JuliaOpt                                                                                                                                                                                                                                   |
-| Plotting                  | JuliaPlots                                                                                                                                                                                                                                 |
-| Network (Graph) Analysis  | JuliaGraphs                                                                                                                                                                                                                                |
+| Estatísticas                | JuliaStats                                                                                                                                                                                                                                 |
+| Diferenciação automática | JuliaDiff                                                                                                                                                                                                                                  |
+| Otimização numérica    | JuliaOpt                                                                                                                                                                                                                                   |
+| Plotagem (criação de gráficos)          | JuliaPlots                                                                                                                                                                                                                                 |
+| Análise de (gráficos de) rede  | JuliaGraphs                                                                                                                                                                                                                                |
 | Web                       | JuliaWeb                                                                                                                                                                                                                                   |
-| Geo-Spatial               | JuliaGeo                                                                                                                                                                                                                                   |
+| Geo-Espacial               | JuliaGeo                                                                                                                                                                                                                                   |
 | Machine Learning          | JuliaML    
 |
-| Scientific Machine Learning | SciML (formerly DifferentialEquations.jl) 
+| Machine Learning científica | SciML (formerly DifferentialEquations.jl) 
 |
-| Super-used Packages       | `DataFrames    # linear/logistic regression`<br>`Distributions # Statistical distributions`<br>`Flux          # Machine learning`<br>`Gadfly        # ggplot2-likeplotting`<br>`LightGraphs   # Network analysis`<br>`TextAnalysis  # NLP` |
+| Pacotes muito usados       | `DataFrames    # regressão logistica/linear`<br>`Distributions # distribuições estatísticas`<br>`Flux          # Machine learning`<br>`Gadfly        # plotagem parecida com ggplot2`<br>`LightGraphs   # Análise de rede`<br>`TextAnalysis  # PNL` |

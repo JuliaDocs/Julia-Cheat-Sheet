@@ -11,134 +11,165 @@
   es: Básico
   ja: 基本
   fr: Fondamentaux
+  br: O Básico
 - file: Operators.md
   title: Operators
   zh-cn: 运算符
   ja: 演算子
   fr: Opérateurs
+  br: Operadores
 - file: The-shell-aka-REPL.md
   title: The shell a.k.a. REPL
   zh-cn: shell/REPL 环境
   ja: REPL
   fr: REPL
+  br: A shell, também conhecida como, o REPL
 - file: Standard-libraries.md
   title: Standard libraries
   zh-cn: 标准库
   ja: 標準ライブラリ
   fr: Bibliothèques standard
+  br: Bibliotecas Padrão
 - file: Package-management.md
   title: Package management
   zh-cn: 包管理
   ja: パッケージ管理
   fr: Gestionnaire de paquets
+  br: Gerenciamento de Pacotes
 - file: Characters-and-strings.md
   title: Characters and strings
   zh-cn: 字符与字符串
   ja: 文字と文字列
+  br: Caracteres e Strings
 - file: Numbers.md
   title: Numbers
   zh-cn: 数字相关
   ja: 数
+  br: Números
 - file: Random-Numbers.md
   title: Random Numbers
   zh-cn: 随机数
   ja: 乱数
+  br: Números Aleatórios
 - file: Arrays.md
   title: Arrays
   zh-cn: 数组
   ja: (1次元)配列 (ベクトル)
   fr: Tableaux
+  br: Arrays
 - file: Linear-Algebra.md
   title: Linear Algebra
   zh-cn: 线性代数
   ja: 線形代数と行列 (2次元配列)
+  br: Álgebra Linear
 - file: Control-flow-and-loops.md
   title: Control flow and loops
   zh-cn: 控制流与循环
   ja: 制御フローと繰返し(ループ)
   fr: Structures de contrôle et boucles
+  br: Estruturas de decisão e repetição
 - file: Functions.md
   title: Functions
   zh-cn: 函数
   ja: 関数
   fr: Fonctions
+  br: Funções
 - file: Dictionaries.md
   title: Dictionaries
   zh-cn: 字典
   ja: ディクショナリ(辞書)
+  br: Dicionários
 - file: Sets.md
   title: Sets
   zh-cn: 集合
   ja: 集合
+  br: Conjuntos
 - file: Collection-functions.md
   title: Collection functions
   zh-cn: 收集相关函数
   ja: コレクション
   fr: Manipulation des collections
+  br: Funções de Coleção
 - file: Types.md
   title: Types
   zh-cn: 类型
   ja: 型
   fr: Types
+  br: Tipos
 - file: Missing-and-Nothing.md
   title: Missing and Nothing
   zh-cn: 缺失值与空值
   ja: missing と nothing
+  br: Faltando e Nada
 - file: Exceptions.md
   title: Exceptions
   zh-cn: 异常处理
   ja: 例外処理
   fr: Exceptions
+  br: Excepções
 - file: Modules.md
   title: Modules
   zh-cn: 模块
   ja: モジュール
   fr: modules
+  br: Módulos
 - file: Expressions.md
   title: Expressions
   zh-cn: 表达式
   ja: 式
+  br: Expressões
 - file: Macros.md
   title: Macros
   zh-cn: 宏
   ja: マクロ
+  br: Macros
 - file: Parallel-Computing.md
   title: Parallel Computing
   zh-cn: 并行计算
   ja: 並列計算
+  br: Computação Paralela
 - file: IO.md
   title: I/O
   zh-cn: 输入/输出
   ja: 入出力
+  br: I/O
 - file: DataFrames.md
   title: DataFrames
   zh-cn: DataFrames
   ja: DataFrames
+  br: DataFrames
 - file: Introspection-and-reflection.md
   title: Introspection and reflection
   zh-cn: 自我检查与反射
   ja: イントロスペクションとリフレクション
+  br: Introspecção e Reflexão
 - file: Noteworthy-packages-and-projects.md
   title: Noteworthy packages and projects
   zh-cn: 值得关注的包与项目
   ja: 注目すべきパッケージとプロジェクト
+  br: Pacotes e Projetos dignos de menção
 - file: Naming-Conventions.md
   title: Naming Conventions
   zh-cn: 命名规范
   ja: 命名規則
+  br: Convenções de nomenclatura
 - file: Performance-tips.md
   title: Performance tips
   zh-cn: 性能改进建议
   ja: 性能向上へのヒント
+  br: Dicas para desempenho
 - file: IDEs-Editors-and-Plugins.md
   title: IDEs, Editors and Plug-ins
   zh-cn: IDE、编辑器和插件
   ja: IDE(統合開発環境)，エディタ，プラグイン
+  br: IDEs, Editores e Plug-ins
 - file: Resources.md
   title: Resources
   zh-cn: 学习资源
   ja: 参考資料
+  br: Recursos
 - file: Videos.md
   title: Videos
   zh-cn: 相关视频
   ja: 動画
+  br: Videos

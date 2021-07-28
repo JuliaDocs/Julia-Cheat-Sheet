@@ -1,30 +1,29 @@
 Todos os argumentos das funções são passadas por referências.
 
-Functions with `!` appended change at least one argument, typically the first:
-`sort!(arr)`.
+Funções com `!` mudam pelo menos um argumento, tipicamente o primeiro:
+`sort!(argumento)`.
 
+Argumentos requiridos são separados por uma vírgula e usam a notação posicional
 
-Required arguments are separated with a comma and use the positional notation.
+Argumentos opcionais precisam de um valor padrão na signatura, definido por `=`.
 
-Optional arguments need a default value in the signature, defined with `=`.
-
-Keyword arguments use the named notation and are listed in the function's
-signature after the semicolon:
+Argumentos de palavra-chave (keyword) usam a notação nomeada e são listados na signatura
+depois da vírgula:
 
 ````
 function func(req1, req2; key1=dflt1, key2=dflt2)
-    # do stuff
+    # faça algo!
 end
 ````
 
-The semicolon is *not* required in the call to a function that accepts keyword arguments.
+A vírgula *não* é necessária na chamada de uma função que aceita argumentos de palavra-chave (keyword)
 
-The `return` statement is optional but highly recommended.
+O comando `return` é opcional, mas fortemente recomendado.
 
-Multiple data structures can be returned as a tuple in a single `return` statement.
+Multiplas estruturas de dados podem ser retornadas como uma tupla em um único comando `return`.
 
-Command line arguments `julia script.jl arg1 arg2...` can be processed from global
-constant `ARGS`:
+Argumentos de linha de comando `julia script.jl arg1 arg2...` podem ser processados pela constante 
+global `ARGS`:
 
 ```
 for arg in ARGS
@@ -32,48 +31,48 @@ for arg in ARGS
 end
 ```
 
-Anonymous functions can best be used in collection functions or list comprehensions:
+Funções anônimas podem ser melhor utilizadas em coleções de funções ou list comprehensions:
 `x -> x^2`.
 
-Functions can accept a variable number of arguments:
+Funções podem aceitar uma quantidade variável de argumentos:
 
 ```
 function func(a...)
     println(a)
 end
 
-func(1, 2, [3:5]) # tuple: (1, 2, UnitRange{Int64}[3:5])
+func(1, 2, [3:5]) # tupla: (1, 2, UnitRange{Int64}[3:5])
 ```
 
-Functions can be nested:
+Funções podem ser aninhadas:
 
 ```
-function outerfunction()
-    # do some outer stuff
-    function innerfunction()
-        # do inner stuff
-        # can access prior outer definitions
+function funcaoexterna()
+    # faça coisas externas
+    function funcaointerna()
+        # faça coisas internas
+        # pode acessar funções externas anteriores a ela
     end
-    # do more outer stuff
+    # faça mais coisas externas
 end
 ```
 
-Functions can have explicit return types
+Funções podem ter tipos de retorno explícitos
 
 ```
-# take any Number subtype and return it as a String
+# pegue qualquer subtipo de número e retorne ele como uma String
 function stringifynumber(num::T)::String where T <: Number
     return "$num"
 end
 ```
 
-Functions can be
-[vectorized](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized-1)
-by using the Dot Syntax
+Funções podem ser
+[vetorizadas](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized-1)
+usando a Sintaxe de Ponto (Dot Syntax)
 
 ```
-# here we broadcast the subtraction of each mean value
-# by using the dot operator
+# aqui nós transmitimos a subtração de cada valor
+# usando o operador (.)
 julia> using Statistics
 julia> A = rand(3, 4);
 julia> B = A .- mean(A, dims=1)
@@ -86,22 +85,25 @@ julia> mean(B, dims=1)
  -7.40149e-17  7.40149e-17  1.85037e-17  3.70074e-17
 ```
 
-Julia generates <a class="tooltip" href="#">specialized versions<span> Multiple dispatch a type of
+Julia gera <a class="tooltip" href="#">versões especializadas<span>
+ Multiple dispatch a type of
 polymorphism that dynamically determines which version of a function to
 call. In this context, dynamic means that it is resolved at run-time,
 whereas method overloading is resolved at compile time. Julia manages
 multiple dispatch completely in the background. Of course, you can
 provide custom function overloadings with type annotations. </span></a>
-of functions based on data types. When a function is called with the
-same argument types again, Julia can look up the native machine code and
-skip the compilation process.
+em funções baseadas em tipos de dados. Quando uma função é executada com o
+mesmo argumento novamente, Julia pode procurar o código de máquina nativo
+e pular o processo de compilação.
 
-Since **Julia 0.5** the existence of potential
-ambiguities is still acceptable, but actually calling an ambiguous
-method is an **immediate error**.
+Desde **Julia 0.5** a existência de potenciais
+ambiguidades ainda é aceitável, mas executar 
+um método ambíguo é um **erro imediato**
 
-Stack overflow is possible when recursive functions nest many levels
-deep. [Trampolining](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia) can
-be used to do tail-call optimization, as Julia does not do that
-automatically [yet](https://github.com/JuliaLang/julia/issues/4964).
-Alternatively, you can rewrite the tail recursion as an iteration.
+Transbordo de pilha (Stack overflow) é possível quando
+funções recursivas aninham a varios níveis de profundidade.
+[Trampolining](https://web.archive.org/web/20140420011956/http://blog.zachallaun.com/post/jumping-julia) pode
+ser utilizado para a otimização chamadas recursivas, já que Julia não faz
+isso automaticamente [ainda](https://github.com/JuliaLang/julia/issues/4964).
+
+Alternativamente, você pode reescrever a recursão como uma iteração.

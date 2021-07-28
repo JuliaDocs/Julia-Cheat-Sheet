@@ -6,7 +6,7 @@ Para a maioria das ferramentas de Álgebra Linear, use `using LinearAlgebra`.
 | Definir Matriz                    | `M = [1 0; 0 1]         `                                                                                                                  |
 | Dimensão da Matriz                | `size(M)         `                                                                                                                         |
 | Selecionar `i`-ésima linha        | `M[i, :]`                                                                                                                                  |
-| Slecionar `i`-ésima coluna        | `M[:, i]`                                                                                                                                  |
+| Selecionar `i`-ésima coluna       | `M[:, i]`                                                                                                                                  |
 | Concatenar horizontalmente        | `M = [a b]` ou `M = hcat(a, b)`                                                                                                            |
 | Concatenar verticalmente          | `M = [a ; b]` ou `M = vcat(a, b)`                                                                                                          |
 | Matriz Transposta                 | `transpose(M)`                                                                                                                             |
