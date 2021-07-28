@@ -21,5 +21,5 @@
 | Acrescentar a com b                             | `append!(a,b)`                                                                       |
 | Verificar se val é um elemento                  | `in(val, arr) or val in arr`                                                         |
 | Produto Escalar                                 | `dot(a, b) == sum(a .* b)`                                                           |
-| Alterar dimensões (s possível)                  | `reshape(1:6, 3, 2)' == [1 2 3; 4 5 6]`                                              |
+| Alterar dimensões (se possível)                 | `reshape(1:6, 3, 2)' == [1 2 3; 4 5 6]`                                              |
 | Para String (com delimitador del entre elementos) | `join(arr, del)`                                                                     |
