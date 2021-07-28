@@ -8,4 +8,4 @@ Módulos são espaços de trabalho de variáveis globais separados que agrupam f
 | Exportações                  | `# Obter uma lista de nomes exportados pelo Módulo`<br>`names(NomeDoModulo)`<br><br>`# incluir nomes não exportados, depreciados`<br>`# e gerados pelo compilador`<br>`names(NomeDoModulo, all::Bool)`<br><br>`# também mostra nomes explicitamente importados de outros módulos`<br>`names(NomeDoModulo, all::Bool, imported::Bool)` |
 
 Existe apenas uma diferença entre `using` e `import` : com `using` você precisa dizer
-`function Foo.bar(..` para disponibilizar a função `bar` do módulo `Foo`'s por meio de um novo método, mas com `import Foo.bar`, você só precisa dizer `function bar(...` e ele automaticamente disponibiliza a função `bar` do módulo `Foo`'s.
+`function Foo.bar(..` para disponibilizar a função `bar` do módulo `Foo`'s por meio de um novo método, mas com `import Foo.bar`, você só precisa dizer `function bar(...` e ele automaticamente disponibiliza a função `bar` do módulo `Foo`
