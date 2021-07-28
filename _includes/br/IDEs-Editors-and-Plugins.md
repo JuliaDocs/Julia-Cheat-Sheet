@@ -1,14 +1,10 @@
 - [Juno](https://junolab.org) (editor)
 - [Jupyter](https://try.jupyter.org) (online IJulia notebook)
 - [Emacs](https://www.gnu.org/software/emacs) [Julia
-  mode](https://www.emacswiki.org/emacs/Julia) (editor)
+  mode](https://www.emacswiki.org/emacs/JuliaProgrammingLanguage) (editor)
+- [Pluto.jl](https://plutojl.org) (online IJulia notebook)
 - [vim](https://www.vim.org) [Julia
   mode](https://github.com/JuliaLang/julia-vim) (editor)
 - [VS Code
   extension](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
   (editor)
-- [Pluto.jl](https://plutojl.org) (online IJulia notebook)
-- [Sublime Text](https://www.sublimetext.com) [Julia
-  plug-in](https://github.com/WestleyArgentum/Sublime-Julia) (editor)
-- [Sublime Text](https://www.sublimetext.com) [IJulia
-  plug-in](https://github.com/quinnj/Sublime-IJulia) (editor)
