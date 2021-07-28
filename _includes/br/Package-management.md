@@ -1,28 +1,29 @@
-Packages must be [registered](https://pkg.julialang.org) before they are visible to the
-package manager. In Julia 1.0, there are two ways to work with the package manager:
-either with `using Pkg` and using `Pkg` functions, or by typing `]` in the REPL to
-enter the special interactive package management mode. (To return to regular REPL, just
-hit `BACKSPACE` on an empty line in package management mode). Note
-that new tools arrive in interactive mode first, then usually also
-become available in regular Julia sessions through `Pkg` module.
+Pacotes devem ser [registrados](https://julialang.org/packages/) antes de 
+serem visíveis ao gerenciador de pacotes.
+Em Julia 1.0, existem duas formas de utilizar o gerenciador de pacotes:
+Ou com `using Pkg` e usando funções `Pkg`, ou digitando `]` no REPL para entrar no
+modo Gerenciamento de Pacotes Interativo. (Para voltar para o REPL normal, pressione
+`BACKSPACE` em uma linha vazia no modo de gerenciamento de pacotes). Note que novas
+ferramentas chegam no modo interativo primeiro, e depois se tornam disponíveis em sessões Julia
+normais por meio do `módulo Pkg`
 
-## Using `Pkg` in Julia session
+## Usando `Pkg` em uma sessão Julia
 
 |                                            |                            |
 | ------------------------------------------ | -------------------------- |
-| List installed packages (human-readable)   | `Pkg.status()`             |
-| Update all packages                        | `Pkg.update()`             |
-| Install `PackageName`                      | `Pkg.add("PackageName")`   |
-| Rebuild `PackageName`                      | `Pkg.build("PackageName")` |
-| Use `PackageName` (after install)          | `using PackageName`        |
-| Remove `PackageName`                       | `Pkg.rm("PackageName")`    |
+| Listar pacotes instalados (Legivel para humanos)   | `Pkg.status()`     |
+| Atualizar todos os pacotes                 | `Pkg.update()`             |
+| Instalar `NomedoPacote`                    | `Pkg.add("NomedoPacote")`  |
+| Reconstruir `NomedoPacote`                 | `Pkg.build("NomedoPacote")`|
+| Usar `NomedoPacote` (depois de instalação) | `using NomedoPacote`       |
+| Remover `NomedoPacote`                     | `Pkg.rm("NomedoPacote")`   |
 
-## In Interactive Package Mode
+## No modo de Gerenciamento de Pacotes Interativo
 
 |                                                          |                                       |
 | -------------------------------------------------------- | ------------------------------------- |
-| Add `PackageName`                                        | `add PackageName`                     |
-| Remove `PackageName`                                     | `rm PackageName`                      |
-| Update `PackageName`                                     | `update PackageName`                  |
-| Use development version                                  | `dev PackageName` or `dev GitRepoUrl` |
-| Stop using development version, revert to public release | `free PackageName`                    |
+| Adicionar `NomedoPacote`                                 | `add NomedoPacote`                    |
+| Remover `NomedoPacote`                                   | `rm NomedoPacote`                     |
+| Atualizar `NomedoPacote`                                 | `update NomedoPacote`                 |
+| Usar versão de desenvolvimento                           | `dev NomedoPacote` or `dev URLdoRepositórioGit`|
+| Parar de usar versão de desenvolvimento e reverter para versão pública | `free NomedoPacote`     |
