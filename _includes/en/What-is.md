@@ -34,4 +34,4 @@ box.
 Julia allows you to generate code automagically thanks to Lisp-inspired
 macros.
 
-Julia was born in 2012.
+Julia was created in 2012.

@@ -1,27 +1,28 @@
-Parallel computing tools are available in the `Distributed` standard library.
+Les outils de calcul parallèle sont disponibles dans la librairie standarde `Distributed`.
 
 |                                            |                                   |
 | ------------------------------------------ | --------------------------------- |
-| Launch REPL with N workers                 | `julia -p N`                      |
-| Number of available workers                | `nprocs()`                        |
-| Add N workers                              | `addprocs(N)`                     |
-| See all worker ids                         | `for pid in workers()`<br>`    println(pid)`<br>`end` |
-| Get id of executing worker                 | `myid()`                          |
-| Remove worker                              | `rmprocs(pid)`                    |
-| Run f with arguments args on pid           | `r = remotecall(f, pid, args...)`<br>`# or:`<br>`r = @spawnat pid f(args)`<br>`...`<br>`fetch(r)` |
-| Run f with arguments args on pid (more efficient) | `remotecall_fetch(f, pid, args...)` |
-| Run f with arguments args on any worker    | `r = @spawn f(args) ... fetch(r)` |
-| Run f with arguments args on all workers   | `r = [@spawnat w f(args) for w in workers()] ... fetch(r)` |
-| Make expr available to all workers         | `@everywhere expr`                |
-| Parallel for loop with <a class="tooltip" href="#">reducer<span>A reducer combines the results from different (independent) workers.</span></a> function red | `sum = @distributed (red) for i in 1:10^6`<br>`    # do parallelstuff`<br>`end` |
-| Apply f to all elements in collection coll | `pmap(f, coll)`                   |
+| Lancer REPL avec N travailleurs            | `julia -p N`                      |
+| Nombre de travailleurs disponibles         | `nprocs()`                        |
+| Ajouter N travailleurs                     | `addprocs(N)`                     |
+| Voir tous les IDs des travailleurs         | `for pid in workers()`<br>`    println(pid)`<br>`end` |
+| Obtenir l'ID du travailleur exécutant      | `myid()`                          |
+| Enlever travailleur                        | `rmprocs(pid)`                    |
+| Exécuter f avec les arguments args via pid | `r = remotecall(f, pid, args...)`<br>`# ou:`<br>`r = @spawnat pid f(args)`<br>`...`<br>`fetch(r)` |
+| Exécuter f avec les arguments args via pid (plus efficace) | `remotecall_fetch(f, pid, args...)` |
+| Exécuter f avec les arguments args via n'importe quel travailleur | `r = @spawn f(args) ... fetch(r)` |
+| Exécuter f avec les arguments args via tous les travailleurs | `r = [@spawnat w f(args) for w in workers()] ... fetch(r)` |
+| Rendre expr disponible à  tous les travailleurs | `@everywhere expr`                |
+| Parallélisation pour boucle avec la fonction <a class="tooltip" href="#">réductrice<span>Un réducteur combine les résultats de différents travailleurs (indépendants).</span></a> red | `sum = @distributed (red) for i in 1:10^6`<br>`    # travail parallèle `<br>`end` |
+| Applique f à tous les éléments de la collection coll | `pmap(f, coll)`                   |
 
-Workers are also known as concurrent/parallel processes.
+Les travailleurs sont aussi appelés processus concurrents/parallèles.
 
-Modules with parallel processing capabilities are best split into a
-functions file that contains all the functions and variables needed by
-all workers, and a driver file that handles the processing of data. The
-driver file obviously has to import the functions file.
+Il vaut mieux que les modules avec des capacités de processus parallèle 
+soient partagés au sein d'un fichier de fonctions qui contient toutes les 
+fonctions et variables requises par tous les travailleurs, et un fichier pilote
+qui gère le traitement de la donnée. Le pilote doit évidemment importer le 
+fichier de fonctions.
 
-A non-trivial (word count) example of a reducer function is provided by
+Un exemple non-trivial (décompte de mots) d'une fonction reductrice est procuré par
 [Adam DeConinck](https://blog.ajdecon.org/parallel-word-count-with-julia-an-interesting).

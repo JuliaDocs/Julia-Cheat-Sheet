@@ -1,15 +1,15 @@
-Many core packages are managed by communities with names of the form
-Julia\[Topic\].
+Plusieurs paquets centraux sont gérés communautairement avec des noms 
+sous la forme de Julia\[Topic\].
 
 |                           |                                                  |
 | ------------------------- | ------------------------------------------------ |
-| Statistics                | JuliaStats                                       |
-| Scientific Machine Learning | SciML (formerly DifferentialEquations.jl)      |
-| Automatic differentiation | JuliaDiff                                        |
-| Numerical optimization    | JuliaOpt                                         |
-| Plotting                  | JuliaPlots                                       |
-| Network (Graph) Analysis  | JuliaGraphs                                      |
-| Web                       | JuliaWeb                                         |
-| Geo-Spatial               | JuliaGeo                                         |
-| Machine Learning          | JuliaML                                          |
-| Super-used Packages       | `DataFrames    # linear/logistic regression`<br>`Distributions # Statistical distributions`<br>`Flux          # Machine learning`<br>`Gadfly        # ggplot2-likeplotting`<br>`LightGraphs   # Network analysis`<br>`TextAnalysis  # NLP` |
+| Statistiques              | JuliaStats                                       |
+| *Machine Learning* Scientifique | SciML (ancien DifferentialEquations.jl)      |
+| Différentiation automatique  | JuliaDiff                                        |
+| Optimisation numérique    | JuliaOpt                                         |
+| Tracés graphiques (plots) | JuliaPlots                                       |
+| Analyses de réseau (graphes) | JuliaGraphs                                      |
+| *Web*                     | JuliaWeb                                         |
+| Géo-Spatial               | JuliaGeo                                         |
+| *Machine Learning*        | JuliaML                                          |
+| Paquets les plus utilisés | `DataFrames    # régresion linéaire/logistique`<br>`Distributions # Distributions stistiques`<br>`Flux          # Machine learning`<br>`Gadfly        # Tracés graphiques simili-ggplot2`<br>`LightGraphs   # Analyse de réseau`<br>`TextAnalysis  # Traitement de Langage Naturel (NLP)` |
