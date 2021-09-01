@@ -1,17 +1,16 @@
-Julia is homoiconic: programs are represented as data structures of the
-language itself. In fact, everything is an expression `Expr`.
+Julia est homoiconique: les programmes sont représentés comme des structures de données 
+du langage lui-même. De fait, tout est une expression `Expr`.
 
-Symbols are <a class="tooltip" href="#">interned strings <span> Only one copy of each distinct
-(immutable) string value is stored. </span></a> prefixed with a colon.
-Symbols are more efficient and they are typically used as identifiers,
-keys (in dictionaries), or columns in data frames. Symbols cannot be
-concatenated.
+Les symboles sont <a class="tooltip" href="#">des chaînes internes <span> Une seule copie
+ de chaque valeur de chaîne distincte (immuable) est stockée. </span></a> préfixés par deux points `:`.
+Les symboles sont plus efficaces et ils sont typiquement utilisés comme identifiants, clés 
+(dans les dictionnaires), ou colonnes dans les tableaux. Les symboles ne peuvent pas être concaténés.
 
-Quoting `:( ... )` or `quote ... end` creates an expression, just
-like <a class="tooltip" href="#">`Meta.parse(str)` <span> This form is probably most familiar to
-people with knowledge of dynamic SQL. The `Meta.parse` function is similar
-to Oracle"s and PostgreSQL"s `EXECUTE IMMEDIATE` statement or SQL
-Server's `sp_executesql()` procedure. </span></a> , and `Expr(:call, ...)`.
+Citer `:( ... )` ou `quote ... end` crée une expression, tout comme
+<a class="tooltip" href="#">`Meta.parse(str)` <span> Cette forme est probablement 
+plus familière aux personnes avec une connaissance du SQL dynamique. La fonction `Meta.parse` 
+est similaire à `EXECUTE IMMEDIATE` dans Oracle et PostgreSQL ou la procédure 
+`sp_executesql()` dans SQL Server. </span></a> , et `Expr(:call, ...)`.
 
 ```
 x = 1

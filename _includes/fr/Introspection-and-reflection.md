@@ -1,9 +1,9 @@
 |                  |                       |
 | ---------------- | --------------------- |
 | Type             | `typeof(name)`        |
-| Type check       | `isa(name, TypeName)` |
-| List subtypes    | `subtypes(TypeName)`  |
-| List supertype   | `supertype(TypeName)` |
-| Function methods | `methods(func)`       |
+| Vérification de type | `isa(name, TypeName)` |
+| Lister les sous-types | `subtypes(TypeName)`  |
+| List les super-types | `supertype(TypeName)` |
+| Méthodes d'une fonction | `methods(func)`       |
 | JIT bytecode     | `code_llvm(expr)`     |
-| Assembly code    | `code_native(expr)`   |
+| Code Assembleur  | `code_native(expr)`   |

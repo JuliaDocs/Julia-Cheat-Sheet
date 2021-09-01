@@ -1,8 +1,8 @@
 |                       |                                                  |
 | --------------------- | ------------------------------------------------ |
-| Programmers Null      | `nothing`                                        |
-| Missing Data          | `missing`                                        |
-| Not a Number in Float | `NaN`                                            |
-| Filter missings       | `collect(skipmissing([1, 2, missing])) == [1,2]` |
-| Replace missings      | `collect((df[:col], 1))`                         |
-| Check if missing      | `ismissing(x)` **not** `x == missing`            |
+| Null des programmeurs | `nothing`                                        |
+| Donnée manquante      | `missing`                                        |
+| Pas un Nombre Flottant | `NaN`                                            |
+| Filtrer les manquants | `collect(skipmissing([1, 2, missing])) == [1,2]` |
+| Remplacer les manquants | `collect((df[:col], 1))`                         |
+| Vérifier les manquants | `ismissing(x)` **pas** `x == missing`            |
