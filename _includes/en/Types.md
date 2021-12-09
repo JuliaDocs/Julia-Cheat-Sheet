@@ -17,7 +17,7 @@ Objects that may be one of a set of types are called `Union` types.
 | ------------------------ | ------------------------------------------------- |
 | Type annotation          | `var::TypeName`                                   |
 | Type declaration         | `struct Programmer`<br>`    name::String`<br>`    birth_year::UInt16`<br>`    fave_language::AbstractString`<br>`end` |
-| Mutable type declaration | replace struct with mutable struct                |
+| Mutable type declaration | replace `struct` with `mutable struct`            |
 | Type alias               | `const Nerd = Programmer`                         |
 | Type constructors        | `methods(TypeName)`                               |
 | Type instantiation       | `me = Programmer("Ian", 1984, "Julia")`<br>`me = Nerd("Ian", 1984, "Julia")` |
