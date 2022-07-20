@@ -14,4 +14,4 @@ Julia\[Tópico\].
 |
 | Machine Learning científica | SciML (formerly DifferentialEquations.jl) 
 |
-| Pacotes muito usados       | `DataFrames    # regressão logistica/linear`<br>`Distributions # distribuições estatísticas`<br>`Flux          # Machine learning`<br>`Gadfly        # plotagem parecida com ggplot2`<br>`LightGraphs   # Análise de rede`<br>`TextAnalysis  # PNL` |
+| Pacotes muito usados       | `DataFrames    # regressão logistica/linear`<br>`Distributions # distribuições estatísticas`<br>`Flux          # Machine learning`<br>`Gadfly        # plotagem parecida com ggplot2`<br>`Graphs        # Análise de rede`<br>`TextAnalysis  # PNL` |

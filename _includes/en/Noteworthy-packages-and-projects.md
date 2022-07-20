@@ -12,4 +12,4 @@ Julia\[Topic\].
 | Web                       | JuliaWeb                                         |
 | Geo-Spatial               | JuliaGeo                                         |
 | Machine Learning          | JuliaML                                          |
-| Super-used Packages       | `DataFrames    # linear/logistic regression`<br>`Distributions # Statistical distributions`<br>`Flux          # Machine learning`<br>`Gadfly        # ggplot2-likeplotting`<br>`LightGraphs   # Network analysis`<br>`TextAnalysis  # NLP` |
+| Super-used Packages       | `DataFrames    # linear/logistic regression`<br>`Distributions # Statistical distributions`<br>`Flux          # Machine learning`<br>`Gadfly        # ggplot2-likeplotting`<br>`Graphs        # Network analysis`<br>`TextAnalysis  # NLP` |

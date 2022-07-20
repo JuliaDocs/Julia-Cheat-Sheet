@@ -20,5 +20,5 @@
 | [Distributions.jl](https://github.com/JuliaStats/Distributions.jl) |  统计分布 |
 | [Flux.jl](https://github.com/FluxML/Flux.jl)                       |  机器学习 |
 | [Gadfly.jl](https://github.com/GiovineItalia/Gadfly.jl)            |  类 ggplot2 的画图包 |
-| [LightGraphs.jl](https://github.com/JuliaGraphs/LightGraphs.jl)    |  网络分析 |
+| [Graphs.jl](https://github.com/JuliaGraphs/Graphs.jl)              |  网络分析 |
 | [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl)    |  自然语言处理(NLP) |

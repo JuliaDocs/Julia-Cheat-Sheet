@@ -11,4 +11,4 @@
 | Web                       | JuliaWeb                                         |
 | 地理空間            | JuliaGeo                                         |
 | 機械学習    | JuliaML                                          |
-| 極めてよく用いられるパッケージ    | `DataFrames    # 線形回帰，ロジスティック回帰`<br>`Distributions # 統計学的分布`<br>`Flux          # 機械学習`<br>`Gadfly        # ggplot2に似たグラフ描画`<br>`LightGraphs   # ネットワーク解析`<br>`TextAnalysis  # 自然言語処理` |
+| 極めてよく用いられるパッケージ    | `DataFrames    # 線形回帰，ロジスティック回帰`<br>`Distributions # 統計学的分布`<br>`Flux          # 機械学習`<br>`Gadfly        # ggplot2に似たグラフ描画`<br>`Graphs        # ネットワーク解析`<br>`TextAnalysis  # 自然言語処理` |
