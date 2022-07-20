@@ -12,4 +12,4 @@ sous la forme de Julia\[Topic\].
 | *Web*                     | JuliaWeb                                         |
 | Géo-Spatial               | JuliaGeo                                         |
 | *Machine Learning*        | JuliaML                                          |
-| Paquets les plus utilisés | `DataFrames    # régresion linéaire/logistique`<br>`Distributions # Distributions stistiques`<br>`Flux          # Machine learning`<br>`Gadfly        # Tracés graphiques simili-ggplot2`<br>`LightGraphs   # Analyse de réseau`<br>`TextAnalysis  # Traitement de Langage Naturel (NLP)` |
+| Paquets les plus utilisés | `DataFrames    # régresion linéaire/logistique`<br>`Distributions # Distributions stistiques`<br>`Flux          # Machine learning`<br>`Gadfly        # Tracés graphiques simili-ggplot2`<br>`Graphs        # Analyse de réseau`<br>`TextAnalysis  # Traitement de Langage Naturel (NLP)` |
