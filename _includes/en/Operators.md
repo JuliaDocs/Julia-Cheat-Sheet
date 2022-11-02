@@ -5,6 +5,7 @@
 | Division                   | `3/12 == 0.25`                                  |
 | Inverse division           | `7\3 == 3/7`                                    |
 | Remainder                  | `x % y` or `rem(x,y)`                           |
+| Integer division           | `7 ÷ 3 == 2`                                    |
 | Negation                   | `!true == false`                                |
 | Equality                   | `a == b`                                        |
 | Inequality                 | `a != b` or `a ≠ b`                             |
