@@ -4,7 +4,7 @@
 
 ## 英文资源
 
-- [Julia 官方文档](https://docs.julialang.org/en/latest)
+- [Julia 官方文档](https://docs.julialang.org/en/v1/)
 - [学习 Julia 的在线资源](https://julialang.org/learning)
 - [Julia 之月](https://github.com/DataWookie/MonthOfJulia)
 - [社区准则](https://julialang.org/community/standards) 
