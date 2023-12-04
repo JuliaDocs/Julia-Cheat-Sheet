@@ -6,4 +6,5 @@
 | Comentário deliminitado       | `#= Isso é outro comentário =#`                                                             |
 | Encadeamento                  | `x = y = z = 1  # direita-para-esquerda`<br>`0 < x < 3          # true`<br>`5 < x != y < 5 # false` |
 | Definição de Função           | `function adicionar_um(i)`<br>`    return i + 1`<br>`end`                                   |
+| Definição de Função<br>(Forma por atribuição) | `adicionar_um(i) = i + 1` |
 | Inserir simbolos LaTex        | `\delta` + [Tab]                                                                            |
