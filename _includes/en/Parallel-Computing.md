@@ -24,4 +24,4 @@ all workers, and a driver file that handles the processing of data. The
 driver file obviously has to import the functions file.
 
 A non-trivial (word count) example of a reducer function is provided by
-[Adam DeConinck](https://blog.ajdecon.org/parallel-word-count-with-julia-an-interesting).
+[Adam DeConinck](https://web.archive.org/web/20231209184522/https://blog.ajdecon.org/parallel-word-count-with-julia-an-interesting/).
