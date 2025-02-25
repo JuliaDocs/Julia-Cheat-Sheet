@@ -6,5 +6,5 @@
 | Delimited comment    | `#= This is another comment =#`                       |
 | Chaining | `x = y = z = 1  # right-to-left`<br>`0 < x < 3      # true`<br>`5 < x != y < 5 # false` |
 | Function definition  | `function add_one(i)`<br>`    return i + 1`<br>`end`  |
-| Function definition`<br>`(Assignment form) | `add_one(i) = i + 1`            |
+| Function definition<br>(Assignment form) | `add_one(i) = i + 1`            |
 | Insert LaTeX symbols | `\delta` + [Tab]                                      |
