@@ -6,8 +6,8 @@ Julia\[Topic\].
 | Statistics                | JuliaStats                                       |
 | Scientific Machine Learning | SciML (DifferentialEquations.jl)      |
 | Automatic differentiation | JuliaDiff                                        |
-| Numerical optimization    | JuliaOpt                                         |
-| Plotting                  | JuliaPlots                                       |
+| Numerical optimization    | JuMP-dev                                         |
+| Plotting                  | JuliaPlots, MakieOrg                             |
 | Network (Graph) Analysis  | JuliaGraphs                                      |
 | Web                       | JuliaWeb                                         |
 | Geo-Spatial               | JuliaGeo                                         |
