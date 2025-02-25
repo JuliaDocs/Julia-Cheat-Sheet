@@ -49,7 +49,7 @@ Julia was created in 2012.
 | Delimited comment    | `#= This is another comment =#`                       |
 | Chaining | `x = y = z = 1  # right-to-left`<br>`0 < x < 3      # true`<br>`5 < x != y < 5 # false` |
 | Function definition  | `function add_one(i)`<br>`    return i + 1`<br>`end`  |
-| Function definition`<br>`(Assignment form) | `add_one(i) = i + 1`            |
+| Function definition<br>(Assignment form) | `add_one(i) = i + 1`            |
 | Insert LaTeX symbols | `\delta` + [Tab]                                      |
 
 
@@ -653,8 +653,8 @@ Julia\[Topic\].
 | Statistics                | JuliaStats                                       |
 | Scientific Machine Learning | SciML (DifferentialEquations.jl)      |
 | Automatic differentiation | JuliaDiff                                        |
-| Numerical optimization    | JuliaOpt                                         |
-| Plotting                  | JuliaPlots                                       |
+| Numerical optimization    | JuMP-dev                                         |
+| Plotting                  | JuliaPlots, MakieOrg                             |
 | Network (Graph) Analysis  | JuliaGraphs                                      |
 | Web                       | JuliaWeb                                         |
 | Geo-Spatial               | JuliaGeo                                         |
